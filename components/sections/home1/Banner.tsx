@@ -146,7 +146,7 @@ const HeroBanner: React.FC = () => {
         }
 
         .hero-title {
-          color: #1a1a1a;
+          color: rgb(254 94 4);
           font-size: clamp(36px, 4.5vw, 60px);
           line-height: 1.15;
           font-weight: 800;
