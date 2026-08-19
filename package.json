@@ -13,7 +13,7 @@
     "@react-google-maps/api": "^2.20.7",
     "isotope-layout": "^3.0.6",
     "lucide-react": "^1.27.0",
-    "next": "15.5.0",
+    "next": "^15.5.21",
     "react": "19.1.0",
     "react-countup": "^6.5.3",
     "react-dom": "19.1.0",
