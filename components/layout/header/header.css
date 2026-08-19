@@ -1,0 +1,189 @@
+/* =====================================================
+   SITE HEADER  –  Single header, all pages
+   Inherits:  .header-style-three  from style.css
+   ===================================================== */
+
+/* ── Always-visible bar ─────────────────────────────── */
+.header-style-three .header-lower {
+  background-color: #ffffff;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.07);
+  box-shadow: 0 2px 14px rgba(0, 0, 0, 0.06);
+  position: relative;
+  z-index: 100;
+}
+
+/* When sticky takes over, fade out the normal bar */
+.fixed-header.header-style-three .header-lower {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+/* On mobile always show the bar */
+@media (max-width: 991px) {
+  .fixed-header.header-style-three .header-lower {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+}
+
+/* =====================================================
+   SIMPLE PRODUCT DROPDOWN
+   ===================================================== */
+
+/* Ensure the parent li is positioned relative so the dropdown aligns to it */
+.main-menu .navigation > li.dropdown {
+  position: relative !important;
+}
+
+.main-menu .navigation > li > .simple-dropdown {
+  display: block !important;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 250px;
+  
+  background: #ffffff; /* Match existing website background */
+  padding: 15px 0;
+  border-radius: 0 0 8px 8px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  z-index: 9999;
+  margin-top: 15px;
+  
+  transition: opacity 0.28s ease, visibility 0.28s ease, margin-top 0.28s ease;
+}
+
+/* Show on hover */
+.main-menu .navigation > li.dropdown:hover > .simple-dropdown {
+  opacity: 1 !important;
+  visibility: visible !important;
+  pointer-events: auto;
+  margin-top: 0;
+}
+
+/* List items */
+.main-menu .navigation > li > .simple-dropdown > li {
+  width: 100%;
+  border-bottom: none !important;
+}
+
+.main-menu .navigation > li > .simple-dropdown > li > a {
+  display: block;
+  padding: 10px 20px !important;
+  font-size: 16px !important; /* Standard theme font size */
+  font-weight: 500 !important;
+  color: #333333 !important; /* Standard theme text color */
+  text-transform: capitalize !important;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05) !important;
+  text-decoration: none;
+  line-height: 1.5 !important;
+  transition: all 0.3s ease;
+}
+
+/* Remove border from last item */
+.main-menu .navigation > li > .simple-dropdown > li:last-child > a {
+  border-bottom: none !important;
+}
+
+.main-menu .navigation > li > .simple-dropdown > li > a:hover {
+  background: #f9f9f9;
+  color: #fe5e04 !important;
+  padding-left: 25px !important; /* Theme default slide-right hover effect */
+}
+
+.main-menu .navigation > li > .simple-dropdown > li.has-children > a {
+  position: relative;
+}
+
+.main-menu .navigation > li > .simple-dropdown > li.has-children > a .dropdown-arrow {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 6px;
+  height: 6px;
+  border-right: 2px solid #999;
+  border-bottom: 2px solid #999;
+  transform: translateY(-50%) rotate(-45deg);
+  transition: all 0.3s ease;
+}
+
+.main-menu .navigation > li > .simple-dropdown > li.has-children:hover > a .dropdown-arrow {
+  border-color: #fe5e04;
+}
+
+/* =====================================================
+   SUB-DROPDOWN (Nested Level 2)
+   ===================================================== */
+.main-menu .navigation > li > .simple-dropdown > li {
+  position: relative;
+}
+
+.main-menu .navigation > li > .simple-dropdown > li > .sub-dropdown {
+  display: block !important;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  
+  position: absolute;
+  top: 0;
+  left: 110%; /* Starts slightly to the right for animation */
+  width: 250px;
+  
+  background: #ffffff;
+  padding: 10px 0;
+  border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  z-index: 99999;
+  
+  transition: opacity 0.3s ease, visibility 0.3s ease, left 0.3s ease;
+}
+
+/* Show nested menu on hover */
+.main-menu .navigation > li > .simple-dropdown > li:hover > .sub-dropdown {
+  opacity: 1 !important;
+  visibility: visible !important;
+  pointer-events: auto;
+  left: 100%; /* Slides into place */
+}
+
+/* Sub-dropdown list items */
+.main-menu .navigation > li > .simple-dropdown > li > .sub-dropdown > li {
+  width: 100%;
+}
+
+.main-menu .navigation > li > .simple-dropdown > li > .sub-dropdown > li > a {
+  display: block;
+  padding: 8px 20px !important;
+  font-size: 15px !important;
+  font-weight: 500 !important;
+  color: #444444 !important;
+  text-transform: capitalize !important;
+  border-bottom: none !important;
+  text-decoration: none;
+  line-height: 1.5 !important;
+  transition: all 0.3s ease;
+}
+
+.main-menu .navigation > li > .simple-dropdown > li > .sub-dropdown > li > a:hover {
+  color: #fe5e04 !important;
+  padding-left: 25px !important;
+  background: #f9f9f9;
+}
+
+/* =====================================================
+   RESPONSIVE
+   ===================================================== */
+
+@media (max-width: 1199px) {
+  .main-menu .navigation > li > .simple-dropdown { width: 240px; }
+}
+
+@media (max-width: 991px) {
+  .main-menu .navigation > li > .simple-dropdown { display: none !important; }
+}
