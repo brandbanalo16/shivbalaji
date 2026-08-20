@@ -169,42 +169,47 @@ const HeroBanner: React.FC = () => {
           margin-bottom: 40px;
         }
 
-        .hero-btn,
-        .hero-btn-outline {
+        :global(.hero-btn),
+        :global(.hero-btn-outline) {
           display: inline-flex;
           align-items: center;
           justify-content: center;
-          padding: 14px 30px;
-          border-radius: 30px; /* Pill shape like the image */
-          font-weight: 600;
-          font-size: 15px;
-          text-decoration: none;
-          transition: all 0.3s ease;
+          padding: 15px 35px;
+          border-radius: 50px; /* Pill shape like the image */
+          font-weight: 700;
+          font-size: 16px;
+          text-decoration: none !important;
+          transition: all 0.3s ease-in-out;
+          font-family: inherit;
+          cursor: pointer;
         }
 
-        .hero-btn {
-          color: #ffffff;
+        :global(.hero-btn) {
+          color: #ffffff !important;
           background: #ff7a00;
-          box-shadow: 0 4px 15px rgba(255, 122, 0, 0.2);
+          border: 2px solid #ff7a00;
+          box-shadow: 0 4px 15px rgba(255, 122, 0, 0.3);
         }
 
-        .hero-btn:hover {
-          transform: translateY(-2px);
-          box-shadow: 0 8px 25px rgba(255, 122, 0, 0.3);
-          color: #ffffff;
+        :global(.hero-btn:hover) {
+          transform: translateY(-4px);
+          box-shadow: 0 10px 25px rgba(255, 122, 0, 0.4);
+          color: #ffffff !important;
           background: #e66a00;
+          border-color: #e66a00;
         }
 
-        .hero-btn-outline {
-          color: #1a1a1a;
-          border: 1px solid #c4c4c4;
+        :global(.hero-btn-outline) {
+          color: #ff7a00 !important;
+          border: 2px solid #ff7a00;
           background: transparent;
         }
 
-        .hero-btn-outline:hover {
-          color: #ffffff;
-          border-color: #ff7a00;
+        :global(.hero-btn-outline:hover) {
+          color: #ffffff !important;
           background: #ff7a00;
+          transform: translateY(-4px);
+          box-shadow: 0 10px 25px rgba(255, 122, 0, 0.25);
         }
 
         /* Bottom Features Bar */

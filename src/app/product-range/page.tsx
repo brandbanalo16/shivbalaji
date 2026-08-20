@@ -5,12 +5,12 @@ import { departments } from "../../../data/products";
 
 // Map each department to a service image and accent color
 const deptMeta: Record<string, { image: string; icon: string; accent: string }> = {
-  "bedside-lockers-over-bed-tables": { image: "/assets/images/caterogy/Bedside Lockers & Over-Bed Tables Manufacturer.png", icon: "fa-box-archive", accent: "#4a90e2" },
-  "examination-room-furniture": { image: "/assets/images/caterogy/Examination Room Furniture.png", icon: "fa-stethoscope", accent: "#27ae60" },
-  "hospital-icu-beds": { image: "/assets/images/service/service-1.jpg", icon: "fa-bed", accent: "#e74c3c" },
-  "medical-trolleys-carts": { image: "/assets/images/service/service-6.jpg", icon: "fa-truck-medical", accent: "#f39c12" },
-  "stools-chairs-patient-seating": { image: "/assets/images/service/service-5.jpg", icon: "fa-chair", accent: "#8e44ad" },
-  "stretchers-screens-accessories": { image: "/assets/images/service/service-7.jpg", icon: "fa-wheelchair", accent: "#16a085" },
+  "bedside-lockers-over-bed-tables": { image: "/assets/images/service/R4.webp", icon: "fa-box-archive", accent: "#4a90e2" },
+  "examination-room-furniture": { image: "/assets/images/service/R3.webp", icon: "fa-stethoscope", accent: "#27ae60" },
+  "hospital-icu-beds": { image: "/assets/images/service/R1.webp", icon: "fa-bed", accent: "#e74c3c" },
+  "medical-trolleys-carts": { image: "/assets/images/service/R4.webp", icon: "fa-truck-medical", accent: "#f39c12" },
+  "stools-chairs-patient-seating": { image: "/assets/images/service/R9.webp", icon: "fa-chair", accent: "#8e44ad" },
+  "stretchers-screens-accessories": { image: "/assets/images/service/R8.webp", icon: "fa-wheelchair", accent: "#16a085" },
 };
 
 const getServiceImg = (slug: string, fallbackIdx: number) =>

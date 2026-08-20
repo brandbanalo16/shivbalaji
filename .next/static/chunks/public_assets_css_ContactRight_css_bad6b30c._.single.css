@@ -1,0 +1,60 @@
+/* [project]/public/assets/css/ContactRight.css [app-client] (css) */
+.contact-right {
+  z-index: 9999;
+  flex-direction: column;
+  display: flex;
+  position: fixed;
+  top: 54%;
+  right: 0;
+  transform: translateY(-50%);
+}
+
+.contact-box {
+  color: #fff;
+  background: #25d366;
+  border-radius: 10px 0 0 10px;
+  justify-content: center;
+  align-items: center;
+  width: 45px;
+  height: 50px;
+  font-size: 26px;
+  text-decoration: none;
+  transition: all .3s;
+  display: flex;
+}
+
+.contact-box.call {
+  background: #2ecc71;
+  border-top: 1px solid rgba(255, 255, 255, .2);
+}
+
+.contact-box:hover {
+  color: #fff;
+  width: 78px;
+}
+
+.contact-box i {
+  transition: transform .3s;
+}
+
+.contact-box:hover i {
+  transform: scale(1.15);
+}
+
+@media (max-width: 768px) {
+  .contact-right {
+    top: 50%;
+  }
+
+  .contact-box {
+    width: 66px;
+    height: 54px;
+    font-size: 22px;
+  }
+
+  .contact-box:hover {
+    width: 66px;
+  }
+}
+
+/*# sourceMappingURL=public_assets_css_ContactRight_css_bad6b30c._.single.css.map*/
