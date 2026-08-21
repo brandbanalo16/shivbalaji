@@ -169,14 +169,14 @@ export default function About_Page() {
                                                     className="shape-2"
                                                     style={{
                                                         backgroundImage:
-                                                            "url(/assets/images/shape/shape-10.png)",
+                                                            "url(/assets/images/shape/shape-5.png)",
                                                     }}
                                                 ></div>
                                             </div>
 
                                             <figure className="image">
                                                 <Image
-                                                    src="/assets/images/resource/aboutj.png"
+                                                    src="/assets/images/resource/about.png"
                                                     alt="Shiv Balaji Surgical Hospital Furniture"
                                                     width={523}
                                                     height={399}
