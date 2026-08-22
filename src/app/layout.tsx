@@ -58,15 +58,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
 
-  
+
   return (
     <html lang="en">
       <body className={`${roboto.variable} ${caveat.variable}`}>
         {children}
         {/* <ToggleBodyClass/> */}
         {/* <SwitcherMenu /> */}
-       <DownloadProductList />
-        
+        <DownloadProductList />
+
         <ContactRight />
       </body>
     </html>

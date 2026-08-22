@@ -186,7 +186,7 @@ export default function ProductSlider() {
 
         {/* View All Button */}
         <div style={{ textAlign: 'center', marginTop: '50px' }}>
-          <Link href="/products" className="view-all-prod-btn">
+          <Link href="/product-range" className="view-all-prod-btn">
             View All Products
             <i className="fas fa-arrow-right"></i>
           </Link>

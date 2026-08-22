@@ -1,7 +1,33 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
+import { useState } from "react";
+import { submitEnquiry } from "../../../src/utils/submitEnquiry";
 
 export default function Subscribe() {
+  const [loading, setLoading] = useState(false);
+  const [statusMessage, setStatusMessage] = useState("");
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setLoading(true);
+    setStatusMessage("");
+
+    const formData = new FormData(e.currentTarget);
+    const result = await submitEnquiry({
+      formName: "Newsletter Subscribe",
+      name: "Subscriber", // Name is required by backend, so we provide a default
+      email: formData.get("email") as string,
+    });
+
+    setStatusMessage(result.message);
+    if (result.success) {
+      e.currentTarget.reset();
+    }
+    setLoading(false);
+  };
+
   return (
     <section className="subscribe-section">
       <div className="auto-container">
@@ -39,7 +65,12 @@ export default function Subscribe() {
             <div className="col-lg-6 col-md-12 col-sm-12 form-column">
               <div className="form-inner">
                 <h2>Sign up for Email</h2>
-                <form method="post" action="contact.html">
+                {statusMessage && (
+                  <div style={{ padding: '8px', marginBottom: '10px', fontSize: '13px', color: statusMessage.includes('Thank') ? '#166534' : '#991b1b' }}>
+                    {statusMessage}
+                  </div>
+                )}
+                <form onSubmit={handleSubmit}>
                   <div className="form-group">
                     <input
                       type="email"
@@ -47,7 +78,9 @@ export default function Subscribe() {
                       placeholder="Your Email"
                       required
                     />
-                    <button type="submit">Submit Now</button>
+                    <button type="submit" disabled={loading} style={{ opacity: loading ? 0.7 : 1 }}>
+                      {loading ? '...' : 'Submit Now'}
+                    </button>
                   </div>
                 </form>
               </div>

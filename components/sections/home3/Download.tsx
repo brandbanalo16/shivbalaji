@@ -1,5 +1,37 @@
+"use client";
+
 import Image from "next/image";
+import { useState } from "react";
+import { submitEnquiry } from "../../../src/utils/submitEnquiry";
+
 export default function Download() {
+  const [loading, setLoading] = useState(false);
+  const [statusMessage, setStatusMessage] = useState("");
+  const [statusType, setStatusType] = useState<"success" | "error" | "">("");
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setLoading(true);
+    setStatusMessage("");
+    
+    const formData = new FormData(e.currentTarget);
+    const result = await submitEnquiry({
+      formName: "Home3 Appointment Form",
+      name: formData.get("name") as string,
+      email: formData.get("email") as string,
+      phone: formData.get("phone") as string,
+      product: formData.get("interest") as string,
+    });
+    
+    setStatusMessage(result.message);
+    setStatusType(result.success ? "success" : "error");
+    
+    if (result.success) {
+      e.currentTarget.reset();
+    }
+    setLoading(false);
+  };
+
   return (
         <section className="download-section pt_120">
             <div className="pattern-layer">
@@ -41,7 +73,12 @@ export default function Download() {
                             <div className="content-box ml_100">
                                 <div className="shape" style={{ backgroundImage: "url(assets/images/shape/shape-33.png)" }}></div>
                                 <h3>Make an Appointment</h3>
-                                <form method="post" action="index-3.html" className="default-form">
+                                {statusMessage && (
+                                  <div style={{ padding: '10px', marginBottom: '15px', borderRadius: '4px', background: statusType === 'success' ? '#dcfce7' : '#fee2e2', color: statusType === 'success' ? '#166534' : '#991b1b', fontSize: '14px' }}>
+                                    {statusMessage}
+                                  </div>
+                                )}
+                                <form onSubmit={handleSubmit} className="default-form">
                                     <div className="form-group">
                                         <div className="icon"><i className="icon-45"></i></div>
                                         <input type="text" name="name" placeholder="Name" required/>
@@ -53,10 +90,10 @@ export default function Download() {
                                     <div className="form-group">
                                         <div className="icon"><Image src="/assets/images/icons/icon-15.svg" alt="Icon" width={15} height={15} priority /></div>
                                         <div className="select-box">
-                                            <select className="selectmenu">
-                                                <option>I&apos;m interested in *</option>
-                                                <option>Heart Health</option>
-                                                <option>Cardiology</option>
+                                            <select name="interest" className="selectmenu">
+                                                <option value="">I&apos;m interested in *</option>
+                                                <option value="Heart Health">Heart Health</option>
+                                                <option value="Cardiology">Cardiology</option>
                                                 <option>Dental</option>
                                                 <option>Gastroenterology</option>
                                             </select>
@@ -66,8 +103,10 @@ export default function Download() {
                                         <div className="icon"><i className="icon-48"></i></div>
                                         <textarea name="message" placeholder="Message"></textarea>
                                     </div>
-                                    <div className="form-group message-btn">
-                                        <button type="submit" className="theme-btn btn-two"><span>Send your message</span></button>
+                                    <div className="form-group mb_0 message-btn">
+                                        <button type="submit" className="theme-btn btn-one" disabled={loading} style={{ opacity: loading ? 0.7 : 1 }}>
+                                            <span>{loading ? 'Submitting...' : 'Send Request'}</span>
+                                        </button>
                                     </div>
                                 </form>
                             </div>

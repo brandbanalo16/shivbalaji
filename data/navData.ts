@@ -49,7 +49,7 @@ export const footerQuickLinks = [
   { title: "Blog", href: "/blog" },
   { title: "Contact Us", href: "/contact" },
   { title: "Privacy Policy", href: "/privacy-policy" },
-  { title: "Terms & Conditions", href: "/terms" },
+  { title: "Terms & Conditions", href: "/terms-conditions" },
 ];
 
 /** Footer company links */

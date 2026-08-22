@@ -1,5 +1,41 @@
+"use client";
+
 import Image from "next/image";
+import { useState } from "react";
+import { submitEnquiry } from "../../../src/utils/submitEnquiry";
+
 export default function Appointment() {
+  const [loading, setLoading] = useState(false);
+  const [statusMessage, setStatusMessage] = useState("");
+  const [statusType, setStatusType] = useState<"success" | "error" | "">("");
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setLoading(true);
+    setStatusMessage("");
+    
+    const formData = new FormData(e.currentTarget);
+    const data = {
+      formName: "Home Page Appointment",
+      name: formData.get("name") as string,
+      phone: formData.get("phone") as string,
+      email: formData.get("email") as string,
+      city: formData.get("city") as string,
+      product: formData.get("product") as string,
+    };
+
+    const result = await submitEnquiry(data);
+    
+    setStatusMessage(result.message);
+    setStatusType(result.success ? "success" : "error");
+    
+    if (result.success) {
+      e.currentTarget.reset();
+    }
+    
+    setLoading(false);
+  };
+
   return (
         <section className="appointment-section">
             <div className="pattern-layer" style={{ backgroundImage: "url(assets/images/shape/shape-17.png)" }}></div>
@@ -18,7 +54,12 @@ export default function Appointment() {
                     <div className="form-inner">
                         <div className="shape" style={{ backgroundImage: "url(assets/images/shape/shape-16.png)" }}></div>
                       <h3>Start Your Inquiry</h3>
-                      <form action="index.html" method="post">
+                      {statusMessage && (
+                        <div style={{ padding: '12px', marginBottom: '15px', borderRadius: '4px', background: statusType === 'success' ? '#dcfce7' : '#fee2e2', color: statusType === 'success' ? '#166534' : '#991b1b', fontSize: '14px' }}>
+                          {statusMessage}
+                        </div>
+                      )}
+                      <form onSubmit={handleSubmit}>
                           <div className="row">
 
                               <div className="col-lg-6 col-md-6 col-sm-12 mb-3">
@@ -94,12 +135,14 @@ export default function Appointment() {
                                   ></div>
                               </div>
 
-                              <div className="col-12">
+                              <div className="col-12 mt-4">
                                   <button
                                       type="submit"
-                                      className="theme-btn btn-two "
+                                      className="theme-btn btn-one w-100 py-3 d-flex align-items-center justify-content-center fw-bold rounded-3 border-0"
+                                      style={{ gap: "8px" }}
+                                      disabled={loading}
                                   >
-                                      <span>Send Message</span>
+                                      {loading ? 'Submitting...' : 'Submit Now'} <i className="fa-solid fa-arrow-right"></i>
                                   </button>
                               </div>
 

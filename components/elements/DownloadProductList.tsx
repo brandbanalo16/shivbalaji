@@ -1,9 +1,12 @@
 "use client";
 
 import { useState } from "react";
+import { submitEnquiry } from "../../src/utils/submitEnquiry";
 
 export default function DownloadProductList() {
   const [showForm, setShowForm] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [statusMessage, setStatusMessage] = useState("");
 
   const [formData, setFormData] = useState({
     name: "",
@@ -23,37 +26,43 @@ export default function DownloadProductList() {
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    setLoading(true);
+    setStatusMessage("");
 
-    // Save data (Optional)
-    console.log(formData);
+    const result = await submitEnquiry({
+      formName: "Download Product List",
+      ...formData
+    });
 
-    // API Call
-    // await fetch("/api/download", {
-    //   method: "POST",
-    //   headers: {
-    //     "Content-Type": "application/json",
-    //   },
-    //   body: JSON.stringify(formData),
-    // });
+    if (!result.success) {
+      setStatusMessage(result.message);
+      setLoading(false);
+      return;
+    }
 
     // Download PDF
     const link = document.createElement("a");
-    link.href = "/downloads/product-list.pdf"; // Put PDF inside public/downloads
-    link.download = "Product-List.pdf";
+    link.href = "/assets/documents/product-list.pdf"; // Assuming there's a document here, or just a fallback
+    link.download = "Shiv-Balaji-Product-List.pdf";
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
 
-    setShowForm(false);
+    setStatusMessage("Download started!");
+    setTimeout(() => {
+      setShowForm(false);
+      setStatusMessage("");
 
-    setFormData({
-      name: "",
-      phone: "",
-      email: "",
-      company: "",
-      city: "",
-      message: "",
-    });
+      setFormData({
+        name: "",
+        phone: "",
+        email: "",
+        company: "",
+        city: "",
+        message: "",
+      });
+      setLoading(false);
+    }, 2000);
   };
 
   return (
@@ -74,10 +83,13 @@ export default function DownloadProductList() {
               ×
             </button>
 
-            <h3 style={{ color: "orange", fontWeight: "bold" }}>
-              Download Product Catalogue
-            </h3>
-
+            <h2>Download Product List</h2>
+            <p>Fill out the form below to get our complete product catalog.</p>
+            {statusMessage && (
+              <div style={{ padding: '10px', marginBottom: '15px', borderRadius: '4px', background: statusMessage.includes('started') ? '#dcfce7' : '#fee2e2', color: statusMessage.includes('started') ? '#166534' : '#991b1b', fontSize: '14px' }}>
+                {statusMessage}
+              </div>
+            )}
             <form onSubmit={handleSubmit}>
               <input
                 type="text"
@@ -129,8 +141,8 @@ export default function DownloadProductList() {
                 onChange={handleChange}
               />
 
-              <button type="submit" className="submit-btn">
-                Submit & Download
+              <button type="submit" disabled={loading} style={{ opacity: loading ? 0.7 : 1 }}>
+                {loading ? 'Processing...' : 'Submit & Download'}
               </button>
             </form>
           </div>

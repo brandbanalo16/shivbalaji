@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { submitEnquiry } from "../../src/utils/submitEnquiry";
 
 export default function ContactForm() {
   const [formData, setFormData] = useState({
@@ -10,6 +11,7 @@ export default function ContactForm() {
   });
 
   const [status, setStatus] = useState<string | null>(null);
+  const [statusMessage, setStatusMessage] = useState<string>("");
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -18,28 +20,30 @@ export default function ContactForm() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setStatus("loading");
+    setStatusMessage("");
 
-    try {
-      const res = await fetch("/api/contact", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
-      });
+    const result = await submitEnquiry({
+      formName: "Contact Us Form",
+      ...formData
+    });
 
-      if (res.ok) {
-        setStatus("success");
-        setFormData({ name: "", email: "", message: "" });
-      } else {
-        setStatus("error");
-      }
-    } catch (err) {
-      console.error(err);
+    if (result.success) {
+      setStatus("success");
+      setStatusMessage(result.message);
+      setFormData({ name: "", email: "", message: "" });
+    } else {
       setStatus("error");
+      setStatusMessage(result.message);
     }
   };
 
   return (
     <form onSubmit={handleSubmit} className="default-form">
+        {statusMessage && (
+          <div style={{ padding: '15px', marginBottom: '20px', borderRadius: '6px', background: status === 'success' ? '#dcfce7' : '#fee2e2', color: status === 'success' ? '#166534' : '#991b1b', fontSize: '14px' }}>
+            {statusMessage}
+          </div>
+        )}
         <div className="row clearfix">
             <div className="col-lg-6 col-md-6 col-sm-12 form-group">
                 <input
@@ -78,18 +82,11 @@ export default function ContactForm() {
                 />
             </div>
             <div className="col-lg-12 col-md-12 col-sm-12 form-group message-btn">
-                <button
-                type="submit"
-                className="theme-btn btn-two"
-            >
-                <span>Send Message</span>
-            </button>
+                <button className="theme-btn btn-one" type="submit" name="submit-form" disabled={status === "loading"}>
+                    <span style={{ opacity: status === "loading" ? 0.7 : 1 }}>{status === "loading" ? 'Sending...' : 'Send Message'}</span>
+                </button>
             </div>
         </div>
-
-      {status === "loading" && <p className="text-gray-600">Sending...</p>}
-      {status === "success" && <p className="text-green-600">Message sent successfully ✅</p>}
-      {status === "error" && <p className="text-red-600">Something went wrong ❌</p>}
     </form>
   );
 }

@@ -109,7 +109,7 @@ export default function Service() {
         style={{ backgroundImage: "url(/assets/images/shape/shape-13.png)" }}
       />
 
-      <span className="big-text">Shiv Balaji Surgical, Shiv Balaji Surgical</span>
+      <span className="big-text" >Shiv Balaji Surgical, Shiv Balaji Surgical</span>
 
       <style>{`
         .svc-slide-card {
@@ -245,10 +245,10 @@ export default function Service() {
             autoplay={{ delay: 4000, disableOnInteraction: false, pauseOnMouseEnter: true }}
             navigation={{ nextEl: ".svc-nav-next", prevEl: ".svc-nav-prev" }}
             breakpoints={{
-              320:  { slidesPerView: 1 },
-              575:  { slidesPerView: 1 },
-              767:  { slidesPerView: 2 },
-              991:  { slidesPerView: 3 },
+              320: { slidesPerView: 1 },
+              575: { slidesPerView: 1 },
+              767: { slidesPerView: 2 },
+              991: { slidesPerView: 3 },
               1199: { slidesPerView: 3 },
             }}
           >
@@ -256,19 +256,19 @@ export default function Service() {
               <SwiperSlide key={index}>
                 <div className="svc-slide-card">
                   <div className="svc-slide-img">
-  <Image
-    src={service.image}
-    alt={service.alt || service.title}
-    fill
-    sizes="(max-width: 768px) 100vw, 416px"
-    style={{
-      objectFit: "cover",
-      objectPosition: "center",
-    }}
-  />
+                    <Image
+                      src={service.image}
+                      alt={service.alt || service.title}
+                      fill
+                      sizes="(max-width: 768px) 100vw, 416px"
+                      style={{
+                        objectFit: "cover",
+                        objectPosition: "center",
+                      }}
+                    />
 
-  {/* <span className="svc-badge">{service.tag}</span> */}
-</div>
+                    {/* <span className="svc-badge">{service.tag}</span> */}
+                  </div>
                   <div className="svc-slide-body">
                     <span className="svc-cat-tag">{service.category}</span>
                     <h3>

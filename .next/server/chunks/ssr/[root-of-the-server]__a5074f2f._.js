@@ -209,7 +209,11 @@ __turbopack_context__.s([
     "productParams",
     ()=>productParams,
     "slugify",
-    ()=>slugify
+    ()=>slugify,
+    "subcategoryImageMap",
+    ()=>subcategoryImageMap,
+    "subcategoryImages",
+    ()=>subcategoryImages
 ]);
 const slugify = (value)=>value.toLowerCase().trim().replace(/&/g, "and").replace(/[^a-z0-9]+/g, "-").replace(/-+/g, "-").replace(/^-|-$/g, "");
 const makeProduct = (product)=>({
@@ -218,1163 +222,6 @@ const makeProduct = (product)=>({
     });
 const productImg = (index)=>`/assets/images/product/${index}.webp`;
 const departments = [
-    {
-        slug: "bedside-lockers-over-bed-tables",
-        name: "Bedside Lockers & Over-Bed Tables",
-        image: "/assets/images/service/R1.webp",
-        icon: "fa-box-archive",
-        description: "Bedside lockers and over-bed tables for organized patient storage and bedside utility. Available in standard, deluxe, ABS and stainless steel variants.",
-        products: [
-            makeProduct({
-                product_id: "SBS-027",
-                product_name: "Bedside Locker Deluxe",
-                model: "SB-G127",
-                category: "Bedside Lockers & Over-Bed Tables",
-                image: "/assets/images/service/R1.webp",
-                short_description: "Bedside Locker Deluxe (Model SB-G127) — Size 16L x 16W x 32H inch",
-                description: "Bedside Locker Deluxe - Model SB-G127 — Bedside Locker Deluxe (Model SB-G127) — Size 16L x 16W x 32H inch",
-                subcategory: "Bedside Lockers",
-                specifications: [
-                    "Size: 16L x 16W x 32H inch.",
-                    "CRC sheet construction with one box and one drawer.",
-                    "Jointless/bend-pressed S.S. top with three-side raised edges.",
-                    "Fitted with PVC stumps.",
-                    "Epoxy powder coated finish."
-                ],
-                optional_feature: [
-                    "Complete S.S. model",
-                    "Double-color powder-coated model"
-                ],
-                features: [
-                    "Size 16L x 16W x 32H inch",
-                    "CRC sheet construction with one box and one drawer",
-                    "Jointless bend-pressed S.S. top with three side raised edges",
-                    "Fitted with PVC stumps",
-                    "Epoxy powder coated finish",
-                    "Also available in complete S.S. model & double colour PC"
-                ],
-                seo: {
-                    focus_keyword: "Bedside Locker Deluxe",
-                    meta_title: "Bedside Locker Deluxe | Semi Fowler Bed Manufacturer and Hospital Bed Exporter India | Shiv Balaji Surgical",
-                    meta_description: "Buy the best Bedside Locker Deluxe. We are a leading ICU Bed Mechanical Manufacturer and GMP Certified Hospital Furniture Manufacturer. Explore our high-quality Bedside Locker Deluxe today!",
-                    url_slug: "/products/bedside-lockers-over-bed-tables/sb-g127-bedside-locker-deluxe",
-                    image_alt_text: "Bedside Locker Deluxe - SB-G127 - ICU Bed Mechanical Manufacturer",
-                    og_title: "Bedside Locker Deluxe SB-G127 | Shiv Balaji Surgical",
-                    og_description: "Buy Bedside Locker Deluxe (Model SB-G127) from Shiv Balaji Surgical - leading hospital furniture manufacturer, supplier & dealer in Delhi NCR. Size 16L x 16W…",
-                    twitter_title: "Bedside Locker Deluxe SB-G127 | Shiv Balaji Surgical",
-                    twitter_description: "Buy Bedside Locker Deluxe (Model SB-G127) from Shiv Balaji Surgical - leading hospital furniture manufacturer, supplier & dealer in Delhi NCR. Size 16L x 16W…",
-                    additional_keywords: [
-                        "ICU Bed Mechanical Manufacturer",
-                        "GMP Certified Hospital Furniture Manufacturer",
-                        "Hospital Bed Manufacturer in Delhi",
-                        "Pediatric Hospital Bed Supplier",
-                        "Medical Furniture Manufacturer India"
-                    ],
-                    business_keywords: [
-                        "Bedside Locker Deluxe Manufacturer",
-                        "Bedside Locker Deluxe Supplier",
-                        "Bedside Locker Deluxe Dealer",
-                        "Bedside Locker Deluxe Exporter",
-                        "Bedside Locker Deluxe Wholesaler in Delhi",
-                        "Hospital Furniture Manufacturer India",
-                        "Hospital Equipment Supplier Delhi NCR"
-                    ],
-                    seo_content_block: "If you are looking for the best Bedside Locker Deluxe, you are in the right place. Our Bedside Locker Deluxe is designed for optimal performance. As a top ICU Bed Mechanical Manufacturer, we ensure every Bedside Locker Deluxe meets high standards. The Bedside Locker Deluxe offers incredible durability. Patients and caregivers prefer our Bedside Locker Deluxe for its reliability. When you choose our Bedside Locker Deluxe, you get quality. We are known as a leading GMP Certified Hospital Furniture Manufacturer as well. This Bedside Locker Deluxe is perfect for clinics. The Bedside Locker Deluxe provides unmatched comfort. Contact us if you need a Bedside Locker Deluxe from a Hospital Bed Manufacturer in Delhi. We also supply related items as a Pediatric Hospital Bed Supplier. The Bedside Locker Deluxe stands out in the market. Many hospitals trust our Bedside Locker Deluxe. Experience the excellence of this Bedside Locker Deluxe today. We are your reliable Medical Furniture Manufacturer India.",
-                    schema_org: {
-                        "@context": "https://schema.org/",
-                        "@type": "Product",
-                        "name": "Bedside Locker Deluxe - SB-G127",
-                        "sku": "SB-G127",
-                        "category": "Bedside Lockers & Over-Bed Tables",
-                        "brand": {
-                            "@type": "Brand",
-                            "name": "Shiv Balaji Surgical"
-                        },
-                        "manufacturer": {
-                            "@type": "Organization",
-                            "name": "Shiv Balaji Surgical",
-                            "address": "Kh. No. 25/2, Nangli Sakrawati, Najafgarh, New Delhi - 110043, India"
-                        },
-                        "description": "Buy Bedside Locker Deluxe (Model SB-G127) from Shiv Balaji Surgical - leading hospital furniture manufacturer, supplier & dealer in Delhi NCR. Size 16L x 16W…"
-                    }
-                }
-            }),
-            makeProduct({
-                product_id: "SBS-028",
-                product_name: "Bedside Locker Super Deluxe",
-                model: "SB-G128",
-                category: "Bedside Lockers & Over-Bed Tables",
-                image: productImg(28),
-                short_description: "Bedside Locker Super Deluxe (Model SB-G128) — Size 16L x 16W x 32H inch",
-                description: "Bedside Locker Super Deluxe - Model SB-G128 — Bedside Locker Super Deluxe (Model SB-G128) — Size 16L x 16W x 32H inch",
-                subcategory: "Bedside Lockers",
-                specifications: [
-                    "Size: 16L x 16W x 32H inch.",
-                    "Machine-pressed CRCA sheet enclosed on three sides.",
-                    "One box and one drawer with membrane/laminated pressed top and front side.",
-                    "Fitted with 50 mm dia castors.",
-                    "Epoxy powder coated finish."
-                ],
-                optional_feature: [],
-                features: [
-                    "Size 16L x 16W x 32H inch",
-                    "Machine pressed CRCA sheet enclosed on three sides",
-                    "One box and one drawer with laminated pressed top and front",
-                    "Fitted with 50mm dia castors",
-                    "Epoxy powder coated finish"
-                ],
-                seo: {
-                    focus_keyword: "Bedside Locker Super Deluxe",
-                    meta_title: "Bedside Locker Super Deluxe | Fowler Bed Electric Manufacturer and Medicine Trolley Manufacturer | Shiv Balaji Surgical",
-                    meta_description: "Buy the best Bedside Locker Super Deluxe. We are a leading Attendant Bed Manufacturer and ICU Bed Electric Manufacturer. Explore our high-quality Bedside Locker Super Deluxe today!",
-                    url_slug: "/products/bedside-lockers-over-bed-tables/sb-g128-bedside-locker-super-deluxe",
-                    image_alt_text: "Bedside Locker Super Deluxe - SB-G128 - Attendant Bed Manufacturer",
-                    og_title: "Bedside Locker Super Deluxe SB-G128 | Shiv Balaji Surgical",
-                    og_description: "Buy Bedside Locker Super Deluxe (Model SB-G128) from Shiv Balaji Surgical - leading hospital furniture manufacturer, supplier & dealer in Delhi NCR. Size 16L…",
-                    twitter_title: "Bedside Locker Super Deluxe SB-G128 | Shiv Balaji Surgical",
-                    twitter_description: "Buy Bedside Locker Super Deluxe (Model SB-G128) from Shiv Balaji Surgical - leading hospital furniture manufacturer, supplier & dealer in Delhi NCR. Size 16L…",
-                    additional_keywords: [
-                        "Attendant Bed Manufacturer",
-                        "ICU Bed Electric Manufacturer",
-                        "Hospital Foot Step Manufacturer",
-                        "Hospital Bed Manufacturer with ABS Panels",
-                        "ISO Certified Hospital Bed Manufacturer"
-                    ],
-                    business_keywords: [
-                        "Bedside Locker Super Deluxe Manufacturer",
-                        "Bedside Locker Super Deluxe Supplier",
-                        "Bedside Locker Super Deluxe Dealer",
-                        "Bedside Locker Super Deluxe Exporter",
-                        "Bedside Locker Super Deluxe Wholesaler in Delhi",
-                        "Hospital Furniture Manufacturer India",
-                        "Hospital Equipment Supplier Delhi NCR"
-                    ],
-                    seo_content_block: "If you are looking for the best Bedside Locker Super Deluxe, you are in the right place. Our Bedside Locker Super Deluxe is designed for optimal performance. As a top Attendant Bed Manufacturer, we ensure every Bedside Locker Super Deluxe meets high standards. The Bedside Locker Super Deluxe offers incredible durability. Patients and caregivers prefer our Bedside Locker Super Deluxe for its reliability. When you choose our Bedside Locker Super Deluxe, you get quality. We are known as a leading ICU Bed Electric Manufacturer as well. This Bedside Locker Super Deluxe is perfect for clinics. The Bedside Locker Super Deluxe provides unmatched comfort. Contact us if you need a Bedside Locker Super Deluxe from a Hospital Foot Step Manufacturer. We also supply related items as a Hospital Bed Manufacturer with ABS Panels. The Bedside Locker Super Deluxe stands out in the market. Many hospitals trust our Bedside Locker Super Deluxe. Experience the excellence of this Bedside Locker Super Deluxe today. We are your reliable ISO Certified Hospital Bed Manufacturer.",
-                    schema_org: {
-                        "@context": "https://schema.org/",
-                        "@type": "Product",
-                        "name": "Bedside Locker Super Deluxe - SB-G128",
-                        "sku": "SB-G128",
-                        "category": "Bedside Lockers & Over-Bed Tables",
-                        "brand": {
-                            "@type": "Brand",
-                            "name": "Shiv Balaji Surgical"
-                        },
-                        "manufacturer": {
-                            "@type": "Organization",
-                            "name": "Shiv Balaji Surgical",
-                            "address": "Kh. No. 25/2, Nangli Sakrawati, Najafgarh, New Delhi - 110043, India"
-                        },
-                        "description": "Buy Bedside Locker Super Deluxe (Model SB-G128) from Shiv Balaji Surgical - leading hospital furniture manufacturer, supplier & dealer in Delhi NCR. Size 16L…"
-                    }
-                }
-            }),
-            makeProduct({
-                product_id: "SBS-029",
-                product_name: "Bedside Locker ABS",
-                model: "SB-G129",
-                category: "Bedside Lockers & Over-Bed Tables",
-                image: productImg(29),
-                short_description: "Bedside Locker ABS (Model SB-G129) — Size 480L x 480W x 760-800H mm",
-                description: "Bedside Locker ABS - Model SB-G129 — Bedside Locker ABS (Model SB-G129) — Size 480L x 480W x 760-800H mm",
-                subcategory: "Bedside Lockers",
-                specifications: [
-                    "Size: 480L x 480W x 760-800H mm.",
-                    "Made of ABS plastic.",
-                    "Built-in towel shelf and one oddment rack."
-                ],
-                optional_feature: [],
-                features: [
-                    "Size 480L x 480W x 760-800H mm",
-                    "Made of ABS plastic - lightweight, stain-resistant, non-ageing",
-                    "Built-in towel shelf and one oddment rack"
-                ],
-                seo: {
-                    focus_keyword: "Bedside Locker ABS",
-                    meta_title: "Bedside Locker ABS | Instrument Trolley Manufacturer and Hospital Bed Exporter India | Shiv Balaji Surgical",
-                    meta_description: "Buy the best Bedside Locker ABS. We are a leading Pediatric Hospital Bed Supplier and Hospital Bed Price List India. Explore our high-quality Bedside Locker ABS today!",
-                    url_slug: "/products/bedside-lockers-over-bed-tables/sb-g129-bedside-locker-abs",
-                    image_alt_text: "Bedside Locker ABS - SB-G129 - Pediatric Hospital Bed Supplier",
-                    og_title: "Bedside Locker ABS SB-G129 | Shiv Balaji Surgical",
-                    og_description: "Buy Bedside Locker ABS (Model SB-G129) from Shiv Balaji Surgical - leading hospital furniture manufacturer, supplier & dealer in Delhi NCR. Size 480L x 480W x…",
-                    twitter_title: "Bedside Locker ABS SB-G129 | Shiv Balaji Surgical",
-                    twitter_description: "Buy Bedside Locker ABS (Model SB-G129) from Shiv Balaji Surgical - leading hospital furniture manufacturer, supplier & dealer in Delhi NCR. Size 480L x 480W x…",
-                    additional_keywords: [
-                        "Pediatric Hospital Bed Supplier",
-                        "Hospital Bed Price List India",
-                        "Recovery Bed Fixed Height Manufacturer",
-                        "ICU Bed Electric Manufacturer",
-                        "Hospital Bed Supplier Near Me"
-                    ],
-                    business_keywords: [
-                        "Bedside Locker ABS Manufacturer",
-                        "Bedside Locker ABS Supplier",
-                        "Bedside Locker ABS Dealer",
-                        "Bedside Locker ABS Exporter",
-                        "Bedside Locker ABS Wholesaler in Delhi",
-                        "Hospital Furniture Manufacturer India",
-                        "Hospital Equipment Supplier Delhi NCR"
-                    ],
-                    seo_content_block: "If you are looking for the best Bedside Locker ABS, you are in the right place. Our Bedside Locker ABS is designed for optimal performance. As a top Pediatric Hospital Bed Supplier, we ensure every Bedside Locker ABS meets high standards. The Bedside Locker ABS offers incredible durability. Patients and caregivers prefer our Bedside Locker ABS for its reliability. When you choose our Bedside Locker ABS, you get quality. We are known as a leading Hospital Bed Price List India as well. This Bedside Locker ABS is perfect for clinics. The Bedside Locker ABS provides unmatched comfort. Contact us if you need a Bedside Locker ABS from a Recovery Bed Fixed Height Manufacturer. We also supply related items as a ICU Bed Electric Manufacturer. The Bedside Locker ABS stands out in the market. Many hospitals trust our Bedside Locker ABS. Experience the excellence of this Bedside Locker ABS today. We are your reliable Hospital Bed Supplier Near Me.",
-                    schema_org: {
-                        "@context": "https://schema.org/",
-                        "@type": "Product",
-                        "name": "Bedside Locker ABS - SB-G129",
-                        "sku": "SB-G129",
-                        "category": "Bedside Lockers & Over-Bed Tables",
-                        "brand": {
-                            "@type": "Brand",
-                            "name": "Shiv Balaji Surgical"
-                        },
-                        "manufacturer": {
-                            "@type": "Organization",
-                            "name": "Shiv Balaji Surgical",
-                            "address": "Kh. No. 25/2, Nangli Sakrawati, Najafgarh, New Delhi - 110043, India"
-                        },
-                        "description": "Buy Bedside Locker ABS (Model SB-G129) from Shiv Balaji Surgical - leading hospital furniture manufacturer, supplier & dealer in Delhi NCR. Size 480L x 480W x…"
-                    }
-                }
-            }),
-            makeProduct({
-                product_id: "SBS-030",
-                product_name: "Bedside Locker Standard",
-                model: "SB-G130",
-                category: "Bedside Lockers & Over-Bed Tables",
-                image: productImg(30),
-                short_description: "Bedside Locker Standard (Model SB-G130) — Size 16L x 16W x 32H inch",
-                description: "Bedside Locker Standard - Model SB-G130 — Bedside Locker Standard (Model SB-G130) — Size 16L x 16W x 32H inch",
-                subcategory: "Bedside Lockers",
-                specifications: [
-                    "Size: 16L x 16W x 32H inch.",
-                    "Four legs fitted with PVC stumps.",
-                    "Box and door made of M.S. sheet.",
-                    "S.S. top made by machine-pressed jointless/bend-pressed construction with three-side raised edge.",
-                    "Epoxy powder coated finish."
-                ],
-                optional_feature: [
-                    "Complete S.S. model",
-                    "Double-color powder-coated model"
-                ],
-                features: [
-                    "Size 16L x 16W x 32H inch",
-                    "Four legs fitted with PVC stumps",
-                    "Box and door made of MS sheet",
-                    "Machine pressed jointless S.S. top with three side raised edge",
-                    "Epoxy powder coated finish"
-                ],
-                seo: {
-                    focus_keyword: "Bedside Locker Standard",
-                    meta_title: "Bedside Locker Standard | Shiv Balaji Surgical Hospital Beds and Hospital Foot Step Manufacturer | Shiv Balaji Surgical",
-                    meta_description: "Buy the best Bedside Locker Standard. We are a leading Shiv Balaji Surgical Hospital Beds and Examination Table Manufacturer. Explore our high-quality Bedside Locker Standard today!",
-                    url_slug: "/products/bedside-lockers-over-bed-tables/sb-g130-bedside-locker-standard",
-                    image_alt_text: "Bedside Locker Standard - SB-G130 - Shiv Balaji Surgical Hospital Beds",
-                    og_title: "Bedside Locker Standard SB-G130 | Shiv Balaji Surgical",
-                    og_description: "Buy Bedside Locker Standard (Model SB-G130) from Shiv Balaji Surgical - leading hospital furniture manufacturer, supplier & dealer in Delhi NCR. Size 16L x…",
-                    twitter_title: "Bedside Locker Standard SB-G130 | Shiv Balaji Surgical",
-                    twitter_description: "Buy Bedside Locker Standard (Model SB-G130) from Shiv Balaji Surgical - leading hospital furniture manufacturer, supplier & dealer in Delhi NCR. Size 16L x…",
-                    additional_keywords: [
-                        "Shiv Balaji Surgical Hospital Beds",
-                        "Examination Table Manufacturer",
-                        "ISO Certified Hospital Bed Manufacturer",
-                        "Bedside Locker Manufacturer",
-                        "Buy ICU Bed Online India"
-                    ],
-                    business_keywords: [
-                        "Bedside Locker Standard Manufacturer",
-                        "Bedside Locker Standard Supplier",
-                        "Bedside Locker Standard Dealer",
-                        "Bedside Locker Standard Exporter",
-                        "Bedside Locker Standard Wholesaler in Delhi",
-                        "Hospital Furniture Manufacturer India",
-                        "Hospital Equipment Supplier Delhi NCR"
-                    ],
-                    seo_content_block: "If you are looking for the best Bedside Locker Standard, you are in the right place. Our Bedside Locker Standard is designed for optimal performance. As a top Shiv Balaji Surgical Hospital Beds, we ensure every Bedside Locker Standard meets high standards. The Bedside Locker Standard offers incredible durability. Patients and caregivers prefer our Bedside Locker Standard for its reliability. When you choose our Bedside Locker Standard, you get quality. We are known as a leading Examination Table Manufacturer as well. This Bedside Locker Standard is perfect for clinics. The Bedside Locker Standard provides unmatched comfort. Contact us if you need a Bedside Locker Standard from a ISO Certified Hospital Bed Manufacturer. We also supply related items as a Bedside Locker Manufacturer. The Bedside Locker Standard stands out in the market. Many hospitals trust our Bedside Locker Standard. Experience the excellence of this Bedside Locker Standard today. We are your reliable Buy ICU Bed Online India.",
-                    schema_org: {
-                        "@context": "https://schema.org/",
-                        "@type": "Product",
-                        "name": "Bedside Locker Standard - SB-G130",
-                        "sku": "SB-G130",
-                        "category": "Bedside Lockers & Over-Bed Tables",
-                        "brand": {
-                            "@type": "Brand",
-                            "name": "Shiv Balaji Surgical"
-                        },
-                        "manufacturer": {
-                            "@type": "Organization",
-                            "name": "Shiv Balaji Surgical",
-                            "address": "Kh. No. 25/2, Nangli Sakrawati, Najafgarh, New Delhi - 110043, India"
-                        },
-                        "description": "Buy Bedside Locker Standard (Model SB-G130) from Shiv Balaji Surgical - leading hospital furniture manufacturer, supplier & dealer in Delhi NCR. Size 16L x…"
-                    }
-                }
-            }),
-            makeProduct({
-                product_id: "SBS-031",
-                product_name: "Bedside Locker Basic (Wooden Finish)",
-                model: "SB-G131",
-                category: "Bedside Lockers & Over-Bed Tables",
-                image: productImg(31),
-                short_description: "Bedside Locker Basic (Wooden Finish) (Model SB-G131) — Size 16L x 16W x 32H inch",
-                description: "Bedside Locker Basic (Wooden Finish) - Model SB-G131 — Bedside Locker Basic (Wooden Finish) (Model SB-G131) — Size 16L x 16W x 32H inch",
-                subcategory: "Bedside Lockers",
-                specifications: [
-                    "Size: 16L x 16W x 32H inch.",
-                    "M.S. tubular framework fitted with rubber shoe.",
-                    "S.S. top with three-side railing and two-side S.S. tray.",
-                    "Pre-treated and epoxy powder coated frame."
-                ],
-                optional_feature: [
-                    "Complete S.S. model",
-                    "Three S.S. trays/shelves"
-                ],
-                features: [
-                    "Size 16L x 16W x 32H inch",
-                    "MS tubular frame work fitted with rubber shoe",
-                    "S.S. top with three side railing and two side S.S. tray",
-                    "Pre-treated and epoxy powder coated frame"
-                ],
-                seo: {
-                    focus_keyword: "Bedside Locker Basic (Wooden Finish)",
-                    meta_title: "Bedside Locker Basic (Wooden Finish) | Hospital Bed Manufacturer in Delhi and Hospital Bed Price List India | Shiv Balaji Surgical",
-                    meta_description: "Buy the best Bedside Locker Basic (Wooden Finish). We are a leading Hospital Bed Manufacturer in Delhi and Medical Furniture Manufacturer India. Explore our high-quality Bedside Locker Basic (Wooden Finish) today!",
-                    url_slug: "/products/bedside-lockers-over-bed-tables/sb-g131-bedside-locker-basic-wooden-finish",
-                    image_alt_text: "Bedside Locker Basic (Wooden Finish) - SB-G131 - Hospital Bed Manufacturer in Delhi",
-                    og_title: "Bedside Locker Basic (Wooden Finish) | Shiv Balaji Surgical",
-                    og_description: "Buy Bedside Locker Basic (Wooden Finish) (Model SB-G131) from Shiv Balaji Surgical - leading hospital furniture manufacturer, supplier & dealer in Delhi NCR.…",
-                    twitter_title: "Bedside Locker Basic (Wooden Finish) | Shiv Balaji Surgical",
-                    twitter_description: "Buy Bedside Locker Basic (Wooden Finish) (Model SB-G131) from Shiv Balaji Surgical - leading hospital furniture manufacturer, supplier & dealer in Delhi NCR.…",
-                    additional_keywords: [
-                        "Hospital Bed Manufacturer in Delhi",
-                        "Medical Furniture Manufacturer India",
-                        "Patient Stool Manufacturer",
-                        "Five Function ICU Bed",
-                        "Hospital Trolley Manufacturer"
-                    ],
-                    business_keywords: [
-                        "Bedside Locker Basic (Wooden Finish) Manufacturer",
-                        "Bedside Locker Basic (Wooden Finish) Supplier",
-                        "Bedside Locker Basic (Wooden Finish) Dealer",
-                        "Bedside Locker Basic (Wooden Finish) Exporter",
-                        "Bedside Locker Basic (Wooden Finish) Wholesaler in Delhi",
-                        "Hospital Furniture Manufacturer India",
-                        "Hospital Equipment Supplier Delhi NCR"
-                    ],
-                    seo_content_block: "If you are looking for the best Bedside Locker Basic (Wooden Finish), you are in the right place. Our Bedside Locker Basic (Wooden Finish) is designed for optimal performance. As a top Hospital Bed Manufacturer in Delhi, we ensure every Bedside Locker Basic (Wooden Finish) meets high standards. The Bedside Locker Basic (Wooden Finish) offers incredible durability. Patients and caregivers prefer our Bedside Locker Basic (Wooden Finish) for its reliability. When you choose our Bedside Locker Basic (Wooden Finish), you get quality. We are known as a leading Medical Furniture Manufacturer India as well. This Bedside Locker Basic (Wooden Finish) is perfect for clinics. The Bedside Locker Basic (Wooden Finish) provides unmatched comfort. Contact us if you need a Bedside Locker Basic (Wooden Finish) from a Patient Stool Manufacturer. We also supply related items as a Five Function ICU Bed. The Bedside Locker Basic (Wooden Finish) stands out in the market. Many hospitals trust our Bedside Locker Basic (Wooden Finish). Experience the excellence of this Bedside Locker Basic (Wooden Finish) today. We are your reliable Hospital Trolley Manufacturer.",
-                    schema_org: {
-                        "@context": "https://schema.org/",
-                        "@type": "Product",
-                        "name": "Bedside Locker Basic (Wooden Finish) - SB-G131",
-                        "sku": "SB-G131",
-                        "category": "Bedside Lockers & Over-Bed Tables",
-                        "brand": {
-                            "@type": "Brand",
-                            "name": "Shiv Balaji Surgical"
-                        },
-                        "manufacturer": {
-                            "@type": "Organization",
-                            "name": "Shiv Balaji Surgical",
-                            "address": "Kh. No. 25/2, Nangli Sakrawati, Najafgarh, New Delhi - 110043, India"
-                        },
-                        "description": "Buy Bedside Locker Basic (Wooden Finish) (Model SB-G131) from Shiv Balaji Surgical - leading hospital furniture manufacturer, supplier & dealer in Delhi NCR.…"
-                    }
-                }
-            }),
-            makeProduct({
-                product_id: "SBS-032",
-                product_name: "Utility Trolley with Drawer",
-                model: "SB-G132",
-                category: "Bedside Lockers & Over-Bed Tables",
-                image: productImg(32),
-                short_description: "Utility Trolley with Drawer (Model SB-G132) — Size 22L x 20W x 34H inch",
-                description: "Utility Trolley with Drawer - Model SB-G132 — Utility Trolley with Drawer (Model SB-G132) — Size 22L x 20W x 34H inch",
-                subcategory: "Bedside Lockers",
-                specifications: [
-                    "Size: 22L x 20W x 34H inch.",
-                    "M.S. framework.",
-                    "S.S. shelves.",
-                    "One M.S. drawer.",
-                    "10 cm dia castors.",
-                    "Epoxy powder coated finish."
-                ],
-                optional_feature: [
-                    "Complete S.S. model"
-                ],
-                features: [
-                    "Size 22L x 20W x 34H inch",
-                    "MS frame work with S.S. shelves",
-                    "One MS drawer",
-                    "10cm dia castors",
-                    "Epoxy powder coated finish",
-                    "Also available in complete S.S. model"
-                ],
-                seo: {
-                    focus_keyword: "Utility Trolley with Drawer",
-                    meta_title: "Utility Trolley with Drawer | Hospital Furniture Manufacturer in Delhi and Buy ICU Bed Online India | Shiv Balaji Surgical",
-                    meta_description: "Buy the best Utility Trolley with Drawer. We are a leading Shiv Balaji Surgical and Hospital Bed Manufacturer Najafgarh. Explore our high-quality Utility Trolley with Drawer today!",
-                    url_slug: "/products/bedside-lockers-over-bed-tables/sb-g132-utility-trolley-with-drawer",
-                    image_alt_text: "Utility Trolley with Drawer - SB-G132 - Shiv Balaji Surgical",
-                    og_title: "Utility Trolley with Drawer SB-G132 | Shiv Balaji Surgical",
-                    og_description: "Buy Utility Trolley with Drawer (Model SB-G132) from Shiv Balaji Surgical - leading hospital furniture manufacturer, supplier & dealer in Delhi NCR. Size 22L…",
-                    twitter_title: "Utility Trolley with Drawer SB-G132 | Shiv Balaji Surgical",
-                    twitter_description: "Buy Utility Trolley with Drawer (Model SB-G132) from Shiv Balaji Surgical - leading hospital furniture manufacturer, supplier & dealer in Delhi NCR. Size 22L…",
-                    additional_keywords: [
-                        "Shiv Balaji Surgical",
-                        "Hospital Bed Manufacturer Najafgarh",
-                        "Over Bed Table Manufacturer",
-                        "GMP Certified Hospital Furniture Manufacturer",
-                        "Bulk Hospital Bed Supplier"
-                    ],
-                    business_keywords: [
-                        "Utility Trolley with Drawer Manufacturer",
-                        "Utility Trolley with Drawer Supplier",
-                        "Utility Trolley with Drawer Dealer",
-                        "Utility Trolley with Drawer Exporter",
-                        "Utility Trolley with Drawer Wholesaler in Delhi",
-                        "Hospital Furniture Manufacturer India",
-                        "Hospital Equipment Supplier Delhi NCR"
-                    ],
-                    seo_content_block: "If you are looking for the best Utility Trolley with Drawer, you are in the right place. Our Utility Trolley with Drawer is designed for optimal performance. As a top Shiv Balaji Surgical, we ensure every Utility Trolley with Drawer meets high standards. The Utility Trolley with Drawer offers incredible durability. Patients and caregivers prefer our Utility Trolley with Drawer for its reliability. When you choose our Utility Trolley with Drawer, you get quality. We are known as a leading Hospital Bed Manufacturer Najafgarh as well. This Utility Trolley with Drawer is perfect for clinics. The Utility Trolley with Drawer provides unmatched comfort. Contact us if you need a Utility Trolley with Drawer from a Over Bed Table Manufacturer. We also supply related items as a GMP Certified Hospital Furniture Manufacturer. The Utility Trolley with Drawer stands out in the market. Many hospitals trust our Utility Trolley with Drawer. Experience the excellence of this Utility Trolley with Drawer today. We are your reliable Bulk Hospital Bed Supplier.",
-                    schema_org: {
-                        "@context": "https://schema.org/",
-                        "@type": "Product",
-                        "name": "Utility Trolley with Drawer - SB-G132",
-                        "sku": "SB-G132",
-                        "category": "Bedside Lockers & Over-Bed Tables",
-                        "brand": {
-                            "@type": "Brand",
-                            "name": "Shiv Balaji Surgical"
-                        },
-                        "manufacturer": {
-                            "@type": "Organization",
-                            "name": "Shiv Balaji Surgical",
-                            "address": "Kh. No. 25/2, Nangli Sakrawati, Najafgarh, New Delhi - 110043, India"
-                        },
-                        "description": "Buy Utility Trolley with Drawer (Model SB-G132) from Shiv Balaji Surgical - leading hospital furniture manufacturer, supplier & dealer in Delhi NCR. Size 22L…"
-                    }
-                }
-            }),
-            makeProduct({
-                product_id: "SBS-033",
-                product_name: "Over Bed Table (Fixed Top)",
-                model: "SB-G133",
-                category: "Bedside Lockers & Over-Bed Tables",
-                image: productImg(33),
-                short_description: "Over Bed Table (Fixed Top) (Model SB-G133) — Overall size 42L x 16W x 39H inch",
-                description: "Over Bed Table (Fixed Top) - Model SB-G133 — Over Bed Table (Fixed Top) (Model SB-G133) — Overall size 42L x 16W x 39H inch",
-                subcategory: "Over-Bed Tables",
-                specifications: [
-                    "Approx. size: 42L x 16W x 39H inch.",
-                    "Tubular framework mounted on 5 cm castors.",
-                    "Fixed membrane-pressed wooden top, 32 x 16 inch.",
-                    "Pre-treated and epoxy powder coated frame."
-                ],
-                optional_feature: [
-                    "S.S. frame model",
-                    "ABS moulded top"
-                ],
-                features: [
-                    "Overall size 42L x 16W x 39H inch",
-                    "Tubular frame work mounted on 5cm castors",
-                    "Fixed membrane pressed wooden top (32\" x 16\")",
-                    "Pre-treated and epoxy powder coated frame"
-                ],
-                seo: {
-                    focus_keyword: "Over Bed Table (Fixed Top)",
-                    meta_title: "Over Bed Table (Fixed Top) | Hospital Bed with Side Railing and Emergency Recovery Trolley Manufacturer | Shiv Balaji Surgical",
-                    meta_description: "Buy the best Over Bed Table (Fixed Top). We are a leading Hospital Bed Wholesale Dealer and Shiv Balaji Surgical. Explore our high-quality Over Bed Table (Fixed Top) today!",
-                    url_slug: "/products/bedside-lockers-over-bed-tables/sb-g133-over-bed-table-fixed-top",
-                    image_alt_text: "Over Bed Table (Fixed Top) - SB-G133 - Hospital Bed Wholesale Dealer",
-                    og_title: "Over Bed Table (Fixed Top) SB-G133 | Shiv Balaji Surgical",
-                    og_description: "Buy Over Bed Table (Fixed Top) (Model SB-G133) from Shiv Balaji Surgical - leading hospital furniture manufacturer, supplier & dealer in Delhi NCR. Overall…",
-                    twitter_title: "Over Bed Table (Fixed Top) SB-G133 | Shiv Balaji Surgical",
-                    twitter_description: "Buy Over Bed Table (Fixed Top) (Model SB-G133) from Shiv Balaji Surgical - leading hospital furniture manufacturer, supplier & dealer in Delhi NCR. Overall…",
-                    additional_keywords: [
-                        "Hospital Bed Wholesale Dealer",
-                        "Shiv Balaji Surgical",
-                        "ICU Bed Electric Manufacturer",
-                        "Recovery Bed Fixed Height Manufacturer",
-                        "Hospital Foot Step Manufacturer"
-                    ],
-                    business_keywords: [
-                        "Over Bed Table (Fixed Top) Manufacturer",
-                        "Over Bed Table (Fixed Top) Supplier",
-                        "Over Bed Table (Fixed Top) Dealer",
-                        "Over Bed Table (Fixed Top) Exporter",
-                        "Over Bed Table (Fixed Top) Wholesaler in Delhi",
-                        "Hospital Furniture Manufacturer India",
-                        "Hospital Equipment Supplier Delhi NCR"
-                    ],
-                    seo_content_block: "If you are looking for the best Over Bed Table (Fixed Top), you are in the right place. Our Over Bed Table (Fixed Top) is designed for optimal performance. As a top Hospital Bed Wholesale Dealer, we ensure every Over Bed Table (Fixed Top) meets high standards. The Over Bed Table (Fixed Top) offers incredible durability. Patients and caregivers prefer our Over Bed Table (Fixed Top) for its reliability. When you choose our Over Bed Table (Fixed Top), you get quality. We are known as a leading Shiv Balaji Surgical as well. This Over Bed Table (Fixed Top) is perfect for clinics. The Over Bed Table (Fixed Top) provides unmatched comfort. Contact us if you need a Over Bed Table (Fixed Top) from a ICU Bed Electric Manufacturer. We also supply related items as a Recovery Bed Fixed Height Manufacturer. The Over Bed Table (Fixed Top) stands out in the market. Many hospitals trust our Over Bed Table (Fixed Top). Experience the excellence of this Over Bed Table (Fixed Top) today. We are your reliable Hospital Foot Step Manufacturer.",
-                    schema_org: {
-                        "@context": "https://schema.org/",
-                        "@type": "Product",
-                        "name": "Over Bed Table (Fixed Top) - SB-G133",
-                        "sku": "SB-G133",
-                        "category": "Bedside Lockers & Over-Bed Tables",
-                        "brand": {
-                            "@type": "Brand",
-                            "name": "Shiv Balaji Surgical"
-                        },
-                        "manufacturer": {
-                            "@type": "Organization",
-                            "name": "Shiv Balaji Surgical",
-                            "address": "Kh. No. 25/2, Nangli Sakrawati, Najafgarh, New Delhi - 110043, India"
-                        },
-                        "description": "Buy Over Bed Table (Fixed Top) (Model SB-G133) from Shiv Balaji Surgical - leading hospital furniture manufacturer, supplier & dealer in Delhi NCR. Overall…"
-                    }
-                }
-            }),
-            makeProduct({
-                product_id: "SBS-034",
-                product_name: "Over Bed Table Manually Adjustable (Side Knob)",
-                model: "SB-G134A",
-                category: "Bedside Lockers & Over-Bed Tables",
-                image: productImg(34),
-                short_description: "Over Bed Table Manually Adjustable (Side Knob) (Model SB-G134A) — Rectangular frame work mounted on 5cm castors",
-                description: "Over Bed Table Manually Adjustable (Side Knob) - Model SB-G134A — Over Bed Table Manually Adjustable (Side Knob) (Model SB-G134A) — Rectangular frame work mounted on 5cm castors",
-                subcategory: "Over-Bed Tables",
-                specifications: [
-                    "Rectangular framework mounted on 5 cm castors.",
-                    "Membrane-pressed wooden top adjustable by side knob.",
-                    "Top size: 32 x 16 inch.",
-                    "Pre-treated and epoxy powder coated frame."
-                ],
-                optional_feature: [
-                    "ABS moulded top",
-                    "S.S. frame model"
-                ],
-                features: [
-                    "Rectangular frame work mounted on 5cm castors",
-                    "Membrane pressed wooden top adjustable by side knob",
-                    "Top size 32\" x 16\"",
-                    "Pre-treated and epoxy powder coated frame"
-                ],
-                seo: {
-                    focus_keyword: "Over Bed Table Manually Adjustable (Side Knob)",
-                    meta_title: "Over Bed Table Manually Adjustable (Side Knob) | Fowler Bed ABS Panel Manufacturer and Hospital Bed Manufacturer in India | Shiv Balaji Surgical",
-                    meta_description: "Buy the best Over Bed Table Manually Adjustable (Side Knob). We are a leading Pediatric Hospital Bed Supplier and Hospital Bed Manufacturer in India. Explore our high-quality Over Bed Table Manually Adjustable (Side Knob) today!",
-                    url_slug: "/products/bedside-lockers-over-bed-tables/sb-g134a-over-bed-table-manually-adjustable-side-knob",
-                    image_alt_text: "Over Bed Table Manually Adjustable (Side Knob) - SB-G134A - Pediatric Hospital Bed Supplier",
-                    og_title: "Over Bed Table Manually Adjustable (Side Knob) | Shiv…",
-                    og_description: "Buy Over Bed Table Manually Adjustable (Side Knob) (Model SB-G134A) from Shiv Balaji Surgical - leading hospital furniture manufacturer, supplier & dealer in…",
-                    twitter_title: "Over Bed Table Manually Adjustable (Side Knob) | Shiv…",
-                    twitter_description: "Buy Over Bed Table Manually Adjustable (Side Knob) (Model SB-G134A) from Shiv Balaji Surgical - leading hospital furniture manufacturer, supplier & dealer in…",
-                    additional_keywords: [
-                        "Pediatric Hospital Bed Supplier",
-                        "Hospital Bed Manufacturer in India",
-                        "Hospital Bed Manufacturer with ABS Panels",
-                        "Examination Table Manufacturer",
-                        "ICU Bed Manufacturer"
-                    ],
-                    business_keywords: [
-                        "Over Bed Table Manually Adjustable (Side Knob) Manufacturer",
-                        "Over Bed Table Manually Adjustable (Side Knob) Supplier",
-                        "Over Bed Table Manually Adjustable (Side Knob) Dealer",
-                        "Over Bed Table Manually Adjustable (Side Knob) Exporter",
-                        "Over Bed Table Manually Adjustable (Side Knob) Wholesaler in Delhi",
-                        "Hospital Furniture Manufacturer India",
-                        "Hospital Equipment Supplier Delhi NCR"
-                    ],
-                    seo_content_block: "If you are looking for the best Over Bed Table Manually Adjustable (Side Knob), you are in the right place. Our Over Bed Table Manually Adjustable (Side Knob) is designed for optimal performance. As a top Pediatric Hospital Bed Supplier, we ensure every Over Bed Table Manually Adjustable (Side Knob) meets high standards. The Over Bed Table Manually Adjustable (Side Knob) offers incredible durability. Patients and caregivers prefer our Over Bed Table Manually Adjustable (Side Knob) for its reliability. When you choose our Over Bed Table Manually Adjustable (Side Knob), you get quality. We are known as a leading Hospital Bed Manufacturer in India as well. This Over Bed Table Manually Adjustable (Side Knob) is perfect for clinics. The Over Bed Table Manually Adjustable (Side Knob) provides unmatched comfort. Contact us if you need a Over Bed Table Manually Adjustable (Side Knob) from a Hospital Bed Manufacturer with ABS Panels. We also supply related items as a Examination Table Manufacturer. The Over Bed Table Manually Adjustable (Side Knob) stands out in the market. Many hospitals trust our Over Bed Table Manually Adjustable (Side Knob). Experience the excellence of this Over Bed Table Manually Adjustable (Side Knob) today. We are your reliable ICU Bed Manufacturer.",
-                    schema_org: {
-                        "@context": "https://schema.org/",
-                        "@type": "Product",
-                        "name": "Over Bed Table Manually Adjustable (Side Knob) - SB-G134A",
-                        "sku": "SB-G134A",
-                        "category": "Bedside Lockers & Over-Bed Tables",
-                        "brand": {
-                            "@type": "Brand",
-                            "name": "Shiv Balaji Surgical"
-                        },
-                        "manufacturer": {
-                            "@type": "Organization",
-                            "name": "Shiv Balaji Surgical",
-                            "address": "Kh. No. 25/2, Nangli Sakrawati, Najafgarh, New Delhi - 110043, India"
-                        },
-                        "description": "Buy Over Bed Table Manually Adjustable (Side Knob) (Model SB-G134A) from Shiv Balaji Surgical - leading hospital furniture manufacturer, supplier & dealer in…"
-                    }
-                }
-            }),
-            makeProduct({
-                product_id: "SBS-035",
-                product_name: "Over Bed Table Manually Adjustable (Gear Handle)",
-                model: "SB-G135B",
-                category: "Bedside Lockers & Over-Bed Tables",
-                image: productImg(35),
-                short_description: "Over Bed Table Manually Adjustable (Gear Handle) (Model SB-G135B) — ABS moulded top fitted on MS square tubber telescopic steam",
-                description: "Over Bed Table Manually Adjustable (Gear Handle) - Model SB-G135B — Over Bed Table Manually Adjustable (Gear Handle) (Model SB-G135B) — ABS moulded top fitted on MS square tubber telescopic steam",
-                subcategory: "Over-Bed Tables",
-                specifications: [
-                    "ABS moulded top fitted on M.S. square tube telescopic stem.",
-                    "Height adjustable by gear handle.",
-                    "Base frame made of rectangular M.S. tube mounted on 5 cm dia castor.",
-                    "Epoxy powder coated frame."
-                ],
-                optional_feature: [
-                    "Laminated top (approx. 32 x 16 inch)",
-                    "S.S. frame model"
-                ],
-                features: [
-                    "ABS moulded top fitted on MS square tubber telescopic steam",
-                    "Height adjustable by gear handle",
-                    "Base frame of rectangular MS tube mounted on 5cm dia castor",
-                    "Epoxy powder coated frame"
-                ],
-                seo: {
-                    focus_keyword: "Over Bed Table Manually Adjustable (Gear Handle)",
-                    meta_title: "Over Bed Table Manually Adjustable (Gear Handle) | Bulk Hospital Bed Supplier and Hospital Trolley Manufacturer | Shiv Balaji Surgical",
-                    meta_description: "Buy the best Over Bed Table Manually Adjustable (Gear Handle). We are a leading GMP Certified Hospital Furniture Manufacturer and Crash Cart Trolley Manufacturer. Explore our high-quality Over Bed Table Manually Adjustable (Gear Handle) today!",
-                    url_slug: "/products/bedside-lockers-over-bed-tables/sb-g135b-over-bed-table-manually-adjustable-gear-handle",
-                    image_alt_text: "Over Bed Table Manually Adjustable (Gear Handle) - SB-G135B - GMP Certified Hospital Furniture Manufacturer",
-                    og_title: "Over Bed Table Manually Adjustable (Gear Handle) | Shiv…",
-                    og_description: "Buy Over Bed Table Manually Adjustable (Gear Handle) (Model SB-G135B) from Shiv Balaji Surgical - leading hospital furniture manufacturer, supplier & dealer…",
-                    twitter_title: "Over Bed Table Manually Adjustable (Gear Handle) | Shiv…",
-                    twitter_description: "Buy Over Bed Table Manually Adjustable (Gear Handle) (Model SB-G135B) from Shiv Balaji Surgical - leading hospital furniture manufacturer, supplier & dealer…",
-                    additional_keywords: [
-                        "GMP Certified Hospital Furniture Manufacturer",
-                        "Crash Cart Trolley Manufacturer",
-                        "Recovery Bed Fixed Height Manufacturer",
-                        "Hospital Bed Exporter India",
-                        "Hospital Furniture Manufacturer"
-                    ],
-                    business_keywords: [
-                        "Over Bed Table Manually Adjustable (Gear Handle) Manufacturer",
-                        "Over Bed Table Manually Adjustable (Gear Handle) Supplier",
-                        "Over Bed Table Manually Adjustable (Gear Handle) Dealer",
-                        "Over Bed Table Manually Adjustable (Gear Handle) Exporter",
-                        "Over Bed Table Manually Adjustable (Gear Handle) Wholesaler in Delhi",
-                        "Hospital Furniture Manufacturer India",
-                        "Hospital Equipment Supplier Delhi NCR"
-                    ],
-                    seo_content_block: "If you are looking for the best Over Bed Table Manually Adjustable (Gear Handle), you are in the right place. Our Over Bed Table Manually Adjustable (Gear Handle) is designed for optimal performance. As a top GMP Certified Hospital Furniture Manufacturer, we ensure every Over Bed Table Manually Adjustable (Gear Handle) meets high standards. The Over Bed Table Manually Adjustable (Gear Handle) offers incredible durability. Patients and caregivers prefer our Over Bed Table Manually Adjustable (Gear Handle) for its reliability. When you choose our Over Bed Table Manually Adjustable (Gear Handle), you get quality. We are known as a leading Crash Cart Trolley Manufacturer as well. This Over Bed Table Manually Adjustable (Gear Handle) is perfect for clinics. The Over Bed Table Manually Adjustable (Gear Handle) provides unmatched comfort. Contact us if you need a Over Bed Table Manually Adjustable (Gear Handle) from a Recovery Bed Fixed Height Manufacturer. We also supply related items as a Hospital Bed Exporter India. The Over Bed Table Manually Adjustable (Gear Handle) stands out in the market. Many hospitals trust our Over Bed Table Manually Adjustable (Gear Handle). Experience the excellence of this Over Bed Table Manually Adjustable (Gear Handle) today. We are your reliable Hospital Furniture Manufacturer.",
-                    schema_org: {
-                        "@context": "https://schema.org/",
-                        "@type": "Product",
-                        "name": "Over Bed Table Manually Adjustable (Gear Handle) - SB-G135B",
-                        "sku": "SB-G135B",
-                        "category": "Bedside Lockers & Over-Bed Tables",
-                        "brand": {
-                            "@type": "Brand",
-                            "name": "Shiv Balaji Surgical"
-                        },
-                        "manufacturer": {
-                            "@type": "Organization",
-                            "name": "Shiv Balaji Surgical",
-                            "address": "Kh. No. 25/2, Nangli Sakrawati, Najafgarh, New Delhi - 110043, India"
-                        },
-                        "description": "Buy Over Bed Table Manually Adjustable (Gear Handle) (Model SB-G135B) from Shiv Balaji Surgical - leading hospital furniture manufacturer, supplier & dealer…"
-                    }
-                }
-            }),
-            makeProduct({
-                product_id: "SBS-036",
-                product_name: "Over Bed Table Pneumatically Adjustable",
-                model: "SB-G136",
-                category: "Bedside Lockers & Over-Bed Tables",
-                image: productImg(36),
-                short_description: "Over Bed Table Pneumatically Adjustable (Model SB-G136) — Rectangular frame work mounted on 5cm castors",
-                description: "Over Bed Table Pneumatically Adjustable - Model SB-G136 — Over Bed Table Pneumatically Adjustable (Model SB-G136) — Rectangular frame work mounted on 5cm castors",
-                subcategory: "Over-Bed Tables",
-                specifications: [
-                    "Rectangular framework mounted on 5 cm castors.",
-                    "33 x 18 ABS moulded top.",
-                    "Adjusted by pneumatic gas spring.",
-                    "Pre-treated and epoxy powder coated frame."
-                ],
-                optional_feature: [
-                    "Laminated top (approx. 32 x 16 inch)"
-                ],
-                features: [
-                    "Rectangular frame work mounted on 5cm castors",
-                    "33\" x 18\" ABS moulded top",
-                    "Height adjusted by pneumatic gas spring",
-                    "Pre-treated and epoxy powder coated frame"
-                ],
-                seo: {
-                    focus_keyword: "Over Bed Table Pneumatically Adjustable",
-                    meta_title: "Over Bed Table Pneumatically Adjustable | Hospital Furniture for Nursing Home and Emergency Recovery Trolley Manufacturer | Shiv Balaji Surgical",
-                    meta_description: "Buy the best Over Bed Table Pneumatically Adjustable. We are a leading Pediatric Bed Manufacturer and Hospital Bed Manufacturer New Delhi. Explore our high-quality Over Bed Table Pneumatically Adjustable today!",
-                    url_slug: "/products/bedside-lockers-over-bed-tables/sb-g136-over-bed-table-pneumatically-adjustable",
-                    image_alt_text: "Over Bed Table Pneumatically Adjustable - SB-G136 - Pediatric Bed Manufacturer",
-                    og_title: "Over Bed Table Pneumatically Adjustable | Shiv Balaji…",
-                    og_description: "Buy Over Bed Table Pneumatically Adjustable (Model SB-G136) from Shiv Balaji Surgical - leading hospital furniture manufacturer, supplier & dealer in Delhi…",
-                    twitter_title: "Over Bed Table Pneumatically Adjustable | Shiv Balaji…",
-                    twitter_description: "Buy Over Bed Table Pneumatically Adjustable (Model SB-G136) from Shiv Balaji Surgical - leading hospital furniture manufacturer, supplier & dealer in Delhi…",
-                    additional_keywords: [
-                        "Pediatric Bed Manufacturer",
-                        "Hospital Bed Manufacturer New Delhi",
-                        "Fowler Bed Manufacturer",
-                        "Hospital Furniture for Nursing Home",
-                        "Manual Hospital Bed Supplier"
-                    ],
-                    business_keywords: [
-                        "Over Bed Table Pneumatically Adjustable Manufacturer",
-                        "Over Bed Table Pneumatically Adjustable Supplier",
-                        "Over Bed Table Pneumatically Adjustable Dealer",
-                        "Over Bed Table Pneumatically Adjustable Exporter",
-                        "Over Bed Table Pneumatically Adjustable Wholesaler in Delhi",
-                        "Hospital Furniture Manufacturer India",
-                        "Hospital Equipment Supplier Delhi NCR"
-                    ],
-                    seo_content_block: "If you are looking for the best Over Bed Table Pneumatically Adjustable, you are in the right place. Our Over Bed Table Pneumatically Adjustable is designed for optimal performance. As a top Pediatric Bed Manufacturer, we ensure every Over Bed Table Pneumatically Adjustable meets high standards. The Over Bed Table Pneumatically Adjustable offers incredible durability. Patients and caregivers prefer our Over Bed Table Pneumatically Adjustable for its reliability. When you choose our Over Bed Table Pneumatically Adjustable, you get quality. We are known as a leading Hospital Bed Manufacturer New Delhi as well. This Over Bed Table Pneumatically Adjustable is perfect for clinics. The Over Bed Table Pneumatically Adjustable provides unmatched comfort. Contact us if you need a Over Bed Table Pneumatically Adjustable from a Fowler Bed Manufacturer. We also supply related items as a Hospital Furniture for Nursing Home. The Over Bed Table Pneumatically Adjustable stands out in the market. Many hospitals trust our Over Bed Table Pneumatically Adjustable. Experience the excellence of this Over Bed Table Pneumatically Adjustable today. We are your reliable Manual Hospital Bed Supplier.",
-                    schema_org: {
-                        "@context": "https://schema.org/",
-                        "@type": "Product",
-                        "name": "Over Bed Table Pneumatically Adjustable - SB-G136",
-                        "sku": "SB-G136",
-                        "category": "Bedside Lockers & Over-Bed Tables",
-                        "brand": {
-                            "@type": "Brand",
-                            "name": "Shiv Balaji Surgical"
-                        },
-                        "manufacturer": {
-                            "@type": "Organization",
-                            "name": "Shiv Balaji Surgical",
-                            "address": "Kh. No. 25/2, Nangli Sakrawati, Najafgarh, New Delhi - 110043, India"
-                        },
-                        "description": "Buy Over Bed Table Pneumatically Adjustable (Model SB-G136) from Shiv Balaji Surgical - leading hospital furniture manufacturer, supplier & dealer in Delhi…"
-                    }
-                }
-            })
-        ]
-    },
-    {
-        slug: "examination-room-furniture",
-        name: "Examination Room Furniture",
-        image: "/assets/images/service/service-2.jpg",
-        icon: "fa-stethoscope",
-        description: "Examination couches, OPD chairs and procedure tables designed for patient comfort and clinical efficiency. Trusted by hospitals and clinics across India.",
-        products: [
-            makeProduct({
-                product_id: "SBS-021",
-                product_name: "Patient OPD Couch/Chair",
-                model: "SB-G121",
-                category: "Examination Room Furniture",
-                image: productImg(21),
-                short_description: "Patient OPD Couch/Chair (Model SB-G121) — Pressed artificial leather fabric",
-                description: "Patient OPD Couch/Chair - Model SB-G121 — Patient OPD Couch/Chair (Model SB-G121) — Pressed artificial leather fabric",
-                subcategory: "OPD Couches & Chairs",
-                specifications: [
-                    "Fabric is pressed artificial leather.",
-                    "Approx. dimensions: 190 x 62 x 58 cm.",
-                    "M.S. tubular framework mounted in PVC stumps.",
-                    "Epoxy powder coated finish."
-                ],
-                optional_feature: [],
-                features: [
-                    "Pressed artificial leather fabric",
-                    "Overall dimension 190 x 62 x 58 cm",
-                    "MS tubular frame work mounted in PVC stumps",
-                    "Epoxy powder coated finish"
-                ],
-                seo: {
-                    focus_keyword: "Patient OPD Couch/Chair",
-                    meta_title: "Patient OPD Couch/Chair | Shiv Balaji Surgical and Hospital Bed Exporter India | Shiv Balaji Surgical",
-                    meta_description: "Buy the best Patient OPD Couch/Chair. We are a leading Fowler Bed Manufacturer and Shiv Balaji Surgical. Explore our high-quality Patient OPD Couch/Chair today!",
-                    url_slug: "/products/examination-room-furniture/sb-g121-patient-opd-couch-chair",
-                    image_alt_text: "Patient OPD Couch/Chair - SB-G121 - Fowler Bed Manufacturer",
-                    og_title: "Patient OPD Couch/Chair SB-G121 | Shiv Balaji Surgical",
-                    og_description: "Buy Patient OPD Couch/Chair (Model SB-G121) from Shiv Balaji Surgical - leading hospital furniture manufacturer, supplier & dealer in Delhi NCR. Pressed…",
-                    twitter_title: "Patient OPD Couch/Chair SB-G121 | Shiv Balaji Surgical",
-                    twitter_description: "Buy Patient OPD Couch/Chair (Model SB-G121) from Shiv Balaji Surgical - leading hospital furniture manufacturer, supplier & dealer in Delhi NCR. Pressed…",
-                    additional_keywords: [
-                        "Fowler Bed Manufacturer",
-                        "Shiv Balaji Surgical",
-                        "Hospital Trolley Manufacturer",
-                        "Crash Cart Trolley Manufacturer",
-                        "Hospital Bed Manufacturer New Delhi"
-                    ],
-                    business_keywords: [
-                        "Patient OPD Couch/Chair Manufacturer",
-                        "Patient OPD Couch/Chair Supplier",
-                        "Patient OPD Couch/Chair Dealer",
-                        "Patient OPD Couch/Chair Exporter",
-                        "Patient OPD Couch/Chair Wholesaler in Delhi",
-                        "Hospital Furniture Manufacturer India",
-                        "Hospital Equipment Supplier Delhi NCR"
-                    ],
-                    seo_content_block: "If you are looking for the best Patient OPD Couch/Chair, you are in the right place. Our Patient OPD Couch/Chair is designed for optimal performance. As a top Fowler Bed Manufacturer, we ensure every Patient OPD Couch/Chair meets high standards. The Patient OPD Couch/Chair offers incredible durability. Patients and caregivers prefer our Patient OPD Couch/Chair for its reliability. When you choose our Patient OPD Couch/Chair, you get quality. We are known as a leading Shiv Balaji Surgical as well. This Patient OPD Couch/Chair is perfect for clinics. The Patient OPD Couch/Chair provides unmatched comfort. Contact us if you need a Patient OPD Couch/Chair from a Hospital Trolley Manufacturer. We also supply related items as a Crash Cart Trolley Manufacturer. The Patient OPD Couch/Chair stands out in the market. Many hospitals trust our Patient OPD Couch/Chair. Experience the excellence of this Patient OPD Couch/Chair today. We are your reliable Hospital Bed Manufacturer New Delhi.",
-                    schema_org: {
-                        "@context": "https://schema.org/",
-                        "@type": "Product",
-                        "name": "Patient OPD Couch/Chair - SB-G121",
-                        "sku": "SB-G121",
-                        "category": "Examination Room Furniture",
-                        "brand": {
-                            "@type": "Brand",
-                            "name": "Shiv Balaji Surgical"
-                        },
-                        "manufacturer": {
-                            "@type": "Organization",
-                            "name": "Shiv Balaji Surgical",
-                            "address": "Kh. No. 25/2, Nangli Sakrawati, Najafgarh, New Delhi - 110043, India"
-                        },
-                        "description": "Buy Patient OPD Couch/Chair (Model SB-G121) from Shiv Balaji Surgical - leading hospital furniture manufacturer, supplier & dealer in Delhi NCR. Pressed…"
-                    }
-                }
-            }),
-            makeProduct({
-                product_id: "SBS-022",
-                product_name: "Examination Table Plain",
-                model: "SB-G122",
-                category: "Examination Room Furniture",
-                image: productImg(22),
-                short_description: "Examination Table Plain (Model SB-G122) — Overall size 183L x 60W x 81H cm",
-                description: "Examination Table Plain - Model SB-G122 — Examination Table Plain (Model SB-G122) — Overall size 183L x 60W x 81H cm",
-                subcategory: "Examination Tables",
-                specifications: [
-                    "Approx. size: 183L x 60W x 81H cm.",
-                    "CRC tube framework.",
-                    "Legs fitted with PVC stumps.",
-                    "5 cm foam cushioned top covered with rexine.",
-                    "Pre-treated and epoxy powder coated finish."
-                ],
-                optional_feature: [
-                    "Machine-pressed double-bend M.S. CRC sheet top mattress"
-                ],
-                features: [
-                    "Overall size 183L x 60W x 81H cm",
-                    "CRC tube frame work with PVC stump legs",
-                    "5cm foam cushioned top covered with rexine",
-                    "Pre-treated and epoxy powder coated finish"
-                ],
-                seo: {
-                    focus_keyword: "Examination Table Plain",
-                    meta_title: "Examination Table Plain | GMP Certified Hospital Furniture Manufacturer and Pediatric Bed Manufacturer | Shiv Balaji Surgical",
-                    meta_description: "Buy the best Examination Table Plain. We are a leading Shiv Balaji Surgical Hospital Beds and Fowler Bed ABS Panel Manufacturer. Explore our high-quality Examination Table Plain today!",
-                    url_slug: "/products/examination-room-furniture/sb-g122-examination-table-plain",
-                    image_alt_text: "Examination Table Plain - SB-G122 - Shiv Balaji Surgical Hospital Beds",
-                    og_title: "Examination Table Plain SB-G122 | Shiv Balaji Surgical",
-                    og_description: "Buy Examination Table Plain (Model SB-G122) from Shiv Balaji Surgical - leading hospital furniture manufacturer, supplier & dealer in Delhi NCR. Overall size…",
-                    twitter_title: "Examination Table Plain SB-G122 | Shiv Balaji Surgical",
-                    twitter_description: "Buy Examination Table Plain (Model SB-G122) from Shiv Balaji Surgical - leading hospital furniture manufacturer, supplier & dealer in Delhi NCR. Overall size…",
-                    additional_keywords: [
-                        "Shiv Balaji Surgical Hospital Beds",
-                        "Fowler Bed ABS Panel Manufacturer",
-                        "Hospital Furniture Manufacturer",
-                        "Recovery Bed Fixed Height Manufacturer",
-                        "Patient Stool Manufacturer"
-                    ],
-                    business_keywords: [
-                        "Examination Table Plain Manufacturer",
-                        "Examination Table Plain Supplier",
-                        "Examination Table Plain Dealer",
-                        "Examination Table Plain Exporter",
-                        "Examination Table Plain Wholesaler in Delhi",
-                        "Hospital Furniture Manufacturer India",
-                        "Hospital Equipment Supplier Delhi NCR"
-                    ],
-                    seo_content_block: "If you are looking for the best Examination Table Plain, you are in the right place. Our Examination Table Plain is designed for optimal performance. As a top Shiv Balaji Surgical Hospital Beds, we ensure every Examination Table Plain meets high standards. The Examination Table Plain offers incredible durability. Patients and caregivers prefer our Examination Table Plain for its reliability. When you choose our Examination Table Plain, you get quality. We are known as a leading Fowler Bed ABS Panel Manufacturer as well. This Examination Table Plain is perfect for clinics. The Examination Table Plain provides unmatched comfort. Contact us if you need a Examination Table Plain from a Hospital Furniture Manufacturer. We also supply related items as a Recovery Bed Fixed Height Manufacturer. The Examination Table Plain stands out in the market. Many hospitals trust our Examination Table Plain. Experience the excellence of this Examination Table Plain today. We are your reliable Patient Stool Manufacturer.",
-                    schema_org: {
-                        "@context": "https://schema.org/",
-                        "@type": "Product",
-                        "name": "Examination Table Plain - SB-G122",
-                        "sku": "SB-G122",
-                        "category": "Examination Room Furniture",
-                        "brand": {
-                            "@type": "Brand",
-                            "name": "Shiv Balaji Surgical"
-                        },
-                        "manufacturer": {
-                            "@type": "Organization",
-                            "name": "Shiv Balaji Surgical",
-                            "address": "Kh. No. 25/2, Nangli Sakrawati, Najafgarh, New Delhi - 110043, India"
-                        },
-                        "description": "Buy Examination Table Plain (Model SB-G122) from Shiv Balaji Surgical - leading hospital furniture manufacturer, supplier & dealer in Delhi NCR. Overall size…"
-                    }
-                }
-            }),
-            makeProduct({
-                product_id: "SBS-023",
-                product_name: "Examination Table with 2 Section",
-                model: "SB-G123",
-                category: "Examination Room Furniture",
-                image: productImg(23),
-                short_description: "Examination Table with 2 Section (Model SB-G123) — Overall size 72L x 24W x 32H inch",
-                description: "Examination Table with 2 Section - Model SB-G123 — Examination Table with 2 Section (Model SB-G123) — Overall size 72L x 24W x 32H inch",
-                subcategory: "Examination Tables",
-                specifications: [
-                    "Approx. size: 72L x 24W x 32H inch.",
-                    "Rectangular and square steel tube framework.",
-                    "Adjustable backrest by hand lever.",
-                    "Two-section cushioned top / two-section M.S. powder-coated top with mattress.",
-                    "Legs fitted with PVC stumps.",
-                    "Pre-treated and epoxy powder coated finish."
-                ],
-                optional_feature: [],
-                features: [
-                    "Overall size 72L x 24W x 32H inch",
-                    "Rectangular & square steel tube frame work",
-                    "Adjustable backrest by hand lever",
-                    "Two section cushioned/powder coated top with mattress",
-                    "Legs fitted with PVC stumps",
-                    "Pre-treated and epoxy powder coated finish"
-                ],
-                seo: {
-                    focus_keyword: "Examination Table with 2 Section",
-                    meta_title: "Examination Table with 2 Section | Hospital Bed Price List India and Hospital Trolley Manufacturer | Shiv Balaji Surgical",
-                    meta_description: "Buy the best Examination Table with 2 Section. We are a leading Hospital Bed Manufacturer with ABS Panels and Hospital Furniture for Nursing Home. Explore our high-quality Examination Table with 2 Section today!",
-                    url_slug: "/products/examination-room-furniture/sb-g123-examination-table-with-2-section",
-                    image_alt_text: "Examination Table with 2 Section - SB-G123 - Hospital Bed Manufacturer with ABS Panels",
-                    og_title: "Examination Table with 2 Section | Shiv Balaji Surgical",
-                    og_description: "Buy Examination Table with 2 Section (Model SB-G123) from Shiv Balaji Surgical - leading hospital furniture manufacturer, supplier & dealer in Delhi NCR.…",
-                    twitter_title: "Examination Table with 2 Section | Shiv Balaji Surgical",
-                    twitter_description: "Buy Examination Table with 2 Section (Model SB-G123) from Shiv Balaji Surgical - leading hospital furniture manufacturer, supplier & dealer in Delhi NCR.…",
-                    additional_keywords: [
-                        "Hospital Bed Manufacturer with ABS Panels",
-                        "Hospital Furniture for Nursing Home",
-                        "Recovery Bed Manufacturer",
-                        "Hospital Furniture Manufacturer in Delhi",
-                        "Surgeon Stool Manufacturer"
-                    ],
-                    business_keywords: [
-                        "Examination Table with 2 Section Manufacturer",
-                        "Examination Table with 2 Section Supplier",
-                        "Examination Table with 2 Section Dealer",
-                        "Examination Table with 2 Section Exporter",
-                        "Examination Table with 2 Section Wholesaler in Delhi",
-                        "Hospital Furniture Manufacturer India",
-                        "Hospital Equipment Supplier Delhi NCR"
-                    ],
-                    seo_content_block: "If you are looking for the best Examination Table with 2 Section, you are in the right place. Our Examination Table with 2 Section is designed for optimal performance. As a top Hospital Bed Manufacturer with ABS Panels, we ensure every Examination Table with 2 Section meets high standards. The Examination Table with 2 Section offers incredible durability. Patients and caregivers prefer our Examination Table with 2 Section for its reliability. When you choose our Examination Table with 2 Section, you get quality. We are known as a leading Hospital Furniture for Nursing Home as well. This Examination Table with 2 Section is perfect for clinics. The Examination Table with 2 Section provides unmatched comfort. Contact us if you need a Examination Table with 2 Section from a Recovery Bed Manufacturer. We also supply related items as a Hospital Furniture Manufacturer in Delhi. The Examination Table with 2 Section stands out in the market. Many hospitals trust our Examination Table with 2 Section. Experience the excellence of this Examination Table with 2 Section today. We are your reliable Surgeon Stool Manufacturer.",
-                    schema_org: {
-                        "@context": "https://schema.org/",
-                        "@type": "Product",
-                        "name": "Examination Table with 2 Section - SB-G123",
-                        "sku": "SB-G123",
-                        "category": "Examination Room Furniture",
-                        "brand": {
-                            "@type": "Brand",
-                            "name": "Shiv Balaji Surgical"
-                        },
-                        "manufacturer": {
-                            "@type": "Organization",
-                            "name": "Shiv Balaji Surgical",
-                            "address": "Kh. No. 25/2, Nangli Sakrawati, Najafgarh, New Delhi - 110043, India"
-                        },
-                        "description": "Buy Examination Table with 2 Section (Model SB-G123) from Shiv Balaji Surgical - leading hospital furniture manufacturer, supplier & dealer in Delhi NCR.…"
-                    }
-                }
-            }),
-            makeProduct({
-                product_id: "SBS-024",
-                product_name: "Examination Table with Cabinet and Drawer",
-                model: "SB-G124",
-                category: "Examination Room Furniture",
-                image: productImg(24),
-                short_description: "Examination Table with Cabinet and Drawer (Model SB-G124) — Overall size 183L x 50W x 80H cm",
-                description: "Examination Table with Cabinet and Drawer - Model SB-G124 — Examination Table with Cabinet and Drawer (Model SB-G124) — Overall size 183L x 50W x 80H cm",
-                subcategory: "Examination Tables",
-                specifications: [
-                    "Approx. size: 183L x 50W x 80H cm.",
-                    "M.S. CRC tube framework.",
-                    "5 cm foam cushioned top covered with rexine.",
-                    "1 pc cabinet with drawer.",
-                    "Leg fitted with PVC stumps.",
-                    "Epoxy powder coated finish."
-                ],
-                optional_feature: [
-                    "Single foot step in powder coated finish"
-                ],
-                features: [
-                    "Overall size 183L x 50W x 80H cm",
-                    "MS CRC tube frame work",
-                    "5cm foam cushioned top covered with rexine",
-                    "1 pc cabinet with drawer",
-                    "Legs fitted with PVC stumps",
-                    "Epoxy powder coated finish"
-                ],
-                seo: {
-                    focus_keyword: "Examination Table with Cabinet and Drawer",
-                    meta_title: "Examination Table with Cabinet and Drawer | Hospital Bed Cradle Supplier and Recovery Bed Manufacturer | Shiv Balaji Surgical",
-                    meta_description: "Buy the best Examination Table with Cabinet and Drawer. We are a leading Recovery Bed Manufacturer and Hospital Furniture Manufacturer in Delhi. Explore our high-quality Examination Table with Cabinet and Drawer today!",
-                    url_slug: "/products/examination-room-furniture/sb-g124-examination-table-with-cabinet-and-drawer",
-                    image_alt_text: "Examination Table with Cabinet and Drawer - SB-G124 - Recovery Bed Manufacturer",
-                    og_title: "Examination Table with Cabinet and Drawer | Shiv Balaji…",
-                    og_description: "Buy Examination Table with Cabinet and Drawer (Model SB-G124) from Shiv Balaji Surgical - leading hospital furniture manufacturer, supplier & dealer in Delhi…",
-                    twitter_title: "Examination Table with Cabinet and Drawer | Shiv Balaji…",
-                    twitter_description: "Buy Examination Table with Cabinet and Drawer (Model SB-G124) from Shiv Balaji Surgical - leading hospital furniture manufacturer, supplier & dealer in Delhi…",
-                    additional_keywords: [
-                        "Recovery Bed Manufacturer",
-                        "Hospital Furniture Manufacturer in Delhi",
-                        "Recovery Bed Fixed Height Manufacturer",
-                        "Hospital Trolley Manufacturer",
-                        "Hospital Bed Price List India"
-                    ],
-                    business_keywords: [
-                        "Examination Table with Cabinet and Drawer Manufacturer",
-                        "Examination Table with Cabinet and Drawer Supplier",
-                        "Examination Table with Cabinet and Drawer Dealer",
-                        "Examination Table with Cabinet and Drawer Exporter",
-                        "Examination Table with Cabinet and Drawer Wholesaler in Delhi",
-                        "Hospital Furniture Manufacturer India",
-                        "Hospital Equipment Supplier Delhi NCR"
-                    ],
-                    seo_content_block: "If you are looking for the best Examination Table with Cabinet and Drawer, you are in the right place. Our Examination Table with Cabinet and Drawer is designed for optimal performance. As a top Recovery Bed Manufacturer, we ensure every Examination Table with Cabinet and Drawer meets high standards. The Examination Table with Cabinet and Drawer offers incredible durability. Patients and caregivers prefer our Examination Table with Cabinet and Drawer for its reliability. When you choose our Examination Table with Cabinet and Drawer, you get quality. We are known as a leading Hospital Furniture Manufacturer in Delhi as well. This Examination Table with Cabinet and Drawer is perfect for clinics. The Examination Table with Cabinet and Drawer provides unmatched comfort. Contact us if you need a Examination Table with Cabinet and Drawer from a Recovery Bed Fixed Height Manufacturer. We also supply related items as a Hospital Trolley Manufacturer. The Examination Table with Cabinet and Drawer stands out in the market. Many hospitals trust our Examination Table with Cabinet and Drawer. Experience the excellence of this Examination Table with Cabinet and Drawer today. We are your reliable Hospital Bed Price List India.",
-                    schema_org: {
-                        "@context": "https://schema.org/",
-                        "@type": "Product",
-                        "name": "Examination Table with Cabinet and Drawer - SB-G124",
-                        "sku": "SB-G124",
-                        "category": "Examination Room Furniture",
-                        "brand": {
-                            "@type": "Brand",
-                            "name": "Shiv Balaji Surgical"
-                        },
-                        "manufacturer": {
-                            "@type": "Organization",
-                            "name": "Shiv Balaji Surgical",
-                            "address": "Kh. No. 25/2, Nangli Sakrawati, Najafgarh, New Delhi - 110043, India"
-                        },
-                        "description": "Buy Examination Table with Cabinet and Drawer (Model SB-G124) from Shiv Balaji Surgical - leading hospital furniture manufacturer, supplier & dealer in Delhi…"
-                    }
-                }
-            }),
-            makeProduct({
-                product_id: "SBS-025",
-                product_name: "Examination Couch with Gynae Cut",
-                model: "SB-G125",
-                category: "Examination Room Furniture",
-                image: productImg(25),
-                short_description: "Examination Couch with Gynae Cut (Model SB-G125) — Overall size 183L x 50W x 82H cm",
-                description: "Examination Couch with Gynae Cut - Model SB-G125 — Examination Couch with Gynae Cut (Model SB-G125) — Overall size 183L x 50W x 82H cm",
-                subcategory: "Examination Couches",
-                specifications: [
-                    "Approx. size: 183L x 50W x 82H cm.",
-                    "CRC tube top frame covered with 5 cm foam cushioned rexine.",
-                    "3 pc cabinet with drawer.",
-                    "Leg fitted with PVC stumps.",
-                    "Pre-treated and epoxy powder coated finish."
-                ],
-                optional_feature: [
-                    "Single foot step in powder coated / S.S.",
-                    "Utility trolley in powder coated finish with S.S. tray"
-                ],
-                features: [
-                    "Overall size 183L x 50W x 82H cm",
-                    "CRC tube top frame covered with 5cm foam cushion & rexine",
-                    "3 pc cabinet with drawer",
-                    "Legs fitted with PVC stumps",
-                    "Pre-treated and epoxy powder coated finish"
-                ],
-                seo: {
-                    focus_keyword: "Examination Couch with Gynae Cut",
-                    meta_title: "Examination Couch with Gynae Cut | ICU Bed Electric Manufacturer and Shiv Balaji Surgical Hospital Beds | Shiv Balaji Surgical",
-                    meta_description: "Buy the best Examination Couch with Gynae Cut. We are a leading ICU Bed Electric Manufacturer and Hospital Bed with Mattress Manufacturer. Explore our high-quality Examination Couch with Gynae Cut today!",
-                    url_slug: "/products/examination-room-furniture/sb-g125-examination-couch-with-gynae-cut",
-                    image_alt_text: "Examination Couch with Gynae Cut - SB-G125 - ICU Bed Electric Manufacturer",
-                    og_title: "Examination Couch with Gynae Cut | Shiv Balaji Surgical",
-                    og_description: "Buy Examination Couch with Gynae Cut (Model SB-G125) from Shiv Balaji Surgical - leading hospital furniture manufacturer, supplier & dealer in Delhi NCR.…",
-                    twitter_title: "Examination Couch with Gynae Cut | Shiv Balaji Surgical",
-                    twitter_description: "Buy Examination Couch with Gynae Cut (Model SB-G125) from Shiv Balaji Surgical - leading hospital furniture manufacturer, supplier & dealer in Delhi NCR.…",
-                    additional_keywords: [
-                        "ICU Bed Electric Manufacturer",
-                        "Hospital Bed with Mattress Manufacturer",
-                        "Examination Couch Manufacturer",
-                        "GMP Certified Hospital Furniture Manufacturer",
-                        "Examination Table Manufacturer"
-                    ],
-                    business_keywords: [
-                        "Examination Couch with Gynae Cut Manufacturer",
-                        "Examination Couch with Gynae Cut Supplier",
-                        "Examination Couch with Gynae Cut Dealer",
-                        "Examination Couch with Gynae Cut Exporter",
-                        "Examination Couch with Gynae Cut Wholesaler in Delhi",
-                        "Hospital Furniture Manufacturer India",
-                        "Hospital Equipment Supplier Delhi NCR"
-                    ],
-                    seo_content_block: "If you are looking for the best Examination Couch with Gynae Cut, you are in the right place. Our Examination Couch with Gynae Cut is designed for optimal performance. As a top ICU Bed Electric Manufacturer, we ensure every Examination Couch with Gynae Cut meets high standards. The Examination Couch with Gynae Cut offers incredible durability. Patients and caregivers prefer our Examination Couch with Gynae Cut for its reliability. When you choose our Examination Couch with Gynae Cut, you get quality. We are known as a leading Hospital Bed with Mattress Manufacturer as well. This Examination Couch with Gynae Cut is perfect for clinics. The Examination Couch with Gynae Cut provides unmatched comfort. Contact us if you need a Examination Couch with Gynae Cut from a Examination Couch Manufacturer. We also supply related items as a GMP Certified Hospital Furniture Manufacturer. The Examination Couch with Gynae Cut stands out in the market. Many hospitals trust our Examination Couch with Gynae Cut. Experience the excellence of this Examination Couch with Gynae Cut today. We are your reliable Examination Table Manufacturer.",
-                    schema_org: {
-                        "@context": "https://schema.org/",
-                        "@type": "Product",
-                        "name": "Examination Couch with Gynae Cut - SB-G125",
-                        "sku": "SB-G125",
-                        "category": "Examination Room Furniture",
-                        "brand": {
-                            "@type": "Brand",
-                            "name": "Shiv Balaji Surgical"
-                        },
-                        "manufacturer": {
-                            "@type": "Organization",
-                            "name": "Shiv Balaji Surgical",
-                            "address": "Kh. No. 25/2, Nangli Sakrawati, Najafgarh, New Delhi - 110043, India"
-                        },
-                        "description": "Buy Examination Couch with Gynae Cut (Model SB-G125) from Shiv Balaji Surgical - leading hospital furniture manufacturer, supplier & dealer in Delhi NCR.…"
-                    }
-                }
-            }),
-            makeProduct({
-                product_id: "SBS-026",
-                product_name: "Examination Couch (Gas Spring Backrest)",
-                model: "SB-G126",
-                category: "Examination Room Furniture",
-                image: productImg(26),
-                short_description: "Examination Couch (Gas Spring Backrest) (Model SB-G126) — Approx. size 183L x 50W x 82H cm",
-                description: "Examination Couch (Gas Spring Backrest) - Model SB-G126 — Examination Couch (Gas Spring Backrest) (Model SB-G126) — Approx. size 183L x 50W x 82H cm",
-                subcategory: "Examination Couches",
-                specifications: [
-                    "Approx. size: 183L x 50W x 82H cm.",
-                    "Body framework made of 18/20G CRC sheet.",
-                    "Backrest adjustable on gas spring."
-                ],
-                optional_feature: [
-                    "S.S./M.S. foot step",
-                    "Pressed double-bend M.S. CRC sheet top mattress"
-                ],
-                features: [
-                    "Approx. size 183L x 50W x 82H cm",
-                    "18/20G CRC sheet body frame work",
-                    "Backrest adjustable on gas spring",
-                    "Optional SS/MS foot step & pressed double bend mattress top"
-                ],
-                seo: {
-                    focus_keyword: "Examination Couch (Gas Spring Backrest)",
-                    meta_title: "Examination Couch (Gas Spring Backrest) | Hospital Bed Manufacturer in Delhi and Hospital Bed Manufacturer in India | Shiv Balaji Surgical",
-                    meta_description: "Buy the best Examination Couch (Gas Spring Backrest). We are a leading ICU Bed Manufacturer and Instrument Trolley Manufacturer. Explore our high-quality Examination Couch (Gas Spring Backrest) today!",
-                    url_slug: "/products/examination-room-furniture/sb-g126-examination-couch-gas-spring-backrest",
-                    image_alt_text: "Examination Couch (Gas Spring Backrest) - SB-G126 - ICU Bed Manufacturer",
-                    og_title: "Examination Couch (Gas Spring Backrest) | Shiv Balaji…",
-                    og_description: "Buy Examination Couch (Gas Spring Backrest) (Model SB-G126) from Shiv Balaji Surgical - leading hospital furniture manufacturer, supplier & dealer in Delhi…",
-                    twitter_title: "Examination Couch (Gas Spring Backrest) | Shiv Balaji…",
-                    twitter_description: "Buy Examination Couch (Gas Spring Backrest) (Model SB-G126) from Shiv Balaji Surgical - leading hospital furniture manufacturer, supplier & dealer in Delhi…",
-                    additional_keywords: [
-                        "ICU Bed Manufacturer",
-                        "Instrument Trolley Manufacturer",
-                        "Fowler Bed Manufacturer",
-                        "Examination Table Manufacturer",
-                        "Hospital Bed Exporter India"
-                    ],
-                    business_keywords: [
-                        "Examination Couch (Gas Spring Backrest) Manufacturer",
-                        "Examination Couch (Gas Spring Backrest) Supplier",
-                        "Examination Couch (Gas Spring Backrest) Dealer",
-                        "Examination Couch (Gas Spring Backrest) Exporter",
-                        "Examination Couch (Gas Spring Backrest) Wholesaler in Delhi",
-                        "Hospital Furniture Manufacturer India",
-                        "Hospital Equipment Supplier Delhi NCR"
-                    ],
-                    seo_content_block: "If you are looking for the best Examination Couch (Gas Spring Backrest), you are in the right place. Our Examination Couch (Gas Spring Backrest) is designed for optimal performance. As a top ICU Bed Manufacturer, we ensure every Examination Couch (Gas Spring Backrest) meets high standards. The Examination Couch (Gas Spring Backrest) offers incredible durability. Patients and caregivers prefer our Examination Couch (Gas Spring Backrest) for its reliability. When you choose our Examination Couch (Gas Spring Backrest), you get quality. We are known as a leading Instrument Trolley Manufacturer as well. This Examination Couch (Gas Spring Backrest) is perfect for clinics. The Examination Couch (Gas Spring Backrest) provides unmatched comfort. Contact us if you need a Examination Couch (Gas Spring Backrest) from a Fowler Bed Manufacturer. We also supply related items as a Examination Table Manufacturer. The Examination Couch (Gas Spring Backrest) stands out in the market. Many hospitals trust our Examination Couch (Gas Spring Backrest). Experience the excellence of this Examination Couch (Gas Spring Backrest) today. We are your reliable Hospital Bed Exporter India.",
-                    schema_org: {
-                        "@context": "https://schema.org/",
-                        "@type": "Product",
-                        "name": "Examination Couch (Gas Spring Backrest) - SB-G126",
-                        "sku": "SB-G126",
-                        "category": "Examination Room Furniture",
-                        "brand": {
-                            "@type": "Brand",
-                            "name": "Shiv Balaji Surgical"
-                        },
-                        "manufacturer": {
-                            "@type": "Organization",
-                            "name": "Shiv Balaji Surgical",
-                            "address": "Kh. No. 25/2, Nangli Sakrawati, Najafgarh, New Delhi - 110043, India"
-                        },
-                        "description": "Buy Examination Couch (Gas Spring Backrest) (Model SB-G126) from Shiv Balaji Surgical - leading hospital furniture manufacturer, supplier & dealer in Delhi…"
-                    }
-                }
-            })
-        ]
-    },
     {
         slug: "hospital-icu-beds",
         name: "Hospital & ICU Beds",
@@ -4799,6 +3646,1163 @@ const departments = [
         ]
     },
     {
+        slug: "bedside-lockers-over-bed-tables",
+        name: "Bedside Lockers & Over-Bed Tables",
+        image: "/assets/images/service/R10.png",
+        icon: "fa-box-archive",
+        description: "Bedside lockers and over-bed tables for organized patient storage and bedside utility. Available in standard, deluxe, ABS and stainless steel variants.",
+        products: [
+            makeProduct({
+                product_id: "SBS-027",
+                product_name: "Bedside Locker Deluxe",
+                model: "SB-G127",
+                category: "Bedside Lockers & Over-Bed Tables",
+                image: "/assets/images/service/R1.webp",
+                short_description: "Bedside Locker Deluxe (Model SB-G127) — Size 16L x 16W x 32H inch",
+                description: "Bedside Locker Deluxe - Model SB-G127 — Bedside Locker Deluxe (Model SB-G127) — Size 16L x 16W x 32H inch",
+                subcategory: "Bedside Lockers",
+                specifications: [
+                    "Size: 16L x 16W x 32H inch.",
+                    "CRC sheet construction with one box and one drawer.",
+                    "Jointless/bend-pressed S.S. top with three-side raised edges.",
+                    "Fitted with PVC stumps.",
+                    "Epoxy powder coated finish."
+                ],
+                optional_feature: [
+                    "Complete S.S. model",
+                    "Double-color powder-coated model"
+                ],
+                features: [
+                    "Size 16L x 16W x 32H inch",
+                    "CRC sheet construction with one box and one drawer",
+                    "Jointless bend-pressed S.S. top with three side raised edges",
+                    "Fitted with PVC stumps",
+                    "Epoxy powder coated finish",
+                    "Also available in complete S.S. model & double colour PC"
+                ],
+                seo: {
+                    focus_keyword: "Bedside Locker Deluxe",
+                    meta_title: "Bedside Locker Deluxe | Semi Fowler Bed Manufacturer and Hospital Bed Exporter India | Shiv Balaji Surgical",
+                    meta_description: "Buy the best Bedside Locker Deluxe. We are a leading ICU Bed Mechanical Manufacturer and GMP Certified Hospital Furniture Manufacturer. Explore our high-quality Bedside Locker Deluxe today!",
+                    url_slug: "/products/bedside-lockers-over-bed-tables/sb-g127-bedside-locker-deluxe",
+                    image_alt_text: "Bedside Locker Deluxe - SB-G127 - ICU Bed Mechanical Manufacturer",
+                    og_title: "Bedside Locker Deluxe SB-G127 | Shiv Balaji Surgical",
+                    og_description: "Buy Bedside Locker Deluxe (Model SB-G127) from Shiv Balaji Surgical - leading hospital furniture manufacturer, supplier & dealer in Delhi NCR. Size 16L x 16W…",
+                    twitter_title: "Bedside Locker Deluxe SB-G127 | Shiv Balaji Surgical",
+                    twitter_description: "Buy Bedside Locker Deluxe (Model SB-G127) from Shiv Balaji Surgical - leading hospital furniture manufacturer, supplier & dealer in Delhi NCR. Size 16L x 16W…",
+                    additional_keywords: [
+                        "ICU Bed Mechanical Manufacturer",
+                        "GMP Certified Hospital Furniture Manufacturer",
+                        "Hospital Bed Manufacturer in Delhi",
+                        "Pediatric Hospital Bed Supplier",
+                        "Medical Furniture Manufacturer India"
+                    ],
+                    business_keywords: [
+                        "Bedside Locker Deluxe Manufacturer",
+                        "Bedside Locker Deluxe Supplier",
+                        "Bedside Locker Deluxe Dealer",
+                        "Bedside Locker Deluxe Exporter",
+                        "Bedside Locker Deluxe Wholesaler in Delhi",
+                        "Hospital Furniture Manufacturer India",
+                        "Hospital Equipment Supplier Delhi NCR"
+                    ],
+                    seo_content_block: "If you are looking for the best Bedside Locker Deluxe, you are in the right place. Our Bedside Locker Deluxe is designed for optimal performance. As a top ICU Bed Mechanical Manufacturer, we ensure every Bedside Locker Deluxe meets high standards. The Bedside Locker Deluxe offers incredible durability. Patients and caregivers prefer our Bedside Locker Deluxe for its reliability. When you choose our Bedside Locker Deluxe, you get quality. We are known as a leading GMP Certified Hospital Furniture Manufacturer as well. This Bedside Locker Deluxe is perfect for clinics. The Bedside Locker Deluxe provides unmatched comfort. Contact us if you need a Bedside Locker Deluxe from a Hospital Bed Manufacturer in Delhi. We also supply related items as a Pediatric Hospital Bed Supplier. The Bedside Locker Deluxe stands out in the market. Many hospitals trust our Bedside Locker Deluxe. Experience the excellence of this Bedside Locker Deluxe today. We are your reliable Medical Furniture Manufacturer India.",
+                    schema_org: {
+                        "@context": "https://schema.org/",
+                        "@type": "Product",
+                        "name": "Bedside Locker Deluxe - SB-G127",
+                        "sku": "SB-G127",
+                        "category": "Bedside Lockers & Over-Bed Tables",
+                        "brand": {
+                            "@type": "Brand",
+                            "name": "Shiv Balaji Surgical"
+                        },
+                        "manufacturer": {
+                            "@type": "Organization",
+                            "name": "Shiv Balaji Surgical",
+                            "address": "Kh. No. 25/2, Nangli Sakrawati, Najafgarh, New Delhi - 110043, India"
+                        },
+                        "description": "Buy Bedside Locker Deluxe (Model SB-G127) from Shiv Balaji Surgical - leading hospital furniture manufacturer, supplier & dealer in Delhi NCR. Size 16L x 16W…"
+                    }
+                }
+            }),
+            makeProduct({
+                product_id: "SBS-028",
+                product_name: "Bedside Locker Super Deluxe",
+                model: "SB-G128",
+                category: "Bedside Lockers & Over-Bed Tables",
+                image: productImg(28),
+                short_description: "Bedside Locker Super Deluxe (Model SB-G128) — Size 16L x 16W x 32H inch",
+                description: "Bedside Locker Super Deluxe - Model SB-G128 — Bedside Locker Super Deluxe (Model SB-G128) — Size 16L x 16W x 32H inch",
+                subcategory: "Bedside Lockers",
+                specifications: [
+                    "Size: 16L x 16W x 32H inch.",
+                    "Machine-pressed CRCA sheet enclosed on three sides.",
+                    "One box and one drawer with membrane/laminated pressed top and front side.",
+                    "Fitted with 50 mm dia castors.",
+                    "Epoxy powder coated finish."
+                ],
+                optional_feature: [],
+                features: [
+                    "Size 16L x 16W x 32H inch",
+                    "Machine pressed CRCA sheet enclosed on three sides",
+                    "One box and one drawer with laminated pressed top and front",
+                    "Fitted with 50mm dia castors",
+                    "Epoxy powder coated finish"
+                ],
+                seo: {
+                    focus_keyword: "Bedside Locker Super Deluxe",
+                    meta_title: "Bedside Locker Super Deluxe | Fowler Bed Electric Manufacturer and Medicine Trolley Manufacturer | Shiv Balaji Surgical",
+                    meta_description: "Buy the best Bedside Locker Super Deluxe. We are a leading Attendant Bed Manufacturer and ICU Bed Electric Manufacturer. Explore our high-quality Bedside Locker Super Deluxe today!",
+                    url_slug: "/products/bedside-lockers-over-bed-tables/sb-g128-bedside-locker-super-deluxe",
+                    image_alt_text: "Bedside Locker Super Deluxe - SB-G128 - Attendant Bed Manufacturer",
+                    og_title: "Bedside Locker Super Deluxe SB-G128 | Shiv Balaji Surgical",
+                    og_description: "Buy Bedside Locker Super Deluxe (Model SB-G128) from Shiv Balaji Surgical - leading hospital furniture manufacturer, supplier & dealer in Delhi NCR. Size 16L…",
+                    twitter_title: "Bedside Locker Super Deluxe SB-G128 | Shiv Balaji Surgical",
+                    twitter_description: "Buy Bedside Locker Super Deluxe (Model SB-G128) from Shiv Balaji Surgical - leading hospital furniture manufacturer, supplier & dealer in Delhi NCR. Size 16L…",
+                    additional_keywords: [
+                        "Attendant Bed Manufacturer",
+                        "ICU Bed Electric Manufacturer",
+                        "Hospital Foot Step Manufacturer",
+                        "Hospital Bed Manufacturer with ABS Panels",
+                        "ISO Certified Hospital Bed Manufacturer"
+                    ],
+                    business_keywords: [
+                        "Bedside Locker Super Deluxe Manufacturer",
+                        "Bedside Locker Super Deluxe Supplier",
+                        "Bedside Locker Super Deluxe Dealer",
+                        "Bedside Locker Super Deluxe Exporter",
+                        "Bedside Locker Super Deluxe Wholesaler in Delhi",
+                        "Hospital Furniture Manufacturer India",
+                        "Hospital Equipment Supplier Delhi NCR"
+                    ],
+                    seo_content_block: "If you are looking for the best Bedside Locker Super Deluxe, you are in the right place. Our Bedside Locker Super Deluxe is designed for optimal performance. As a top Attendant Bed Manufacturer, we ensure every Bedside Locker Super Deluxe meets high standards. The Bedside Locker Super Deluxe offers incredible durability. Patients and caregivers prefer our Bedside Locker Super Deluxe for its reliability. When you choose our Bedside Locker Super Deluxe, you get quality. We are known as a leading ICU Bed Electric Manufacturer as well. This Bedside Locker Super Deluxe is perfect for clinics. The Bedside Locker Super Deluxe provides unmatched comfort. Contact us if you need a Bedside Locker Super Deluxe from a Hospital Foot Step Manufacturer. We also supply related items as a Hospital Bed Manufacturer with ABS Panels. The Bedside Locker Super Deluxe stands out in the market. Many hospitals trust our Bedside Locker Super Deluxe. Experience the excellence of this Bedside Locker Super Deluxe today. We are your reliable ISO Certified Hospital Bed Manufacturer.",
+                    schema_org: {
+                        "@context": "https://schema.org/",
+                        "@type": "Product",
+                        "name": "Bedside Locker Super Deluxe - SB-G128",
+                        "sku": "SB-G128",
+                        "category": "Bedside Lockers & Over-Bed Tables",
+                        "brand": {
+                            "@type": "Brand",
+                            "name": "Shiv Balaji Surgical"
+                        },
+                        "manufacturer": {
+                            "@type": "Organization",
+                            "name": "Shiv Balaji Surgical",
+                            "address": "Kh. No. 25/2, Nangli Sakrawati, Najafgarh, New Delhi - 110043, India"
+                        },
+                        "description": "Buy Bedside Locker Super Deluxe (Model SB-G128) from Shiv Balaji Surgical - leading hospital furniture manufacturer, supplier & dealer in Delhi NCR. Size 16L…"
+                    }
+                }
+            }),
+            makeProduct({
+                product_id: "SBS-029",
+                product_name: "Bedside Locker ABS",
+                model: "SB-G129",
+                category: "Bedside Lockers & Over-Bed Tables",
+                image: productImg(29),
+                short_description: "Bedside Locker ABS (Model SB-G129) — Size 480L x 480W x 760-800H mm",
+                description: "Bedside Locker ABS - Model SB-G129 — Bedside Locker ABS (Model SB-G129) — Size 480L x 480W x 760-800H mm",
+                subcategory: "Bedside Lockers",
+                specifications: [
+                    "Size: 480L x 480W x 760-800H mm.",
+                    "Made of ABS plastic.",
+                    "Built-in towel shelf and one oddment rack."
+                ],
+                optional_feature: [],
+                features: [
+                    "Size 480L x 480W x 760-800H mm",
+                    "Made of ABS plastic - lightweight, stain-resistant, non-ageing",
+                    "Built-in towel shelf and one oddment rack"
+                ],
+                seo: {
+                    focus_keyword: "Bedside Locker ABS",
+                    meta_title: "Bedside Locker ABS | Instrument Trolley Manufacturer and Hospital Bed Exporter India | Shiv Balaji Surgical",
+                    meta_description: "Buy the best Bedside Locker ABS. We are a leading Pediatric Hospital Bed Supplier and Hospital Bed Price List India. Explore our high-quality Bedside Locker ABS today!",
+                    url_slug: "/products/bedside-lockers-over-bed-tables/sb-g129-bedside-locker-abs",
+                    image_alt_text: "Bedside Locker ABS - SB-G129 - Pediatric Hospital Bed Supplier",
+                    og_title: "Bedside Locker ABS SB-G129 | Shiv Balaji Surgical",
+                    og_description: "Buy Bedside Locker ABS (Model SB-G129) from Shiv Balaji Surgical - leading hospital furniture manufacturer, supplier & dealer in Delhi NCR. Size 480L x 480W x…",
+                    twitter_title: "Bedside Locker ABS SB-G129 | Shiv Balaji Surgical",
+                    twitter_description: "Buy Bedside Locker ABS (Model SB-G129) from Shiv Balaji Surgical - leading hospital furniture manufacturer, supplier & dealer in Delhi NCR. Size 480L x 480W x…",
+                    additional_keywords: [
+                        "Pediatric Hospital Bed Supplier",
+                        "Hospital Bed Price List India",
+                        "Recovery Bed Fixed Height Manufacturer",
+                        "ICU Bed Electric Manufacturer",
+                        "Hospital Bed Supplier Near Me"
+                    ],
+                    business_keywords: [
+                        "Bedside Locker ABS Manufacturer",
+                        "Bedside Locker ABS Supplier",
+                        "Bedside Locker ABS Dealer",
+                        "Bedside Locker ABS Exporter",
+                        "Bedside Locker ABS Wholesaler in Delhi",
+                        "Hospital Furniture Manufacturer India",
+                        "Hospital Equipment Supplier Delhi NCR"
+                    ],
+                    seo_content_block: "If you are looking for the best Bedside Locker ABS, you are in the right place. Our Bedside Locker ABS is designed for optimal performance. As a top Pediatric Hospital Bed Supplier, we ensure every Bedside Locker ABS meets high standards. The Bedside Locker ABS offers incredible durability. Patients and caregivers prefer our Bedside Locker ABS for its reliability. When you choose our Bedside Locker ABS, you get quality. We are known as a leading Hospital Bed Price List India as well. This Bedside Locker ABS is perfect for clinics. The Bedside Locker ABS provides unmatched comfort. Contact us if you need a Bedside Locker ABS from a Recovery Bed Fixed Height Manufacturer. We also supply related items as a ICU Bed Electric Manufacturer. The Bedside Locker ABS stands out in the market. Many hospitals trust our Bedside Locker ABS. Experience the excellence of this Bedside Locker ABS today. We are your reliable Hospital Bed Supplier Near Me.",
+                    schema_org: {
+                        "@context": "https://schema.org/",
+                        "@type": "Product",
+                        "name": "Bedside Locker ABS - SB-G129",
+                        "sku": "SB-G129",
+                        "category": "Bedside Lockers & Over-Bed Tables",
+                        "brand": {
+                            "@type": "Brand",
+                            "name": "Shiv Balaji Surgical"
+                        },
+                        "manufacturer": {
+                            "@type": "Organization",
+                            "name": "Shiv Balaji Surgical",
+                            "address": "Kh. No. 25/2, Nangli Sakrawati, Najafgarh, New Delhi - 110043, India"
+                        },
+                        "description": "Buy Bedside Locker ABS (Model SB-G129) from Shiv Balaji Surgical - leading hospital furniture manufacturer, supplier & dealer in Delhi NCR. Size 480L x 480W x…"
+                    }
+                }
+            }),
+            makeProduct({
+                product_id: "SBS-030",
+                product_name: "Bedside Locker Standard",
+                model: "SB-G130",
+                category: "Bedside Lockers & Over-Bed Tables",
+                image: productImg(30),
+                short_description: "Bedside Locker Standard (Model SB-G130) — Size 16L x 16W x 32H inch",
+                description: "Bedside Locker Standard - Model SB-G130 — Bedside Locker Standard (Model SB-G130) — Size 16L x 16W x 32H inch",
+                subcategory: "Bedside Lockers",
+                specifications: [
+                    "Size: 16L x 16W x 32H inch.",
+                    "Four legs fitted with PVC stumps.",
+                    "Box and door made of M.S. sheet.",
+                    "S.S. top made by machine-pressed jointless/bend-pressed construction with three-side raised edge.",
+                    "Epoxy powder coated finish."
+                ],
+                optional_feature: [
+                    "Complete S.S. model",
+                    "Double-color powder-coated model"
+                ],
+                features: [
+                    "Size 16L x 16W x 32H inch",
+                    "Four legs fitted with PVC stumps",
+                    "Box and door made of MS sheet",
+                    "Machine pressed jointless S.S. top with three side raised edge",
+                    "Epoxy powder coated finish"
+                ],
+                seo: {
+                    focus_keyword: "Bedside Locker Standard",
+                    meta_title: "Bedside Locker Standard | Shiv Balaji Surgical Hospital Beds and Hospital Foot Step Manufacturer | Shiv Balaji Surgical",
+                    meta_description: "Buy the best Bedside Locker Standard. We are a leading Shiv Balaji Surgical Hospital Beds and Examination Table Manufacturer. Explore our high-quality Bedside Locker Standard today!",
+                    url_slug: "/products/bedside-lockers-over-bed-tables/sb-g130-bedside-locker-standard",
+                    image_alt_text: "Bedside Locker Standard - SB-G130 - Shiv Balaji Surgical Hospital Beds",
+                    og_title: "Bedside Locker Standard SB-G130 | Shiv Balaji Surgical",
+                    og_description: "Buy Bedside Locker Standard (Model SB-G130) from Shiv Balaji Surgical - leading hospital furniture manufacturer, supplier & dealer in Delhi NCR. Size 16L x…",
+                    twitter_title: "Bedside Locker Standard SB-G130 | Shiv Balaji Surgical",
+                    twitter_description: "Buy Bedside Locker Standard (Model SB-G130) from Shiv Balaji Surgical - leading hospital furniture manufacturer, supplier & dealer in Delhi NCR. Size 16L x…",
+                    additional_keywords: [
+                        "Shiv Balaji Surgical Hospital Beds",
+                        "Examination Table Manufacturer",
+                        "ISO Certified Hospital Bed Manufacturer",
+                        "Bedside Locker Manufacturer",
+                        "Buy ICU Bed Online India"
+                    ],
+                    business_keywords: [
+                        "Bedside Locker Standard Manufacturer",
+                        "Bedside Locker Standard Supplier",
+                        "Bedside Locker Standard Dealer",
+                        "Bedside Locker Standard Exporter",
+                        "Bedside Locker Standard Wholesaler in Delhi",
+                        "Hospital Furniture Manufacturer India",
+                        "Hospital Equipment Supplier Delhi NCR"
+                    ],
+                    seo_content_block: "If you are looking for the best Bedside Locker Standard, you are in the right place. Our Bedside Locker Standard is designed for optimal performance. As a top Shiv Balaji Surgical Hospital Beds, we ensure every Bedside Locker Standard meets high standards. The Bedside Locker Standard offers incredible durability. Patients and caregivers prefer our Bedside Locker Standard for its reliability. When you choose our Bedside Locker Standard, you get quality. We are known as a leading Examination Table Manufacturer as well. This Bedside Locker Standard is perfect for clinics. The Bedside Locker Standard provides unmatched comfort. Contact us if you need a Bedside Locker Standard from a ISO Certified Hospital Bed Manufacturer. We also supply related items as a Bedside Locker Manufacturer. The Bedside Locker Standard stands out in the market. Many hospitals trust our Bedside Locker Standard. Experience the excellence of this Bedside Locker Standard today. We are your reliable Buy ICU Bed Online India.",
+                    schema_org: {
+                        "@context": "https://schema.org/",
+                        "@type": "Product",
+                        "name": "Bedside Locker Standard - SB-G130",
+                        "sku": "SB-G130",
+                        "category": "Bedside Lockers & Over-Bed Tables",
+                        "brand": {
+                            "@type": "Brand",
+                            "name": "Shiv Balaji Surgical"
+                        },
+                        "manufacturer": {
+                            "@type": "Organization",
+                            "name": "Shiv Balaji Surgical",
+                            "address": "Kh. No. 25/2, Nangli Sakrawati, Najafgarh, New Delhi - 110043, India"
+                        },
+                        "description": "Buy Bedside Locker Standard (Model SB-G130) from Shiv Balaji Surgical - leading hospital furniture manufacturer, supplier & dealer in Delhi NCR. Size 16L x…"
+                    }
+                }
+            }),
+            makeProduct({
+                product_id: "SBS-031",
+                product_name: "Bedside Locker Basic (Wooden Finish)",
+                model: "SB-G131",
+                category: "Bedside Lockers & Over-Bed Tables",
+                image: productImg(31),
+                short_description: "Bedside Locker Basic (Wooden Finish) (Model SB-G131) — Size 16L x 16W x 32H inch",
+                description: "Bedside Locker Basic (Wooden Finish) - Model SB-G131 — Bedside Locker Basic (Wooden Finish) (Model SB-G131) — Size 16L x 16W x 32H inch",
+                subcategory: "Bedside Lockers",
+                specifications: [
+                    "Size: 16L x 16W x 32H inch.",
+                    "M.S. tubular framework fitted with rubber shoe.",
+                    "S.S. top with three-side railing and two-side S.S. tray.",
+                    "Pre-treated and epoxy powder coated frame."
+                ],
+                optional_feature: [
+                    "Complete S.S. model",
+                    "Three S.S. trays/shelves"
+                ],
+                features: [
+                    "Size 16L x 16W x 32H inch",
+                    "MS tubular frame work fitted with rubber shoe",
+                    "S.S. top with three side railing and two side S.S. tray",
+                    "Pre-treated and epoxy powder coated frame"
+                ],
+                seo: {
+                    focus_keyword: "Bedside Locker Basic (Wooden Finish)",
+                    meta_title: "Bedside Locker Basic (Wooden Finish) | Hospital Bed Manufacturer in Delhi and Hospital Bed Price List India | Shiv Balaji Surgical",
+                    meta_description: "Buy the best Bedside Locker Basic (Wooden Finish). We are a leading Hospital Bed Manufacturer in Delhi and Medical Furniture Manufacturer India. Explore our high-quality Bedside Locker Basic (Wooden Finish) today!",
+                    url_slug: "/products/bedside-lockers-over-bed-tables/sb-g131-bedside-locker-basic-wooden-finish",
+                    image_alt_text: "Bedside Locker Basic (Wooden Finish) - SB-G131 - Hospital Bed Manufacturer in Delhi",
+                    og_title: "Bedside Locker Basic (Wooden Finish) | Shiv Balaji Surgical",
+                    og_description: "Buy Bedside Locker Basic (Wooden Finish) (Model SB-G131) from Shiv Balaji Surgical - leading hospital furniture manufacturer, supplier & dealer in Delhi NCR.…",
+                    twitter_title: "Bedside Locker Basic (Wooden Finish) | Shiv Balaji Surgical",
+                    twitter_description: "Buy Bedside Locker Basic (Wooden Finish) (Model SB-G131) from Shiv Balaji Surgical - leading hospital furniture manufacturer, supplier & dealer in Delhi NCR.…",
+                    additional_keywords: [
+                        "Hospital Bed Manufacturer in Delhi",
+                        "Medical Furniture Manufacturer India",
+                        "Patient Stool Manufacturer",
+                        "Five Function ICU Bed",
+                        "Hospital Trolley Manufacturer"
+                    ],
+                    business_keywords: [
+                        "Bedside Locker Basic (Wooden Finish) Manufacturer",
+                        "Bedside Locker Basic (Wooden Finish) Supplier",
+                        "Bedside Locker Basic (Wooden Finish) Dealer",
+                        "Bedside Locker Basic (Wooden Finish) Exporter",
+                        "Bedside Locker Basic (Wooden Finish) Wholesaler in Delhi",
+                        "Hospital Furniture Manufacturer India",
+                        "Hospital Equipment Supplier Delhi NCR"
+                    ],
+                    seo_content_block: "If you are looking for the best Bedside Locker Basic (Wooden Finish), you are in the right place. Our Bedside Locker Basic (Wooden Finish) is designed for optimal performance. As a top Hospital Bed Manufacturer in Delhi, we ensure every Bedside Locker Basic (Wooden Finish) meets high standards. The Bedside Locker Basic (Wooden Finish) offers incredible durability. Patients and caregivers prefer our Bedside Locker Basic (Wooden Finish) for its reliability. When you choose our Bedside Locker Basic (Wooden Finish), you get quality. We are known as a leading Medical Furniture Manufacturer India as well. This Bedside Locker Basic (Wooden Finish) is perfect for clinics. The Bedside Locker Basic (Wooden Finish) provides unmatched comfort. Contact us if you need a Bedside Locker Basic (Wooden Finish) from a Patient Stool Manufacturer. We also supply related items as a Five Function ICU Bed. The Bedside Locker Basic (Wooden Finish) stands out in the market. Many hospitals trust our Bedside Locker Basic (Wooden Finish). Experience the excellence of this Bedside Locker Basic (Wooden Finish) today. We are your reliable Hospital Trolley Manufacturer.",
+                    schema_org: {
+                        "@context": "https://schema.org/",
+                        "@type": "Product",
+                        "name": "Bedside Locker Basic (Wooden Finish) - SB-G131",
+                        "sku": "SB-G131",
+                        "category": "Bedside Lockers & Over-Bed Tables",
+                        "brand": {
+                            "@type": "Brand",
+                            "name": "Shiv Balaji Surgical"
+                        },
+                        "manufacturer": {
+                            "@type": "Organization",
+                            "name": "Shiv Balaji Surgical",
+                            "address": "Kh. No. 25/2, Nangli Sakrawati, Najafgarh, New Delhi - 110043, India"
+                        },
+                        "description": "Buy Bedside Locker Basic (Wooden Finish) (Model SB-G131) from Shiv Balaji Surgical - leading hospital furniture manufacturer, supplier & dealer in Delhi NCR.…"
+                    }
+                }
+            }),
+            makeProduct({
+                product_id: "SBS-032",
+                product_name: "Utility Trolley with Drawer",
+                model: "SB-G132",
+                category: "Bedside Lockers & Over-Bed Tables",
+                image: productImg(32),
+                short_description: "Utility Trolley with Drawer (Model SB-G132) — Size 22L x 20W x 34H inch",
+                description: "Utility Trolley with Drawer - Model SB-G132 — Utility Trolley with Drawer (Model SB-G132) — Size 22L x 20W x 34H inch",
+                subcategory: "Bedside Lockers",
+                specifications: [
+                    "Size: 22L x 20W x 34H inch.",
+                    "M.S. framework.",
+                    "S.S. shelves.",
+                    "One M.S. drawer.",
+                    "10 cm dia castors.",
+                    "Epoxy powder coated finish."
+                ],
+                optional_feature: [
+                    "Complete S.S. model"
+                ],
+                features: [
+                    "Size 22L x 20W x 34H inch",
+                    "MS frame work with S.S. shelves",
+                    "One MS drawer",
+                    "10cm dia castors",
+                    "Epoxy powder coated finish",
+                    "Also available in complete S.S. model"
+                ],
+                seo: {
+                    focus_keyword: "Utility Trolley with Drawer",
+                    meta_title: "Utility Trolley with Drawer | Hospital Furniture Manufacturer in Delhi and Buy ICU Bed Online India | Shiv Balaji Surgical",
+                    meta_description: "Buy the best Utility Trolley with Drawer. We are a leading Shiv Balaji Surgical and Hospital Bed Manufacturer Najafgarh. Explore our high-quality Utility Trolley with Drawer today!",
+                    url_slug: "/products/bedside-lockers-over-bed-tables/sb-g132-utility-trolley-with-drawer",
+                    image_alt_text: "Utility Trolley with Drawer - SB-G132 - Shiv Balaji Surgical",
+                    og_title: "Utility Trolley with Drawer SB-G132 | Shiv Balaji Surgical",
+                    og_description: "Buy Utility Trolley with Drawer (Model SB-G132) from Shiv Balaji Surgical - leading hospital furniture manufacturer, supplier & dealer in Delhi NCR. Size 22L…",
+                    twitter_title: "Utility Trolley with Drawer SB-G132 | Shiv Balaji Surgical",
+                    twitter_description: "Buy Utility Trolley with Drawer (Model SB-G132) from Shiv Balaji Surgical - leading hospital furniture manufacturer, supplier & dealer in Delhi NCR. Size 22L…",
+                    additional_keywords: [
+                        "Shiv Balaji Surgical",
+                        "Hospital Bed Manufacturer Najafgarh",
+                        "Over Bed Table Manufacturer",
+                        "GMP Certified Hospital Furniture Manufacturer",
+                        "Bulk Hospital Bed Supplier"
+                    ],
+                    business_keywords: [
+                        "Utility Trolley with Drawer Manufacturer",
+                        "Utility Trolley with Drawer Supplier",
+                        "Utility Trolley with Drawer Dealer",
+                        "Utility Trolley with Drawer Exporter",
+                        "Utility Trolley with Drawer Wholesaler in Delhi",
+                        "Hospital Furniture Manufacturer India",
+                        "Hospital Equipment Supplier Delhi NCR"
+                    ],
+                    seo_content_block: "If you are looking for the best Utility Trolley with Drawer, you are in the right place. Our Utility Trolley with Drawer is designed for optimal performance. As a top Shiv Balaji Surgical, we ensure every Utility Trolley with Drawer meets high standards. The Utility Trolley with Drawer offers incredible durability. Patients and caregivers prefer our Utility Trolley with Drawer for its reliability. When you choose our Utility Trolley with Drawer, you get quality. We are known as a leading Hospital Bed Manufacturer Najafgarh as well. This Utility Trolley with Drawer is perfect for clinics. The Utility Trolley with Drawer provides unmatched comfort. Contact us if you need a Utility Trolley with Drawer from a Over Bed Table Manufacturer. We also supply related items as a GMP Certified Hospital Furniture Manufacturer. The Utility Trolley with Drawer stands out in the market. Many hospitals trust our Utility Trolley with Drawer. Experience the excellence of this Utility Trolley with Drawer today. We are your reliable Bulk Hospital Bed Supplier.",
+                    schema_org: {
+                        "@context": "https://schema.org/",
+                        "@type": "Product",
+                        "name": "Utility Trolley with Drawer - SB-G132",
+                        "sku": "SB-G132",
+                        "category": "Bedside Lockers & Over-Bed Tables",
+                        "brand": {
+                            "@type": "Brand",
+                            "name": "Shiv Balaji Surgical"
+                        },
+                        "manufacturer": {
+                            "@type": "Organization",
+                            "name": "Shiv Balaji Surgical",
+                            "address": "Kh. No. 25/2, Nangli Sakrawati, Najafgarh, New Delhi - 110043, India"
+                        },
+                        "description": "Buy Utility Trolley with Drawer (Model SB-G132) from Shiv Balaji Surgical - leading hospital furniture manufacturer, supplier & dealer in Delhi NCR. Size 22L…"
+                    }
+                }
+            }),
+            makeProduct({
+                product_id: "SBS-033",
+                product_name: "Over Bed Table (Fixed Top)",
+                model: "SB-G133",
+                category: "Bedside Lockers & Over-Bed Tables",
+                image: productImg(33),
+                short_description: "Over Bed Table (Fixed Top) (Model SB-G133) — Overall size 42L x 16W x 39H inch",
+                description: "Over Bed Table (Fixed Top) - Model SB-G133 — Over Bed Table (Fixed Top) (Model SB-G133) — Overall size 42L x 16W x 39H inch",
+                subcategory: "Over-Bed Tables",
+                specifications: [
+                    "Approx. size: 42L x 16W x 39H inch.",
+                    "Tubular framework mounted on 5 cm castors.",
+                    "Fixed membrane-pressed wooden top, 32 x 16 inch.",
+                    "Pre-treated and epoxy powder coated frame."
+                ],
+                optional_feature: [
+                    "S.S. frame model",
+                    "ABS moulded top"
+                ],
+                features: [
+                    "Overall size 42L x 16W x 39H inch",
+                    "Tubular frame work mounted on 5cm castors",
+                    "Fixed membrane pressed wooden top (32\" x 16\")",
+                    "Pre-treated and epoxy powder coated frame"
+                ],
+                seo: {
+                    focus_keyword: "Over Bed Table (Fixed Top)",
+                    meta_title: "Over Bed Table (Fixed Top) | Hospital Bed with Side Railing and Emergency Recovery Trolley Manufacturer | Shiv Balaji Surgical",
+                    meta_description: "Buy the best Over Bed Table (Fixed Top). We are a leading Hospital Bed Wholesale Dealer and Shiv Balaji Surgical. Explore our high-quality Over Bed Table (Fixed Top) today!",
+                    url_slug: "/products/bedside-lockers-over-bed-tables/sb-g133-over-bed-table-fixed-top",
+                    image_alt_text: "Over Bed Table (Fixed Top) - SB-G133 - Hospital Bed Wholesale Dealer",
+                    og_title: "Over Bed Table (Fixed Top) SB-G133 | Shiv Balaji Surgical",
+                    og_description: "Buy Over Bed Table (Fixed Top) (Model SB-G133) from Shiv Balaji Surgical - leading hospital furniture manufacturer, supplier & dealer in Delhi NCR. Overall…",
+                    twitter_title: "Over Bed Table (Fixed Top) SB-G133 | Shiv Balaji Surgical",
+                    twitter_description: "Buy Over Bed Table (Fixed Top) (Model SB-G133) from Shiv Balaji Surgical - leading hospital furniture manufacturer, supplier & dealer in Delhi NCR. Overall…",
+                    additional_keywords: [
+                        "Hospital Bed Wholesale Dealer",
+                        "Shiv Balaji Surgical",
+                        "ICU Bed Electric Manufacturer",
+                        "Recovery Bed Fixed Height Manufacturer",
+                        "Hospital Foot Step Manufacturer"
+                    ],
+                    business_keywords: [
+                        "Over Bed Table (Fixed Top) Manufacturer",
+                        "Over Bed Table (Fixed Top) Supplier",
+                        "Over Bed Table (Fixed Top) Dealer",
+                        "Over Bed Table (Fixed Top) Exporter",
+                        "Over Bed Table (Fixed Top) Wholesaler in Delhi",
+                        "Hospital Furniture Manufacturer India",
+                        "Hospital Equipment Supplier Delhi NCR"
+                    ],
+                    seo_content_block: "If you are looking for the best Over Bed Table (Fixed Top), you are in the right place. Our Over Bed Table (Fixed Top) is designed for optimal performance. As a top Hospital Bed Wholesale Dealer, we ensure every Over Bed Table (Fixed Top) meets high standards. The Over Bed Table (Fixed Top) offers incredible durability. Patients and caregivers prefer our Over Bed Table (Fixed Top) for its reliability. When you choose our Over Bed Table (Fixed Top), you get quality. We are known as a leading Shiv Balaji Surgical as well. This Over Bed Table (Fixed Top) is perfect for clinics. The Over Bed Table (Fixed Top) provides unmatched comfort. Contact us if you need a Over Bed Table (Fixed Top) from a ICU Bed Electric Manufacturer. We also supply related items as a Recovery Bed Fixed Height Manufacturer. The Over Bed Table (Fixed Top) stands out in the market. Many hospitals trust our Over Bed Table (Fixed Top). Experience the excellence of this Over Bed Table (Fixed Top) today. We are your reliable Hospital Foot Step Manufacturer.",
+                    schema_org: {
+                        "@context": "https://schema.org/",
+                        "@type": "Product",
+                        "name": "Over Bed Table (Fixed Top) - SB-G133",
+                        "sku": "SB-G133",
+                        "category": "Bedside Lockers & Over-Bed Tables",
+                        "brand": {
+                            "@type": "Brand",
+                            "name": "Shiv Balaji Surgical"
+                        },
+                        "manufacturer": {
+                            "@type": "Organization",
+                            "name": "Shiv Balaji Surgical",
+                            "address": "Kh. No. 25/2, Nangli Sakrawati, Najafgarh, New Delhi - 110043, India"
+                        },
+                        "description": "Buy Over Bed Table (Fixed Top) (Model SB-G133) from Shiv Balaji Surgical - leading hospital furniture manufacturer, supplier & dealer in Delhi NCR. Overall…"
+                    }
+                }
+            }),
+            makeProduct({
+                product_id: "SBS-034",
+                product_name: "Over Bed Table Manually Adjustable (Side Knob)",
+                model: "SB-G134A",
+                category: "Bedside Lockers & Over-Bed Tables",
+                image: productImg(34),
+                short_description: "Over Bed Table Manually Adjustable (Side Knob) (Model SB-G134A) — Rectangular frame work mounted on 5cm castors",
+                description: "Over Bed Table Manually Adjustable (Side Knob) - Model SB-G134A — Over Bed Table Manually Adjustable (Side Knob) (Model SB-G134A) — Rectangular frame work mounted on 5cm castors",
+                subcategory: "Over-Bed Tables",
+                specifications: [
+                    "Rectangular framework mounted on 5 cm castors.",
+                    "Membrane-pressed wooden top adjustable by side knob.",
+                    "Top size: 32 x 16 inch.",
+                    "Pre-treated and epoxy powder coated frame."
+                ],
+                optional_feature: [
+                    "ABS moulded top",
+                    "S.S. frame model"
+                ],
+                features: [
+                    "Rectangular frame work mounted on 5cm castors",
+                    "Membrane pressed wooden top adjustable by side knob",
+                    "Top size 32\" x 16\"",
+                    "Pre-treated and epoxy powder coated frame"
+                ],
+                seo: {
+                    focus_keyword: "Over Bed Table Manually Adjustable (Side Knob)",
+                    meta_title: "Over Bed Table Manually Adjustable (Side Knob) | Fowler Bed ABS Panel Manufacturer and Hospital Bed Manufacturer in India | Shiv Balaji Surgical",
+                    meta_description: "Buy the best Over Bed Table Manually Adjustable (Side Knob). We are a leading Pediatric Hospital Bed Supplier and Hospital Bed Manufacturer in India. Explore our high-quality Over Bed Table Manually Adjustable (Side Knob) today!",
+                    url_slug: "/products/bedside-lockers-over-bed-tables/sb-g134a-over-bed-table-manually-adjustable-side-knob",
+                    image_alt_text: "Over Bed Table Manually Adjustable (Side Knob) - SB-G134A - Pediatric Hospital Bed Supplier",
+                    og_title: "Over Bed Table Manually Adjustable (Side Knob) | Shiv…",
+                    og_description: "Buy Over Bed Table Manually Adjustable (Side Knob) (Model SB-G134A) from Shiv Balaji Surgical - leading hospital furniture manufacturer, supplier & dealer in…",
+                    twitter_title: "Over Bed Table Manually Adjustable (Side Knob) | Shiv…",
+                    twitter_description: "Buy Over Bed Table Manually Adjustable (Side Knob) (Model SB-G134A) from Shiv Balaji Surgical - leading hospital furniture manufacturer, supplier & dealer in…",
+                    additional_keywords: [
+                        "Pediatric Hospital Bed Supplier",
+                        "Hospital Bed Manufacturer in India",
+                        "Hospital Bed Manufacturer with ABS Panels",
+                        "Examination Table Manufacturer",
+                        "ICU Bed Manufacturer"
+                    ],
+                    business_keywords: [
+                        "Over Bed Table Manually Adjustable (Side Knob) Manufacturer",
+                        "Over Bed Table Manually Adjustable (Side Knob) Supplier",
+                        "Over Bed Table Manually Adjustable (Side Knob) Dealer",
+                        "Over Bed Table Manually Adjustable (Side Knob) Exporter",
+                        "Over Bed Table Manually Adjustable (Side Knob) Wholesaler in Delhi",
+                        "Hospital Furniture Manufacturer India",
+                        "Hospital Equipment Supplier Delhi NCR"
+                    ],
+                    seo_content_block: "If you are looking for the best Over Bed Table Manually Adjustable (Side Knob), you are in the right place. Our Over Bed Table Manually Adjustable (Side Knob) is designed for optimal performance. As a top Pediatric Hospital Bed Supplier, we ensure every Over Bed Table Manually Adjustable (Side Knob) meets high standards. The Over Bed Table Manually Adjustable (Side Knob) offers incredible durability. Patients and caregivers prefer our Over Bed Table Manually Adjustable (Side Knob) for its reliability. When you choose our Over Bed Table Manually Adjustable (Side Knob), you get quality. We are known as a leading Hospital Bed Manufacturer in India as well. This Over Bed Table Manually Adjustable (Side Knob) is perfect for clinics. The Over Bed Table Manually Adjustable (Side Knob) provides unmatched comfort. Contact us if you need a Over Bed Table Manually Adjustable (Side Knob) from a Hospital Bed Manufacturer with ABS Panels. We also supply related items as a Examination Table Manufacturer. The Over Bed Table Manually Adjustable (Side Knob) stands out in the market. Many hospitals trust our Over Bed Table Manually Adjustable (Side Knob). Experience the excellence of this Over Bed Table Manually Adjustable (Side Knob) today. We are your reliable ICU Bed Manufacturer.",
+                    schema_org: {
+                        "@context": "https://schema.org/",
+                        "@type": "Product",
+                        "name": "Over Bed Table Manually Adjustable (Side Knob) - SB-G134A",
+                        "sku": "SB-G134A",
+                        "category": "Bedside Lockers & Over-Bed Tables",
+                        "brand": {
+                            "@type": "Brand",
+                            "name": "Shiv Balaji Surgical"
+                        },
+                        "manufacturer": {
+                            "@type": "Organization",
+                            "name": "Shiv Balaji Surgical",
+                            "address": "Kh. No. 25/2, Nangli Sakrawati, Najafgarh, New Delhi - 110043, India"
+                        },
+                        "description": "Buy Over Bed Table Manually Adjustable (Side Knob) (Model SB-G134A) from Shiv Balaji Surgical - leading hospital furniture manufacturer, supplier & dealer in…"
+                    }
+                }
+            }),
+            makeProduct({
+                product_id: "SBS-035",
+                product_name: "Over Bed Table Manually Adjustable (Gear Handle)",
+                model: "SB-G135B",
+                category: "Bedside Lockers & Over-Bed Tables",
+                image: productImg(35),
+                short_description: "Over Bed Table Manually Adjustable (Gear Handle) (Model SB-G135B) — ABS moulded top fitted on MS square tubber telescopic steam",
+                description: "Over Bed Table Manually Adjustable (Gear Handle) - Model SB-G135B — Over Bed Table Manually Adjustable (Gear Handle) (Model SB-G135B) — ABS moulded top fitted on MS square tubber telescopic steam",
+                subcategory: "Over-Bed Tables",
+                specifications: [
+                    "ABS moulded top fitted on M.S. square tube telescopic stem.",
+                    "Height adjustable by gear handle.",
+                    "Base frame made of rectangular M.S. tube mounted on 5 cm dia castor.",
+                    "Epoxy powder coated frame."
+                ],
+                optional_feature: [
+                    "Laminated top (approx. 32 x 16 inch)",
+                    "S.S. frame model"
+                ],
+                features: [
+                    "ABS moulded top fitted on MS square tubber telescopic steam",
+                    "Height adjustable by gear handle",
+                    "Base frame of rectangular MS tube mounted on 5cm dia castor",
+                    "Epoxy powder coated frame"
+                ],
+                seo: {
+                    focus_keyword: "Over Bed Table Manually Adjustable (Gear Handle)",
+                    meta_title: "Over Bed Table Manually Adjustable (Gear Handle) | Bulk Hospital Bed Supplier and Hospital Trolley Manufacturer | Shiv Balaji Surgical",
+                    meta_description: "Buy the best Over Bed Table Manually Adjustable (Gear Handle). We are a leading GMP Certified Hospital Furniture Manufacturer and Crash Cart Trolley Manufacturer. Explore our high-quality Over Bed Table Manually Adjustable (Gear Handle) today!",
+                    url_slug: "/products/bedside-lockers-over-bed-tables/sb-g135b-over-bed-table-manually-adjustable-gear-handle",
+                    image_alt_text: "Over Bed Table Manually Adjustable (Gear Handle) - SB-G135B - GMP Certified Hospital Furniture Manufacturer",
+                    og_title: "Over Bed Table Manually Adjustable (Gear Handle) | Shiv…",
+                    og_description: "Buy Over Bed Table Manually Adjustable (Gear Handle) (Model SB-G135B) from Shiv Balaji Surgical - leading hospital furniture manufacturer, supplier & dealer…",
+                    twitter_title: "Over Bed Table Manually Adjustable (Gear Handle) | Shiv…",
+                    twitter_description: "Buy Over Bed Table Manually Adjustable (Gear Handle) (Model SB-G135B) from Shiv Balaji Surgical - leading hospital furniture manufacturer, supplier & dealer…",
+                    additional_keywords: [
+                        "GMP Certified Hospital Furniture Manufacturer",
+                        "Crash Cart Trolley Manufacturer",
+                        "Recovery Bed Fixed Height Manufacturer",
+                        "Hospital Bed Exporter India",
+                        "Hospital Furniture Manufacturer"
+                    ],
+                    business_keywords: [
+                        "Over Bed Table Manually Adjustable (Gear Handle) Manufacturer",
+                        "Over Bed Table Manually Adjustable (Gear Handle) Supplier",
+                        "Over Bed Table Manually Adjustable (Gear Handle) Dealer",
+                        "Over Bed Table Manually Adjustable (Gear Handle) Exporter",
+                        "Over Bed Table Manually Adjustable (Gear Handle) Wholesaler in Delhi",
+                        "Hospital Furniture Manufacturer India",
+                        "Hospital Equipment Supplier Delhi NCR"
+                    ],
+                    seo_content_block: "If you are looking for the best Over Bed Table Manually Adjustable (Gear Handle), you are in the right place. Our Over Bed Table Manually Adjustable (Gear Handle) is designed for optimal performance. As a top GMP Certified Hospital Furniture Manufacturer, we ensure every Over Bed Table Manually Adjustable (Gear Handle) meets high standards. The Over Bed Table Manually Adjustable (Gear Handle) offers incredible durability. Patients and caregivers prefer our Over Bed Table Manually Adjustable (Gear Handle) for its reliability. When you choose our Over Bed Table Manually Adjustable (Gear Handle), you get quality. We are known as a leading Crash Cart Trolley Manufacturer as well. This Over Bed Table Manually Adjustable (Gear Handle) is perfect for clinics. The Over Bed Table Manually Adjustable (Gear Handle) provides unmatched comfort. Contact us if you need a Over Bed Table Manually Adjustable (Gear Handle) from a Recovery Bed Fixed Height Manufacturer. We also supply related items as a Hospital Bed Exporter India. The Over Bed Table Manually Adjustable (Gear Handle) stands out in the market. Many hospitals trust our Over Bed Table Manually Adjustable (Gear Handle). Experience the excellence of this Over Bed Table Manually Adjustable (Gear Handle) today. We are your reliable Hospital Furniture Manufacturer.",
+                    schema_org: {
+                        "@context": "https://schema.org/",
+                        "@type": "Product",
+                        "name": "Over Bed Table Manually Adjustable (Gear Handle) - SB-G135B",
+                        "sku": "SB-G135B",
+                        "category": "Bedside Lockers & Over-Bed Tables",
+                        "brand": {
+                            "@type": "Brand",
+                            "name": "Shiv Balaji Surgical"
+                        },
+                        "manufacturer": {
+                            "@type": "Organization",
+                            "name": "Shiv Balaji Surgical",
+                            "address": "Kh. No. 25/2, Nangli Sakrawati, Najafgarh, New Delhi - 110043, India"
+                        },
+                        "description": "Buy Over Bed Table Manually Adjustable (Gear Handle) (Model SB-G135B) from Shiv Balaji Surgical - leading hospital furniture manufacturer, supplier & dealer…"
+                    }
+                }
+            }),
+            makeProduct({
+                product_id: "SBS-036",
+                product_name: "Over Bed Table Pneumatically Adjustable",
+                model: "SB-G136",
+                category: "Bedside Lockers & Over-Bed Tables",
+                image: productImg(36),
+                short_description: "Over Bed Table Pneumatically Adjustable (Model SB-G136) — Rectangular frame work mounted on 5cm castors",
+                description: "Over Bed Table Pneumatically Adjustable - Model SB-G136 — Over Bed Table Pneumatically Adjustable (Model SB-G136) — Rectangular frame work mounted on 5cm castors",
+                subcategory: "Over-Bed Tables",
+                specifications: [
+                    "Rectangular framework mounted on 5 cm castors.",
+                    "33 x 18 ABS moulded top.",
+                    "Adjusted by pneumatic gas spring.",
+                    "Pre-treated and epoxy powder coated frame."
+                ],
+                optional_feature: [
+                    "Laminated top (approx. 32 x 16 inch)"
+                ],
+                features: [
+                    "Rectangular frame work mounted on 5cm castors",
+                    "33\" x 18\" ABS moulded top",
+                    "Height adjusted by pneumatic gas spring",
+                    "Pre-treated and epoxy powder coated frame"
+                ],
+                seo: {
+                    focus_keyword: "Over Bed Table Pneumatically Adjustable",
+                    meta_title: "Over Bed Table Pneumatically Adjustable | Hospital Furniture for Nursing Home and Emergency Recovery Trolley Manufacturer | Shiv Balaji Surgical",
+                    meta_description: "Buy the best Over Bed Table Pneumatically Adjustable. We are a leading Pediatric Bed Manufacturer and Hospital Bed Manufacturer New Delhi. Explore our high-quality Over Bed Table Pneumatically Adjustable today!",
+                    url_slug: "/products/bedside-lockers-over-bed-tables/sb-g136-over-bed-table-pneumatically-adjustable",
+                    image_alt_text: "Over Bed Table Pneumatically Adjustable - SB-G136 - Pediatric Bed Manufacturer",
+                    og_title: "Over Bed Table Pneumatically Adjustable | Shiv Balaji…",
+                    og_description: "Buy Over Bed Table Pneumatically Adjustable (Model SB-G136) from Shiv Balaji Surgical - leading hospital furniture manufacturer, supplier & dealer in Delhi…",
+                    twitter_title: "Over Bed Table Pneumatically Adjustable | Shiv Balaji…",
+                    twitter_description: "Buy Over Bed Table Pneumatically Adjustable (Model SB-G136) from Shiv Balaji Surgical - leading hospital furniture manufacturer, supplier & dealer in Delhi…",
+                    additional_keywords: [
+                        "Pediatric Bed Manufacturer",
+                        "Hospital Bed Manufacturer New Delhi",
+                        "Fowler Bed Manufacturer",
+                        "Hospital Furniture for Nursing Home",
+                        "Manual Hospital Bed Supplier"
+                    ],
+                    business_keywords: [
+                        "Over Bed Table Pneumatically Adjustable Manufacturer",
+                        "Over Bed Table Pneumatically Adjustable Supplier",
+                        "Over Bed Table Pneumatically Adjustable Dealer",
+                        "Over Bed Table Pneumatically Adjustable Exporter",
+                        "Over Bed Table Pneumatically Adjustable Wholesaler in Delhi",
+                        "Hospital Furniture Manufacturer India",
+                        "Hospital Equipment Supplier Delhi NCR"
+                    ],
+                    seo_content_block: "If you are looking for the best Over Bed Table Pneumatically Adjustable, you are in the right place. Our Over Bed Table Pneumatically Adjustable is designed for optimal performance. As a top Pediatric Bed Manufacturer, we ensure every Over Bed Table Pneumatically Adjustable meets high standards. The Over Bed Table Pneumatically Adjustable offers incredible durability. Patients and caregivers prefer our Over Bed Table Pneumatically Adjustable for its reliability. When you choose our Over Bed Table Pneumatically Adjustable, you get quality. We are known as a leading Hospital Bed Manufacturer New Delhi as well. This Over Bed Table Pneumatically Adjustable is perfect for clinics. The Over Bed Table Pneumatically Adjustable provides unmatched comfort. Contact us if you need a Over Bed Table Pneumatically Adjustable from a Fowler Bed Manufacturer. We also supply related items as a Hospital Furniture for Nursing Home. The Over Bed Table Pneumatically Adjustable stands out in the market. Many hospitals trust our Over Bed Table Pneumatically Adjustable. Experience the excellence of this Over Bed Table Pneumatically Adjustable today. We are your reliable Manual Hospital Bed Supplier.",
+                    schema_org: {
+                        "@context": "https://schema.org/",
+                        "@type": "Product",
+                        "name": "Over Bed Table Pneumatically Adjustable - SB-G136",
+                        "sku": "SB-G136",
+                        "category": "Bedside Lockers & Over-Bed Tables",
+                        "brand": {
+                            "@type": "Brand",
+                            "name": "Shiv Balaji Surgical"
+                        },
+                        "manufacturer": {
+                            "@type": "Organization",
+                            "name": "Shiv Balaji Surgical",
+                            "address": "Kh. No. 25/2, Nangli Sakrawati, Najafgarh, New Delhi - 110043, India"
+                        },
+                        "description": "Buy Over Bed Table Pneumatically Adjustable (Model SB-G136) from Shiv Balaji Surgical - leading hospital furniture manufacturer, supplier & dealer in Delhi…"
+                    }
+                }
+            })
+        ]
+    },
+    {
+        slug: "examination-room-furniture",
+        name: "Examination Room Furniture",
+        image: "/assets/images/service/service-2.jpg",
+        icon: "fa-stethoscope",
+        description: "Examination couches, OPD chairs and procedure tables designed for patient comfort and clinical efficiency. Trusted by hospitals and clinics across India.",
+        products: [
+            makeProduct({
+                product_id: "SBS-021",
+                product_name: "Patient OPD Couch/Chair",
+                model: "SB-G121",
+                category: "Examination Room Furniture",
+                image: productImg(21),
+                short_description: "Patient OPD Couch/Chair (Model SB-G121) — Pressed artificial leather fabric",
+                description: "Patient OPD Couch/Chair - Model SB-G121 — Patient OPD Couch/Chair (Model SB-G121) — Pressed artificial leather fabric",
+                subcategory: "OPD Couches & Chairs",
+                specifications: [
+                    "Fabric is pressed artificial leather.",
+                    "Approx. dimensions: 190 x 62 x 58 cm.",
+                    "M.S. tubular framework mounted in PVC stumps.",
+                    "Epoxy powder coated finish."
+                ],
+                optional_feature: [],
+                features: [
+                    "Pressed artificial leather fabric",
+                    "Overall dimension 190 x 62 x 58 cm",
+                    "MS tubular frame work mounted in PVC stumps",
+                    "Epoxy powder coated finish"
+                ],
+                seo: {
+                    focus_keyword: "Patient OPD Couch/Chair",
+                    meta_title: "Patient OPD Couch/Chair | Shiv Balaji Surgical and Hospital Bed Exporter India | Shiv Balaji Surgical",
+                    meta_description: "Buy the best Patient OPD Couch/Chair. We are a leading Fowler Bed Manufacturer and Shiv Balaji Surgical. Explore our high-quality Patient OPD Couch/Chair today!",
+                    url_slug: "/products/examination-room-furniture/sb-g121-patient-opd-couch-chair",
+                    image_alt_text: "Patient OPD Couch/Chair - SB-G121 - Fowler Bed Manufacturer",
+                    og_title: "Patient OPD Couch/Chair SB-G121 | Shiv Balaji Surgical",
+                    og_description: "Buy Patient OPD Couch/Chair (Model SB-G121) from Shiv Balaji Surgical - leading hospital furniture manufacturer, supplier & dealer in Delhi NCR. Pressed…",
+                    twitter_title: "Patient OPD Couch/Chair SB-G121 | Shiv Balaji Surgical",
+                    twitter_description: "Buy Patient OPD Couch/Chair (Model SB-G121) from Shiv Balaji Surgical - leading hospital furniture manufacturer, supplier & dealer in Delhi NCR. Pressed…",
+                    additional_keywords: [
+                        "Fowler Bed Manufacturer",
+                        "Shiv Balaji Surgical",
+                        "Hospital Trolley Manufacturer",
+                        "Crash Cart Trolley Manufacturer",
+                        "Hospital Bed Manufacturer New Delhi"
+                    ],
+                    business_keywords: [
+                        "Patient OPD Couch/Chair Manufacturer",
+                        "Patient OPD Couch/Chair Supplier",
+                        "Patient OPD Couch/Chair Dealer",
+                        "Patient OPD Couch/Chair Exporter",
+                        "Patient OPD Couch/Chair Wholesaler in Delhi",
+                        "Hospital Furniture Manufacturer India",
+                        "Hospital Equipment Supplier Delhi NCR"
+                    ],
+                    seo_content_block: "If you are looking for the best Patient OPD Couch/Chair, you are in the right place. Our Patient OPD Couch/Chair is designed for optimal performance. As a top Fowler Bed Manufacturer, we ensure every Patient OPD Couch/Chair meets high standards. The Patient OPD Couch/Chair offers incredible durability. Patients and caregivers prefer our Patient OPD Couch/Chair for its reliability. When you choose our Patient OPD Couch/Chair, you get quality. We are known as a leading Shiv Balaji Surgical as well. This Patient OPD Couch/Chair is perfect for clinics. The Patient OPD Couch/Chair provides unmatched comfort. Contact us if you need a Patient OPD Couch/Chair from a Hospital Trolley Manufacturer. We also supply related items as a Crash Cart Trolley Manufacturer. The Patient OPD Couch/Chair stands out in the market. Many hospitals trust our Patient OPD Couch/Chair. Experience the excellence of this Patient OPD Couch/Chair today. We are your reliable Hospital Bed Manufacturer New Delhi.",
+                    schema_org: {
+                        "@context": "https://schema.org/",
+                        "@type": "Product",
+                        "name": "Patient OPD Couch/Chair - SB-G121",
+                        "sku": "SB-G121",
+                        "category": "Examination Room Furniture",
+                        "brand": {
+                            "@type": "Brand",
+                            "name": "Shiv Balaji Surgical"
+                        },
+                        "manufacturer": {
+                            "@type": "Organization",
+                            "name": "Shiv Balaji Surgical",
+                            "address": "Kh. No. 25/2, Nangli Sakrawati, Najafgarh, New Delhi - 110043, India"
+                        },
+                        "description": "Buy Patient OPD Couch/Chair (Model SB-G121) from Shiv Balaji Surgical - leading hospital furniture manufacturer, supplier & dealer in Delhi NCR. Pressed…"
+                    }
+                }
+            }),
+            makeProduct({
+                product_id: "SBS-022",
+                product_name: "Examination Table Plain",
+                model: "SB-G122",
+                category: "Examination Room Furniture",
+                image: productImg(22),
+                short_description: "Examination Table Plain (Model SB-G122) — Overall size 183L x 60W x 81H cm",
+                description: "Examination Table Plain - Model SB-G122 — Examination Table Plain (Model SB-G122) — Overall size 183L x 60W x 81H cm",
+                subcategory: "Examination Tables",
+                specifications: [
+                    "Approx. size: 183L x 60W x 81H cm.",
+                    "CRC tube framework.",
+                    "Legs fitted with PVC stumps.",
+                    "5 cm foam cushioned top covered with rexine.",
+                    "Pre-treated and epoxy powder coated finish."
+                ],
+                optional_feature: [
+                    "Machine-pressed double-bend M.S. CRC sheet top mattress"
+                ],
+                features: [
+                    "Overall size 183L x 60W x 81H cm",
+                    "CRC tube frame work with PVC stump legs",
+                    "5cm foam cushioned top covered with rexine",
+                    "Pre-treated and epoxy powder coated finish"
+                ],
+                seo: {
+                    focus_keyword: "Examination Table Plain",
+                    meta_title: "Examination Table Plain | GMP Certified Hospital Furniture Manufacturer and Pediatric Bed Manufacturer | Shiv Balaji Surgical",
+                    meta_description: "Buy the best Examination Table Plain. We are a leading Shiv Balaji Surgical Hospital Beds and Fowler Bed ABS Panel Manufacturer. Explore our high-quality Examination Table Plain today!",
+                    url_slug: "/products/examination-room-furniture/sb-g122-examination-table-plain",
+                    image_alt_text: "Examination Table Plain - SB-G122 - Shiv Balaji Surgical Hospital Beds",
+                    og_title: "Examination Table Plain SB-G122 | Shiv Balaji Surgical",
+                    og_description: "Buy Examination Table Plain (Model SB-G122) from Shiv Balaji Surgical - leading hospital furniture manufacturer, supplier & dealer in Delhi NCR. Overall size…",
+                    twitter_title: "Examination Table Plain SB-G122 | Shiv Balaji Surgical",
+                    twitter_description: "Buy Examination Table Plain (Model SB-G122) from Shiv Balaji Surgical - leading hospital furniture manufacturer, supplier & dealer in Delhi NCR. Overall size…",
+                    additional_keywords: [
+                        "Shiv Balaji Surgical Hospital Beds",
+                        "Fowler Bed ABS Panel Manufacturer",
+                        "Hospital Furniture Manufacturer",
+                        "Recovery Bed Fixed Height Manufacturer",
+                        "Patient Stool Manufacturer"
+                    ],
+                    business_keywords: [
+                        "Examination Table Plain Manufacturer",
+                        "Examination Table Plain Supplier",
+                        "Examination Table Plain Dealer",
+                        "Examination Table Plain Exporter",
+                        "Examination Table Plain Wholesaler in Delhi",
+                        "Hospital Furniture Manufacturer India",
+                        "Hospital Equipment Supplier Delhi NCR"
+                    ],
+                    seo_content_block: "If you are looking for the best Examination Table Plain, you are in the right place. Our Examination Table Plain is designed for optimal performance. As a top Shiv Balaji Surgical Hospital Beds, we ensure every Examination Table Plain meets high standards. The Examination Table Plain offers incredible durability. Patients and caregivers prefer our Examination Table Plain for its reliability. When you choose our Examination Table Plain, you get quality. We are known as a leading Fowler Bed ABS Panel Manufacturer as well. This Examination Table Plain is perfect for clinics. The Examination Table Plain provides unmatched comfort. Contact us if you need a Examination Table Plain from a Hospital Furniture Manufacturer. We also supply related items as a Recovery Bed Fixed Height Manufacturer. The Examination Table Plain stands out in the market. Many hospitals trust our Examination Table Plain. Experience the excellence of this Examination Table Plain today. We are your reliable Patient Stool Manufacturer.",
+                    schema_org: {
+                        "@context": "https://schema.org/",
+                        "@type": "Product",
+                        "name": "Examination Table Plain - SB-G122",
+                        "sku": "SB-G122",
+                        "category": "Examination Room Furniture",
+                        "brand": {
+                            "@type": "Brand",
+                            "name": "Shiv Balaji Surgical"
+                        },
+                        "manufacturer": {
+                            "@type": "Organization",
+                            "name": "Shiv Balaji Surgical",
+                            "address": "Kh. No. 25/2, Nangli Sakrawati, Najafgarh, New Delhi - 110043, India"
+                        },
+                        "description": "Buy Examination Table Plain (Model SB-G122) from Shiv Balaji Surgical - leading hospital furniture manufacturer, supplier & dealer in Delhi NCR. Overall size…"
+                    }
+                }
+            }),
+            makeProduct({
+                product_id: "SBS-023",
+                product_name: "Examination Table with 2 Section",
+                model: "SB-G123",
+                category: "Examination Room Furniture",
+                image: productImg(23),
+                short_description: "Examination Table with 2 Section (Model SB-G123) — Overall size 72L x 24W x 32H inch",
+                description: "Examination Table with 2 Section - Model SB-G123 — Examination Table with 2 Section (Model SB-G123) — Overall size 72L x 24W x 32H inch",
+                subcategory: "Examination Tables",
+                specifications: [
+                    "Approx. size: 72L x 24W x 32H inch.",
+                    "Rectangular and square steel tube framework.",
+                    "Adjustable backrest by hand lever.",
+                    "Two-section cushioned top / two-section M.S. powder-coated top with mattress.",
+                    "Legs fitted with PVC stumps.",
+                    "Pre-treated and epoxy powder coated finish."
+                ],
+                optional_feature: [],
+                features: [
+                    "Overall size 72L x 24W x 32H inch",
+                    "Rectangular & square steel tube frame work",
+                    "Adjustable backrest by hand lever",
+                    "Two section cushioned/powder coated top with mattress",
+                    "Legs fitted with PVC stumps",
+                    "Pre-treated and epoxy powder coated finish"
+                ],
+                seo: {
+                    focus_keyword: "Examination Table with 2 Section",
+                    meta_title: "Examination Table with 2 Section | Hospital Bed Price List India and Hospital Trolley Manufacturer | Shiv Balaji Surgical",
+                    meta_description: "Buy the best Examination Table with 2 Section. We are a leading Hospital Bed Manufacturer with ABS Panels and Hospital Furniture for Nursing Home. Explore our high-quality Examination Table with 2 Section today!",
+                    url_slug: "/products/examination-room-furniture/sb-g123-examination-table-with-2-section",
+                    image_alt_text: "Examination Table with 2 Section - SB-G123 - Hospital Bed Manufacturer with ABS Panels",
+                    og_title: "Examination Table with 2 Section | Shiv Balaji Surgical",
+                    og_description: "Buy Examination Table with 2 Section (Model SB-G123) from Shiv Balaji Surgical - leading hospital furniture manufacturer, supplier & dealer in Delhi NCR.…",
+                    twitter_title: "Examination Table with 2 Section | Shiv Balaji Surgical",
+                    twitter_description: "Buy Examination Table with 2 Section (Model SB-G123) from Shiv Balaji Surgical - leading hospital furniture manufacturer, supplier & dealer in Delhi NCR.…",
+                    additional_keywords: [
+                        "Hospital Bed Manufacturer with ABS Panels",
+                        "Hospital Furniture for Nursing Home",
+                        "Recovery Bed Manufacturer",
+                        "Hospital Furniture Manufacturer in Delhi",
+                        "Surgeon Stool Manufacturer"
+                    ],
+                    business_keywords: [
+                        "Examination Table with 2 Section Manufacturer",
+                        "Examination Table with 2 Section Supplier",
+                        "Examination Table with 2 Section Dealer",
+                        "Examination Table with 2 Section Exporter",
+                        "Examination Table with 2 Section Wholesaler in Delhi",
+                        "Hospital Furniture Manufacturer India",
+                        "Hospital Equipment Supplier Delhi NCR"
+                    ],
+                    seo_content_block: "If you are looking for the best Examination Table with 2 Section, you are in the right place. Our Examination Table with 2 Section is designed for optimal performance. As a top Hospital Bed Manufacturer with ABS Panels, we ensure every Examination Table with 2 Section meets high standards. The Examination Table with 2 Section offers incredible durability. Patients and caregivers prefer our Examination Table with 2 Section for its reliability. When you choose our Examination Table with 2 Section, you get quality. We are known as a leading Hospital Furniture for Nursing Home as well. This Examination Table with 2 Section is perfect for clinics. The Examination Table with 2 Section provides unmatched comfort. Contact us if you need a Examination Table with 2 Section from a Recovery Bed Manufacturer. We also supply related items as a Hospital Furniture Manufacturer in Delhi. The Examination Table with 2 Section stands out in the market. Many hospitals trust our Examination Table with 2 Section. Experience the excellence of this Examination Table with 2 Section today. We are your reliable Surgeon Stool Manufacturer.",
+                    schema_org: {
+                        "@context": "https://schema.org/",
+                        "@type": "Product",
+                        "name": "Examination Table with 2 Section - SB-G123",
+                        "sku": "SB-G123",
+                        "category": "Examination Room Furniture",
+                        "brand": {
+                            "@type": "Brand",
+                            "name": "Shiv Balaji Surgical"
+                        },
+                        "manufacturer": {
+                            "@type": "Organization",
+                            "name": "Shiv Balaji Surgical",
+                            "address": "Kh. No. 25/2, Nangli Sakrawati, Najafgarh, New Delhi - 110043, India"
+                        },
+                        "description": "Buy Examination Table with 2 Section (Model SB-G123) from Shiv Balaji Surgical - leading hospital furniture manufacturer, supplier & dealer in Delhi NCR.…"
+                    }
+                }
+            }),
+            makeProduct({
+                product_id: "SBS-024",
+                product_name: "Examination Table with Cabinet and Drawer",
+                model: "SB-G124",
+                category: "Examination Room Furniture",
+                image: productImg(24),
+                short_description: "Examination Table with Cabinet and Drawer (Model SB-G124) — Overall size 183L x 50W x 80H cm",
+                description: "Examination Table with Cabinet and Drawer - Model SB-G124 — Examination Table with Cabinet and Drawer (Model SB-G124) — Overall size 183L x 50W x 80H cm",
+                subcategory: "Examination Tables",
+                specifications: [
+                    "Approx. size: 183L x 50W x 80H cm.",
+                    "M.S. CRC tube framework.",
+                    "5 cm foam cushioned top covered with rexine.",
+                    "1 pc cabinet with drawer.",
+                    "Leg fitted with PVC stumps.",
+                    "Epoxy powder coated finish."
+                ],
+                optional_feature: [
+                    "Single foot step in powder coated finish"
+                ],
+                features: [
+                    "Overall size 183L x 50W x 80H cm",
+                    "MS CRC tube frame work",
+                    "5cm foam cushioned top covered with rexine",
+                    "1 pc cabinet with drawer",
+                    "Legs fitted with PVC stumps",
+                    "Epoxy powder coated finish"
+                ],
+                seo: {
+                    focus_keyword: "Examination Table with Cabinet and Drawer",
+                    meta_title: "Examination Table with Cabinet and Drawer | Hospital Bed Cradle Supplier and Recovery Bed Manufacturer | Shiv Balaji Surgical",
+                    meta_description: "Buy the best Examination Table with Cabinet and Drawer. We are a leading Recovery Bed Manufacturer and Hospital Furniture Manufacturer in Delhi. Explore our high-quality Examination Table with Cabinet and Drawer today!",
+                    url_slug: "/products/examination-room-furniture/sb-g124-examination-table-with-cabinet-and-drawer",
+                    image_alt_text: "Examination Table with Cabinet and Drawer - SB-G124 - Recovery Bed Manufacturer",
+                    og_title: "Examination Table with Cabinet and Drawer | Shiv Balaji…",
+                    og_description: "Buy Examination Table with Cabinet and Drawer (Model SB-G124) from Shiv Balaji Surgical - leading hospital furniture manufacturer, supplier & dealer in Delhi…",
+                    twitter_title: "Examination Table with Cabinet and Drawer | Shiv Balaji…",
+                    twitter_description: "Buy Examination Table with Cabinet and Drawer (Model SB-G124) from Shiv Balaji Surgical - leading hospital furniture manufacturer, supplier & dealer in Delhi…",
+                    additional_keywords: [
+                        "Recovery Bed Manufacturer",
+                        "Hospital Furniture Manufacturer in Delhi",
+                        "Recovery Bed Fixed Height Manufacturer",
+                        "Hospital Trolley Manufacturer",
+                        "Hospital Bed Price List India"
+                    ],
+                    business_keywords: [
+                        "Examination Table with Cabinet and Drawer Manufacturer",
+                        "Examination Table with Cabinet and Drawer Supplier",
+                        "Examination Table with Cabinet and Drawer Dealer",
+                        "Examination Table with Cabinet and Drawer Exporter",
+                        "Examination Table with Cabinet and Drawer Wholesaler in Delhi",
+                        "Hospital Furniture Manufacturer India",
+                        "Hospital Equipment Supplier Delhi NCR"
+                    ],
+                    seo_content_block: "If you are looking for the best Examination Table with Cabinet and Drawer, you are in the right place. Our Examination Table with Cabinet and Drawer is designed for optimal performance. As a top Recovery Bed Manufacturer, we ensure every Examination Table with Cabinet and Drawer meets high standards. The Examination Table with Cabinet and Drawer offers incredible durability. Patients and caregivers prefer our Examination Table with Cabinet and Drawer for its reliability. When you choose our Examination Table with Cabinet and Drawer, you get quality. We are known as a leading Hospital Furniture Manufacturer in Delhi as well. This Examination Table with Cabinet and Drawer is perfect for clinics. The Examination Table with Cabinet and Drawer provides unmatched comfort. Contact us if you need a Examination Table with Cabinet and Drawer from a Recovery Bed Fixed Height Manufacturer. We also supply related items as a Hospital Trolley Manufacturer. The Examination Table with Cabinet and Drawer stands out in the market. Many hospitals trust our Examination Table with Cabinet and Drawer. Experience the excellence of this Examination Table with Cabinet and Drawer today. We are your reliable Hospital Bed Price List India.",
+                    schema_org: {
+                        "@context": "https://schema.org/",
+                        "@type": "Product",
+                        "name": "Examination Table with Cabinet and Drawer - SB-G124",
+                        "sku": "SB-G124",
+                        "category": "Examination Room Furniture",
+                        "brand": {
+                            "@type": "Brand",
+                            "name": "Shiv Balaji Surgical"
+                        },
+                        "manufacturer": {
+                            "@type": "Organization",
+                            "name": "Shiv Balaji Surgical",
+                            "address": "Kh. No. 25/2, Nangli Sakrawati, Najafgarh, New Delhi - 110043, India"
+                        },
+                        "description": "Buy Examination Table with Cabinet and Drawer (Model SB-G124) from Shiv Balaji Surgical - leading hospital furniture manufacturer, supplier & dealer in Delhi…"
+                    }
+                }
+            }),
+            makeProduct({
+                product_id: "SBS-025",
+                product_name: "Examination Couch with Gynae Cut",
+                model: "SB-G125",
+                category: "Examination Room Furniture",
+                image: productImg(25),
+                short_description: "Examination Couch with Gynae Cut (Model SB-G125) — Overall size 183L x 50W x 82H cm",
+                description: "Examination Couch with Gynae Cut - Model SB-G125 — Examination Couch with Gynae Cut (Model SB-G125) — Overall size 183L x 50W x 82H cm",
+                subcategory: "Examination Couches",
+                specifications: [
+                    "Approx. size: 183L x 50W x 82H cm.",
+                    "CRC tube top frame covered with 5 cm foam cushioned rexine.",
+                    "3 pc cabinet with drawer.",
+                    "Leg fitted with PVC stumps.",
+                    "Pre-treated and epoxy powder coated finish."
+                ],
+                optional_feature: [
+                    "Single foot step in powder coated / S.S.",
+                    "Utility trolley in powder coated finish with S.S. tray"
+                ],
+                features: [
+                    "Overall size 183L x 50W x 82H cm",
+                    "CRC tube top frame covered with 5cm foam cushion & rexine",
+                    "3 pc cabinet with drawer",
+                    "Legs fitted with PVC stumps",
+                    "Pre-treated and epoxy powder coated finish"
+                ],
+                seo: {
+                    focus_keyword: "Examination Couch with Gynae Cut",
+                    meta_title: "Examination Couch with Gynae Cut | ICU Bed Electric Manufacturer and Shiv Balaji Surgical Hospital Beds | Shiv Balaji Surgical",
+                    meta_description: "Buy the best Examination Couch with Gynae Cut. We are a leading ICU Bed Electric Manufacturer and Hospital Bed with Mattress Manufacturer. Explore our high-quality Examination Couch with Gynae Cut today!",
+                    url_slug: "/products/examination-room-furniture/sb-g125-examination-couch-with-gynae-cut",
+                    image_alt_text: "Examination Couch with Gynae Cut - SB-G125 - ICU Bed Electric Manufacturer",
+                    og_title: "Examination Couch with Gynae Cut | Shiv Balaji Surgical",
+                    og_description: "Buy Examination Couch with Gynae Cut (Model SB-G125) from Shiv Balaji Surgical - leading hospital furniture manufacturer, supplier & dealer in Delhi NCR.…",
+                    twitter_title: "Examination Couch with Gynae Cut | Shiv Balaji Surgical",
+                    twitter_description: "Buy Examination Couch with Gynae Cut (Model SB-G125) from Shiv Balaji Surgical - leading hospital furniture manufacturer, supplier & dealer in Delhi NCR.…",
+                    additional_keywords: [
+                        "ICU Bed Electric Manufacturer",
+                        "Hospital Bed with Mattress Manufacturer",
+                        "Examination Couch Manufacturer",
+                        "GMP Certified Hospital Furniture Manufacturer",
+                        "Examination Table Manufacturer"
+                    ],
+                    business_keywords: [
+                        "Examination Couch with Gynae Cut Manufacturer",
+                        "Examination Couch with Gynae Cut Supplier",
+                        "Examination Couch with Gynae Cut Dealer",
+                        "Examination Couch with Gynae Cut Exporter",
+                        "Examination Couch with Gynae Cut Wholesaler in Delhi",
+                        "Hospital Furniture Manufacturer India",
+                        "Hospital Equipment Supplier Delhi NCR"
+                    ],
+                    seo_content_block: "If you are looking for the best Examination Couch with Gynae Cut, you are in the right place. Our Examination Couch with Gynae Cut is designed for optimal performance. As a top ICU Bed Electric Manufacturer, we ensure every Examination Couch with Gynae Cut meets high standards. The Examination Couch with Gynae Cut offers incredible durability. Patients and caregivers prefer our Examination Couch with Gynae Cut for its reliability. When you choose our Examination Couch with Gynae Cut, you get quality. We are known as a leading Hospital Bed with Mattress Manufacturer as well. This Examination Couch with Gynae Cut is perfect for clinics. The Examination Couch with Gynae Cut provides unmatched comfort. Contact us if you need a Examination Couch with Gynae Cut from a Examination Couch Manufacturer. We also supply related items as a GMP Certified Hospital Furniture Manufacturer. The Examination Couch with Gynae Cut stands out in the market. Many hospitals trust our Examination Couch with Gynae Cut. Experience the excellence of this Examination Couch with Gynae Cut today. We are your reliable Examination Table Manufacturer.",
+                    schema_org: {
+                        "@context": "https://schema.org/",
+                        "@type": "Product",
+                        "name": "Examination Couch with Gynae Cut - SB-G125",
+                        "sku": "SB-G125",
+                        "category": "Examination Room Furniture",
+                        "brand": {
+                            "@type": "Brand",
+                            "name": "Shiv Balaji Surgical"
+                        },
+                        "manufacturer": {
+                            "@type": "Organization",
+                            "name": "Shiv Balaji Surgical",
+                            "address": "Kh. No. 25/2, Nangli Sakrawati, Najafgarh, New Delhi - 110043, India"
+                        },
+                        "description": "Buy Examination Couch with Gynae Cut (Model SB-G125) from Shiv Balaji Surgical - leading hospital furniture manufacturer, supplier & dealer in Delhi NCR.…"
+                    }
+                }
+            }),
+            makeProduct({
+                product_id: "SBS-026",
+                product_name: "Examination Couch (Gas Spring Backrest)",
+                model: "SB-G126",
+                category: "Examination Room Furniture",
+                image: productImg(26),
+                short_description: "Examination Couch (Gas Spring Backrest) (Model SB-G126) — Approx. size 183L x 50W x 82H cm",
+                description: "Examination Couch (Gas Spring Backrest) - Model SB-G126 — Examination Couch (Gas Spring Backrest) (Model SB-G126) — Approx. size 183L x 50W x 82H cm",
+                subcategory: "Examination Couches",
+                specifications: [
+                    "Approx. size: 183L x 50W x 82H cm.",
+                    "Body framework made of 18/20G CRC sheet.",
+                    "Backrest adjustable on gas spring."
+                ],
+                optional_feature: [
+                    "S.S./M.S. foot step",
+                    "Pressed double-bend M.S. CRC sheet top mattress"
+                ],
+                features: [
+                    "Approx. size 183L x 50W x 82H cm",
+                    "18/20G CRC sheet body frame work",
+                    "Backrest adjustable on gas spring",
+                    "Optional SS/MS foot step & pressed double bend mattress top"
+                ],
+                seo: {
+                    focus_keyword: "Examination Couch (Gas Spring Backrest)",
+                    meta_title: "Examination Couch (Gas Spring Backrest) | Hospital Bed Manufacturer in Delhi and Hospital Bed Manufacturer in India | Shiv Balaji Surgical",
+                    meta_description: "Buy the best Examination Couch (Gas Spring Backrest). We are a leading ICU Bed Manufacturer and Instrument Trolley Manufacturer. Explore our high-quality Examination Couch (Gas Spring Backrest) today!",
+                    url_slug: "/products/examination-room-furniture/sb-g126-examination-couch-gas-spring-backrest",
+                    image_alt_text: "Examination Couch (Gas Spring Backrest) - SB-G126 - ICU Bed Manufacturer",
+                    og_title: "Examination Couch (Gas Spring Backrest) | Shiv Balaji…",
+                    og_description: "Buy Examination Couch (Gas Spring Backrest) (Model SB-G126) from Shiv Balaji Surgical - leading hospital furniture manufacturer, supplier & dealer in Delhi…",
+                    twitter_title: "Examination Couch (Gas Spring Backrest) | Shiv Balaji…",
+                    twitter_description: "Buy Examination Couch (Gas Spring Backrest) (Model SB-G126) from Shiv Balaji Surgical - leading hospital furniture manufacturer, supplier & dealer in Delhi…",
+                    additional_keywords: [
+                        "ICU Bed Manufacturer",
+                        "Instrument Trolley Manufacturer",
+                        "Fowler Bed Manufacturer",
+                        "Examination Table Manufacturer",
+                        "Hospital Bed Exporter India"
+                    ],
+                    business_keywords: [
+                        "Examination Couch (Gas Spring Backrest) Manufacturer",
+                        "Examination Couch (Gas Spring Backrest) Supplier",
+                        "Examination Couch (Gas Spring Backrest) Dealer",
+                        "Examination Couch (Gas Spring Backrest) Exporter",
+                        "Examination Couch (Gas Spring Backrest) Wholesaler in Delhi",
+                        "Hospital Furniture Manufacturer India",
+                        "Hospital Equipment Supplier Delhi NCR"
+                    ],
+                    seo_content_block: "If you are looking for the best Examination Couch (Gas Spring Backrest), you are in the right place. Our Examination Couch (Gas Spring Backrest) is designed for optimal performance. As a top ICU Bed Manufacturer, we ensure every Examination Couch (Gas Spring Backrest) meets high standards. The Examination Couch (Gas Spring Backrest) offers incredible durability. Patients and caregivers prefer our Examination Couch (Gas Spring Backrest) for its reliability. When you choose our Examination Couch (Gas Spring Backrest), you get quality. We are known as a leading Instrument Trolley Manufacturer as well. This Examination Couch (Gas Spring Backrest) is perfect for clinics. The Examination Couch (Gas Spring Backrest) provides unmatched comfort. Contact us if you need a Examination Couch (Gas Spring Backrest) from a Fowler Bed Manufacturer. We also supply related items as a Examination Table Manufacturer. The Examination Couch (Gas Spring Backrest) stands out in the market. Many hospitals trust our Examination Couch (Gas Spring Backrest). Experience the excellence of this Examination Couch (Gas Spring Backrest) today. We are your reliable Hospital Bed Exporter India.",
+                    schema_org: {
+                        "@context": "https://schema.org/",
+                        "@type": "Product",
+                        "name": "Examination Couch (Gas Spring Backrest) - SB-G126",
+                        "sku": "SB-G126",
+                        "category": "Examination Room Furniture",
+                        "brand": {
+                            "@type": "Brand",
+                            "name": "Shiv Balaji Surgical"
+                        },
+                        "manufacturer": {
+                            "@type": "Organization",
+                            "name": "Shiv Balaji Surgical",
+                            "address": "Kh. No. 25/2, Nangli Sakrawati, Najafgarh, New Delhi - 110043, India"
+                        },
+                        "description": "Buy Examination Couch (Gas Spring Backrest) (Model SB-G126) from Shiv Balaji Surgical - leading hospital furniture manufacturer, supplier & dealer in Delhi…"
+                    }
+                }
+            })
+        ]
+    },
+    {
         slug: "stools-chairs-patient-seating",
         name: "Stools, Chairs & Patient Seating",
         image: "/assets/images/service/service-5.jpg",
@@ -5475,68 +5479,54 @@ const departments = [
                     }
                 }
             }),
-            makeProduct({
-                product_id: "SBS-075",
-                product_name: "Doctor Chair (Gas Lift with Backrest)",
-                model: "SB-G60",
-                category: "Stools, Chairs & Patient Seating",
-                image: productImg(75),
-                short_description: "Doctor Chair (Gas Lift with Backrest) (Model SB-G60) — Cushioned seat and backrest",
-                description: "Doctor Chair (Gas Lift with Backrest) - Model SB-G60 — Doctor Chair (Gas Lift with Backrest) (Model SB-G60) — Cushioned seat and backrest",
-                subcategory: "Doctor Chairs",
-                specifications: [],
-                optional_feature: [],
-                features: [
-                    "Cushioned seat and backrest",
-                    "Pneumatic gas-lift height adjustment",
-                    "5-leg chrome base with castors"
-                ],
-                seo: {
-                    focus_keyword: "Doctor Chair (Gas Lift with Backrest)",
-                    meta_title: "Doctor Chair (Gas Lift with Backrest) | Hospital Bed Manufacturer in Delhi and Hospital Furniture for Clinics | Shiv Balaji Surgical",
-                    meta_description: "Buy the best Doctor Chair (Gas Lift with Backrest). We are a leading Hospital Foot Step Manufacturer and Hospital Bed with Mattress Manufacturer. Explore our high-quality Doctor Chair (Gas Lift with Backrest) today!",
-                    url_slug: "/products/stools-chairs-patient-seating/sb-g60-doctor-chair-gas-lift-with-backrest",
-                    image_alt_text: "Doctor Chair (Gas Lift with Backrest) - SB-G60 - Hospital Foot Step Manufacturer",
-                    og_title: "Doctor Chair (Gas Lift with Backrest) | Shiv Balaji Surgical",
-                    og_description: "Buy Doctor Chair (Gas Lift with Backrest) (Model SB-G60) from Shiv Balaji Surgical - leading hospital furniture manufacturer, supplier & dealer in Delhi NCR.…",
-                    twitter_title: "Doctor Chair (Gas Lift with Backrest) | Shiv Balaji Surgical",
-                    twitter_description: "Buy Doctor Chair (Gas Lift with Backrest) (Model SB-G60) from Shiv Balaji Surgical - leading hospital furniture manufacturer, supplier & dealer in Delhi NCR.…",
-                    additional_keywords: [
-                        "Hospital Foot Step Manufacturer",
-                        "Hospital Bed with Mattress Manufacturer",
-                        "ICU Bed Electric Manufacturer",
-                        "Hospital Bed Supplier Near Me",
-                        "Instrument Trolley Manufacturer"
-                    ],
-                    business_keywords: [
-                        "Doctor Chair (Gas Lift with Backrest) Manufacturer",
-                        "Doctor Chair (Gas Lift with Backrest) Supplier",
-                        "Doctor Chair (Gas Lift with Backrest) Dealer",
-                        "Doctor Chair (Gas Lift with Backrest) Exporter",
-                        "Doctor Chair (Gas Lift with Backrest) Wholesaler in Delhi",
-                        "Hospital Furniture Manufacturer India",
-                        "Hospital Equipment Supplier Delhi NCR"
-                    ],
-                    seo_content_block: "If you are looking for the best Doctor Chair (Gas Lift with Backrest), you are in the right place. Our Doctor Chair (Gas Lift with Backrest) is designed for optimal performance. As a top Hospital Foot Step Manufacturer, we ensure every Doctor Chair (Gas Lift with Backrest) meets high standards. The Doctor Chair (Gas Lift with Backrest) offers incredible durability. Patients and caregivers prefer our Doctor Chair (Gas Lift with Backrest) for its reliability. When you choose our Doctor Chair (Gas Lift with Backrest), you get quality. We are known as a leading Hospital Bed with Mattress Manufacturer as well. This Doctor Chair (Gas Lift with Backrest) is perfect for clinics. The Doctor Chair (Gas Lift with Backrest) provides unmatched comfort. Contact us if you need a Doctor Chair (Gas Lift with Backrest) from a ICU Bed Electric Manufacturer. We also supply related items as a Hospital Bed Supplier Near Me. The Doctor Chair (Gas Lift with Backrest) stands out in the market. Many hospitals trust our Doctor Chair (Gas Lift with Backrest). Experience the excellence of this Doctor Chair (Gas Lift with Backrest) today. We are your reliable Instrument Trolley Manufacturer.",
-                    schema_org: {
-                        "@context": "https://schema.org/",
-                        "@type": "Product",
-                        "name": "Doctor Chair (Gas Lift with Backrest) - SB-G60",
-                        "sku": "SB-G60",
-                        "category": "Stools, Chairs & Patient Seating",
-                        "brand": {
-                            "@type": "Brand",
-                            "name": "Shiv Balaji Surgical"
-                        },
-                        "manufacturer": {
-                            "@type": "Organization",
-                            "name": "Shiv Balaji Surgical",
-                            "address": "Kh. No. 25/2, Nangli Sakrawati, Najafgarh, New Delhi - 110043, India"
-                        },
-                        "description": "Buy Doctor Chair (Gas Lift with Backrest) (Model SB-G60) from Shiv Balaji Surgical - leading hospital furniture manufacturer, supplier & dealer in Delhi NCR.…"
-                    }
-                }
-            }),
+            // makeProduct({
+            //   product_id: "SBS-075",
+            //   product_name: "Doctor Chair (Gas Lift with Backrest)",
+            //   model: "SB-G60",
+            //   category: "Stools, Chairs & Patient Seating",
+            //   image: productImg(75),
+            //   short_description: "Doctor Chair (Gas Lift with Backrest) (Model SB-G60) — Cushioned seat and backrest",
+            //   description: "Doctor Chair (Gas Lift with Backrest) - Model SB-G60 — Doctor Chair (Gas Lift with Backrest) (Model SB-G60) — Cushioned seat and backrest",
+            //   subcategory: "Doctor Chairs",
+            //   specifications: [],
+            //   optional_feature: [],
+            //   features: [
+            //     "Cushioned seat and backrest",
+            //     "Pneumatic gas-lift height adjustment",
+            //     "5-leg chrome base with castors",
+            //   ],
+            //   seo: {
+            //     focus_keyword: "Doctor Chair (Gas Lift with Backrest)",
+            //     meta_title: "Doctor Chair (Gas Lift with Backrest) | Hospital Bed Manufacturer in Delhi and Hospital Furniture for Clinics | Shiv Balaji Surgical",
+            //     meta_description: "Buy the best Doctor Chair (Gas Lift with Backrest). We are a leading Hospital Foot Step Manufacturer and Hospital Bed with Mattress Manufacturer. Explore our high-quality Doctor Chair (Gas Lift with Backrest) today!",
+            //     url_slug: "/products/stools-chairs-patient-seating/sb-g60-doctor-chair-gas-lift-with-backrest",
+            //     image_alt_text: "Doctor Chair (Gas Lift with Backrest) - SB-G60 - Hospital Foot Step Manufacturer",
+            //     og_title: "Doctor Chair (Gas Lift with Backrest) | Shiv Balaji Surgical",
+            //     og_description: "Buy Doctor Chair (Gas Lift with Backrest) (Model SB-G60) from Shiv Balaji Surgical - leading hospital furniture manufacturer, supplier & dealer in Delhi NCR.…",
+            //     twitter_title: "Doctor Chair (Gas Lift with Backrest) | Shiv Balaji Surgical",
+            //     twitter_description: "Buy Doctor Chair (Gas Lift with Backrest) (Model SB-G60) from Shiv Balaji Surgical - leading hospital furniture manufacturer, supplier & dealer in Delhi NCR.…",
+            //     additional_keywords: ["Hospital Foot Step Manufacturer", "Hospital Bed with Mattress Manufacturer", "ICU Bed Electric Manufacturer", "Hospital Bed Supplier Near Me", "Instrument Trolley Manufacturer"],
+            //     business_keywords: ["Doctor Chair (Gas Lift with Backrest) Manufacturer", "Doctor Chair (Gas Lift with Backrest) Supplier", "Doctor Chair (Gas Lift with Backrest) Dealer", "Doctor Chair (Gas Lift with Backrest) Exporter", "Doctor Chair (Gas Lift with Backrest) Wholesaler in Delhi", "Hospital Furniture Manufacturer India", "Hospital Equipment Supplier Delhi NCR"],
+            //     seo_content_block: "If you are looking for the best Doctor Chair (Gas Lift with Backrest), you are in the right place. Our Doctor Chair (Gas Lift with Backrest) is designed for optimal performance. As a top Hospital Foot Step Manufacturer, we ensure every Doctor Chair (Gas Lift with Backrest) meets high standards. The Doctor Chair (Gas Lift with Backrest) offers incredible durability. Patients and caregivers prefer our Doctor Chair (Gas Lift with Backrest) for its reliability. When you choose our Doctor Chair (Gas Lift with Backrest), you get quality. We are known as a leading Hospital Bed with Mattress Manufacturer as well. This Doctor Chair (Gas Lift with Backrest) is perfect for clinics. The Doctor Chair (Gas Lift with Backrest) provides unmatched comfort. Contact us if you need a Doctor Chair (Gas Lift with Backrest) from a ICU Bed Electric Manufacturer. We also supply related items as a Hospital Bed Supplier Near Me. The Doctor Chair (Gas Lift with Backrest) stands out in the market. Many hospitals trust our Doctor Chair (Gas Lift with Backrest). Experience the excellence of this Doctor Chair (Gas Lift with Backrest) today. We are your reliable Instrument Trolley Manufacturer.",
+            //     schema_org: {
+            //       "@context": "https://schema.org/",
+            //       "@type": "Product",
+            //       "name": "Doctor Chair (Gas Lift with Backrest) - SB-G60",
+            //       "sku": "SB-G60",
+            //       "category": "Stools, Chairs & Patient Seating",
+            //       "brand": {
+            //         "@type": "Brand",
+            //         "name": "Shiv Balaji Surgical"
+            //       },
+            //       "manufacturer": {
+            //         "@type": "Organization",
+            //         "name": "Shiv Balaji Surgical",
+            //         "address": "Kh. No. 25/2, Nangli Sakrawati, Najafgarh, New Delhi - 110043, India"
+            //       },
+            //       "description": "Buy Doctor Chair (Gas Lift with Backrest) (Model SB-G60) from Shiv Balaji Surgical - leading hospital furniture manufacturer, supplier & dealer in Delhi NCR.…"
+            //     },
+            //   },
+            // }),
             makeProduct({
                 product_id: "SBS-076",
                 product_name: "Three Seated Waiting Chair (Silver)",
@@ -6611,6 +6601,40 @@ const getRelatedProductsBySubcategory = (subcategoryName, categorySlug, currentP
     }
     return related;
 };
+const subcategoryImageMap = {
+};
+const subcategoryImages = {
+    "Attendant Beds": "/assets/images/Sub Categoty/Attendant Beds.webp",
+    "Bedside Lockers": "/assets/images/Sub Categoty/Bedside Lockers.png",
+    "Bedside Screen": "/assets/images/Sub Categoty/Bedside Screen.webp",
+    "Blood Donor Chairs": "/assets/images/Sub Categoty/Blood Donor Chairs.webp",
+    "Crash Carts": "/assets/images/Sub Categoty/Crash Carts.webp",
+    "Dressing Trolleys": "/assets/images/Sub Categoty/Dressing Trolleys.webp",
+    "Emergency Trolleys": "/assets/images/Sub Categoty/Emergency Trolleys.webp",
+    "Examination Couches": "/assets/images/Sub Categoty/Examination Couches.png",
+    "Examination Tables": "/assets/images/Sub Categoty/Examination Tables.png",
+    "Fowler Beds": "/assets/images/Sub Categoty/Fowler Beds.webp",
+    "Hospital Seating": "/assets/images/Sub Categoty/Hospital Seating.webp",
+    "Hospital Trolleys": "/assets/images/Sub Categoty/Hospital Trolleys.webp",
+    "ICU Beds": "/assets/images/Sub Categoty/ICU Beds.png",
+    "Instrument Trolleys": "/assets/images/Sub Categoty/Instrument Trolleys.webp",
+    "Lab Stools": "/assets/images/Sub Categoty/Lab Stools.webp",
+    "Medicine Trolleys": "/assets/images/Sub Categoty/Medicine Trolleys.webp",
+    "Monitor Trolleys": "/assets/images/Sub Categoty/Monitor Trolleys.webp",
+    "OPD Couches & Chairs": "/assets/images/Sub Categoty/OPD Couches & Chairs.png",
+    "OT Trolleys": "/assets/images/Sub Categoty/OT Trolleys.webp",
+    "Over-Bed Tables": "/assets/images/Sub Categoty/Over-Bed Tables.webp",
+    "Oxygen Trolleys": "/assets/images/Sub Categoty/Oxygen Trolleys.png",
+    "Patient Stools": "/assets/images/Sub Categoty/Patient Stools.webp",
+    "Patient Stretchers": "/assets/images/Sub Categoty/Patient Stretchers.webp",
+    "Patient Trolleys": "/assets/images/Sub Categoty/Patient Trolleys.webp",
+    "Pediatric Beds": "/assets/images/Sub Categoty/Pediatric Beds.webp",
+    "Plain Hospital Beds": "/assets/images/Sub Categoty/Plain Hospital Beds.webp",
+    "Recovery Beds": "/assets/images/Sub Categoty/Recovery Beds.webp",
+    "Semi Fowler Beds": "/assets/images/Sub Categoty/Semi Fowler Beds.webp",
+    "Surgeon Stools": "/assets/images/Sub Categoty/Surgeon Stools.webp",
+    "Waiting Chairs": "/assets/images/Sub Categoty/Waiting Chairs.webp"
+};
 }),
 "[project]/src/app/[category]/page.tsx [app-rsc] (ecmascript)", ((__turbopack_context__) => {
 "use strict";
@@ -6891,7 +6915,7 @@ async function CategoryPage({ params }) {
         `
                 }, void 0, false, {
                     fileName: "[project]/src/app/[category]/page.tsx",
-                    lineNumber: 52,
+                    lineNumber: 53,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -6912,14 +6936,14 @@ async function CategoryPage({ params }) {
                                                 className: `fas ${category.icon}`
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/[category]/page.tsx",
-                                                lineNumber: 277,
+                                                lineNumber: 278,
                                                 columnNumber: 17
                                             }, this),
                                             category.name
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/app/[category]/page.tsx",
-                                        lineNumber: 276,
+                                        lineNumber: 277,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
@@ -6929,26 +6953,26 @@ async function CategoryPage({ params }) {
                                                 children: "Subcategories"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/[category]/page.tsx",
-                                                lineNumber: 281,
+                                                lineNumber: 282,
                                                 columnNumber: 25
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/app/[category]/page.tsx",
-                                        lineNumber: 280,
+                                        lineNumber: 281,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                         children: category.description
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/[category]/page.tsx",
-                                        lineNumber: 283,
+                                        lineNumber: 284,
                                         columnNumber: 15
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/app/[category]/page.tsx",
-                                lineNumber: 275,
+                                lineNumber: 276,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -6957,14 +6981,15 @@ async function CategoryPage({ params }) {
                                     const subSlug = (0, __TURBOPACK__imported__module__$5b$project$5d2f$data$2f$products$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["slugify"])(subName);
                                     const products = (0, __TURBOPACK__imported__module__$5b$project$5d2f$data$2f$products$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["getProductsBySubcategory"])(resolvedParams.category, subName);
                                     const firstProduct = products[0];
+                                    let subImage = __TURBOPACK__imported__module__$5b$project$5d2f$data$2f$products$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["subcategoryImages"][subName] || firstProduct?.image || '/assets/images/placeholder.jpg';
                                     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                         className: "pr-card",
                                         children: [
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                 className: "pr-card-img",
                                                 children: [
-                                                    firstProduct && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {
-                                                        src: firstProduct.image,
+                                                    subImage && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {
+                                                        src: subImage,
                                                         alt: subName,
                                                         width: 300,
                                                         height: 300,
@@ -6975,14 +7000,14 @@ async function CategoryPage({ params }) {
                                                         }
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/app/[category]/page.tsx",
-                                                        lineNumber: 297,
+                                                        lineNumber: 300,
                                                         columnNumber: 25
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                         className: "pr-card-overlay"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/app/[category]/page.tsx",
-                                                        lineNumber: 309,
+                                                        lineNumber: 312,
                                                         columnNumber: 23
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -6993,7 +7018,7 @@ async function CategoryPage({ params }) {
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/src/app/[category]/page.tsx",
-                                                        lineNumber: 310,
+                                                        lineNumber: 313,
                                                         columnNumber: 23
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -7002,18 +7027,18 @@ async function CategoryPage({ params }) {
                                                             className: `fas ${category.icon}`
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/[category]/page.tsx",
-                                                            lineNumber: 314,
+                                                            lineNumber: 317,
                                                             columnNumber: 25
                                                         }, this)
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/app/[category]/page.tsx",
-                                                        lineNumber: 313,
+                                                        lineNumber: 316,
                                                         columnNumber: 23
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/app/[category]/page.tsx",
-                                                lineNumber: 295,
+                                                lineNumber: 298,
                                                 columnNumber: 21
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -7024,7 +7049,7 @@ async function CategoryPage({ params }) {
                                                         children: "Subcategory"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/app/[category]/page.tsx",
-                                                        lineNumber: 319,
+                                                        lineNumber: 322,
                                                         columnNumber: 23
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
@@ -7033,12 +7058,12 @@ async function CategoryPage({ params }) {
                                                             children: subName
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/[category]/page.tsx",
-                                                            lineNumber: 321,
+                                                            lineNumber: 324,
                                                             columnNumber: 25
                                                         }, this)
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/app/[category]/page.tsx",
-                                                        lineNumber: 320,
+                                                        lineNumber: 323,
                                                         columnNumber: 23
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -7049,7 +7074,7 @@ async function CategoryPage({ params }) {
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/src/app/[category]/page.tsx",
-                                                        lineNumber: 323,
+                                                        lineNumber: 326,
                                                         columnNumber: 23
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -7064,13 +7089,13 @@ async function CategoryPage({ params }) {
                                                                         className: "fas fa-arrow-right"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/src/app/[category]/page.tsx",
-                                                                        lineNumber: 332,
+                                                                        lineNumber: 335,
                                                                         columnNumber: 41
                                                                     }, this)
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/src/app/[category]/page.tsx",
-                                                                lineNumber: 328,
+                                                                lineNumber: 331,
                                                                 columnNumber: 25
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -7080,7 +7105,7 @@ async function CategoryPage({ params }) {
                                                                         className: "fas fa-cube"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/src/app/[category]/page.tsx",
-                                                                        lineNumber: 335,
+                                                                        lineNumber: 338,
                                                                         columnNumber: 27
                                                                     }, this),
                                                                     products.length,
@@ -7088,42 +7113,42 @@ async function CategoryPage({ params }) {
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/src/app/[category]/page.tsx",
-                                                                lineNumber: 334,
+                                                                lineNumber: 337,
                                                                 columnNumber: 25
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/src/app/[category]/page.tsx",
-                                                        lineNumber: 327,
+                                                        lineNumber: 330,
                                                         columnNumber: 23
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/app/[category]/page.tsx",
-                                                lineNumber: 318,
+                                                lineNumber: 321,
                                                 columnNumber: 21
                                             }, this)
                                         ]
                                     }, subSlug, true, {
                                         fileName: "[project]/src/app/[category]/page.tsx",
-                                        lineNumber: 294,
+                                        lineNumber: 297,
                                         columnNumber: 19
                                     }, this);
                                 })
                             }, void 0, false, {
                                 fileName: "[project]/src/app/[category]/page.tsx",
-                                lineNumber: 287,
+                                lineNumber: 288,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/app/[category]/page.tsx",
-                        lineNumber: 273,
+                        lineNumber: 274,
                         columnNumber: 11
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/src/app/[category]/page.tsx",
-                    lineNumber: 272,
+                    lineNumber: 273,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -7156,7 +7181,7 @@ async function CategoryPage({ params }) {
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/app/[category]/page.tsx",
-                                    lineNumber: 351,
+                                    lineNumber: 354,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -7174,7 +7199,7 @@ async function CategoryPage({ params }) {
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/app/[category]/page.tsx",
-                                            lineNumber: 353,
+                                            lineNumber: 356,
                                             columnNumber: 50
                                         }, this),
                                         ", it's essential to partner with experts who understand healthcare needs. As a leading ",
@@ -7185,7 +7210,7 @@ async function CategoryPage({ params }) {
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/app/[category]/page.tsx",
-                                            lineNumber: 354,
+                                            lineNumber: 357,
                                             columnNumber: 30
                                         }, this),
                                         ", we ensure every product is built to last. Our reputation as a reliable ",
@@ -7196,7 +7221,7 @@ async function CategoryPage({ params }) {
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/app/[category]/page.tsx",
-                                            lineNumber: 354,
+                                            lineNumber: 357,
                                             columnNumber: 157
                                         }, this),
                                         "extends across India. If you need a trusted ",
@@ -7207,7 +7232,7 @@ async function CategoryPage({ params }) {
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/app/[category]/page.tsx",
-                                            lineNumber: 355,
+                                            lineNumber: 358,
                                             columnNumber: 61
                                         }, this),
                                         ", we provide the best solutions. Our team takes pride in being a top ",
@@ -7218,14 +7243,14 @@ async function CategoryPage({ params }) {
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/app/[category]/page.tsx",
-                                            lineNumber: 355,
+                                            lineNumber: 358,
                                             columnNumber: 175
                                         }, this),
                                         "."
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/app/[category]/page.tsx",
-                                    lineNumber: 352,
+                                    lineNumber: 355,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -7243,7 +7268,7 @@ async function CategoryPage({ params }) {
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/app/[category]/page.tsx",
-                                            lineNumber: 358,
+                                            lineNumber: 361,
                                             columnNumber: 82
                                         }, this),
                                         ". Furthermore, being a prominent ",
@@ -7254,7 +7279,7 @@ async function CategoryPage({ params }) {
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/app/[category]/page.tsx",
-                                            lineNumber: 358,
+                                            lineNumber: 361,
                                             columnNumber: 160
                                         }, this),
                                         " means we offer competitive pricing. If you are looking for a bulk ",
@@ -7265,7 +7290,7 @@ async function CategoryPage({ params }) {
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/app/[category]/page.tsx",
-                                            lineNumber: 359,
+                                            lineNumber: 362,
                                             columnNumber: 47
                                         }, this),
                                         ", you are in the right place. Our journey as a premium ",
@@ -7276,14 +7301,14 @@ async function CategoryPage({ params }) {
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/app/[category]/page.tsx",
-                                            lineNumber: 359,
+                                            lineNumber: 362,
                                             columnNumber: 147
                                         }, this),
                                         " guarantees innovation."
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/app/[category]/page.tsx",
-                                    lineNumber: 357,
+                                    lineNumber: 360,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -7300,7 +7325,7 @@ async function CategoryPage({ params }) {
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/app/[category]/page.tsx",
-                                            lineNumber: 362,
+                                            lineNumber: 365,
                                             columnNumber: 55
                                         }, this),
                                         " today. Contact us for all your needs from a distinguished ",
@@ -7311,7 +7336,7 @@ async function CategoryPage({ params }) {
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/app/[category]/page.tsx",
-                                            lineNumber: 362,
+                                            lineNumber: 365,
                                             columnNumber: 159
                                         }, this),
                                         ". We are the ",
@@ -7322,46 +7347,46 @@ async function CategoryPage({ params }) {
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/app/[category]/page.tsx",
-                                            lineNumber: 362,
+                                            lineNumber: 365,
                                             columnNumber: 217
                                         }, this),
                                         " you can trust."
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/app/[category]/page.tsx",
-                                    lineNumber: 361,
+                                    lineNumber: 364,
                                     columnNumber: 15
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/app/[category]/page.tsx",
-                            lineNumber: 350,
+                            lineNumber: 353,
                             columnNumber: 13
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/src/app/[category]/page.tsx",
-                        lineNumber: 349,
+                        lineNumber: 352,
                         columnNumber: 11
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/src/app/[category]/page.tsx",
-                    lineNumber: 348,
+                    lineNumber: 351,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$sections$2f$home2$2f$Cta$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                     fileName: "[project]/src/app/[category]/page.tsx",
-                    lineNumber: 368,
+                    lineNumber: 371,
                     columnNumber: 9
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/src/app/[category]/page.tsx",
-            lineNumber: 51,
+            lineNumber: 52,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "[project]/src/app/[category]/page.tsx",
-        lineNumber: 50,
+        lineNumber: 51,
         columnNumber: 5
     }, this);
 }

@@ -9,6 +9,7 @@ import {
   getSubcategoriesByCategory,
   getProductsBySubcategory,
   slugify,
+  subcategoryImages,
 } from "../../../data/products";
 
 interface PageProps {
@@ -290,12 +291,14 @@ export default async function CategoryPage({ params }: PageProps) {
                 const products = getProductsBySubcategory(resolvedParams.category, subName);
                 const firstProduct = products[0];
 
+                let subImage = subcategoryImages[subName] || firstProduct?.image || '/assets/images/placeholder.jpg';
+
                 return (
                   <div className="pr-card" key={subSlug}>
                     <div className="pr-card-img">
-                      {firstProduct && (
+                      {subImage && (
                         <Image
-                          src={firstProduct.image}
+                          src={subImage}
                           alt={subName}
                           width={300}
                           height={300}
@@ -343,19 +346,19 @@ export default async function CategoryPage({ params }: PageProps) {
             </div>
           </div>
         </section>
-        
+
         {/* SEO Content Block */}
         <section className="seo-content-section" style={{ padding: "0 0 80px 0", background: "#f8f9fb" }}>
           <div className="auto-container">
             <div className="seo-box" style={{ padding: "40px", background: "#fff", borderRadius: "18px", boxShadow: "0 10px 30px rgba(0,0,0,0.05)" }}>
               <h2 style={{ fontSize: "28px", color: "#1a1a2e", marginBottom: "20px" }}>Why Choose Us as your {category.name} Manufacturer</h2>
               <p style={{ color: "#666", lineHeight: 1.8, marginBottom: "15px" }}>
-                When searching for a top-quality <strong>{category.name} Manufacturer</strong>, it&apos;s essential to partner with experts who understand healthcare needs. 
-                As a leading <strong>{category.name} Manufacturer in Delhi</strong>, we ensure every product is built to last. Our reputation as a reliable <strong>{category.name} Manufacturer</strong> 
+                When searching for a top-quality <strong>{category.name} Manufacturer</strong>, it&apos;s essential to partner with experts who understand healthcare needs.
+                As a leading <strong>{category.name} Manufacturer in Delhi</strong>, we ensure every product is built to last. Our reputation as a reliable <strong>{category.name} Manufacturer</strong>
                 extends across India. If you need a trusted <strong>{category.name} Manufacturer</strong>, we provide the best solutions. Our team takes pride in being a top <strong>{category.name} Manufacturer</strong>.
               </p>
               <p style={{ color: "#666", lineHeight: 1.8, marginBottom: "15px" }}>
-                Many clinics prefer our products because we are an ISO Certified <strong>{category.name} Manufacturer</strong>. Furthermore, being a prominent <strong>{category.name} Manufacturer</strong> means we offer competitive pricing. 
+                Many clinics prefer our products because we are an ISO Certified <strong>{category.name} Manufacturer</strong>. Furthermore, being a prominent <strong>{category.name} Manufacturer</strong> means we offer competitive pricing.
                 If you are looking for a bulk <strong>{category.name} Manufacturer</strong>, you are in the right place. Our journey as a premium <strong>{category.name} Manufacturer</strong> guarantees innovation.
               </p>
               <p style={{ color: "#666", lineHeight: 1.8 }}>
@@ -364,7 +367,7 @@ export default async function CategoryPage({ params }: PageProps) {
             </div>
           </div>
         </section>
-        
+
         <Cta />
       </Layout>
     </div>

@@ -7,6 +7,7 @@ import { getProductByCategoryAndSlug, getCategoryBySlug, getSubcategoriesByCateg
 import ProductTabs from "../../../../../components/sections/product/ProductTabs";
 import Appointment from "../../../../../components/sections/home1/Appointment";
 import ProductImageGallery from "../../../../../components/sections/ProductShowcase/ProductImageGallery";
+import ProductEnquiryForm from "../../../../../components/elements/ProductEnquiryForm";
 
 interface PageProps {
   params: Promise<{
@@ -218,29 +219,7 @@ export default async function ProductDetailPage({ params }: PageProps) {
                   <div className="form-inner" style={{ padding: "40px", background: "#fff", borderRadius: "10px", border: "1px solid #e2e8f0", boxShadow: "0 10px 30px rgba(0,0,0,0.05)" }}>
                     <h3 style={{ fontSize: "24px", fontWeight: 700, marginBottom: "25px", color: "#1e293b", borderBottom: "2px solid #fe5e04", paddingBottom: "15px" }}>Request a Quote</h3>
                     
-                    <form action="#" method="post">
-                      <div className="form-group mb-3">
-                        <label style={{ fontSize: "14px", fontWeight: 600, color: "#475569", marginBottom: "8px", display: "block" }}>Full Name *</label>
-                        <input type="text" name="name" required style={{ width: "100%", padding: "14px 20px", border: "1px solid #cbd5e1", borderRadius: "6px", fontSize: "15px", background: "#f8fafc" }} placeholder="Enter your name" />
-                      </div>
-                      <div className="row mb-3">
-                        <div className="col-md-6 form-group mb-3 mb-md-0">
-                          <label style={{ fontSize: "14px", fontWeight: 600, color: "#475569", marginBottom: "8px", display: "block" }}>Email Address *</label>
-                          <input type="email" name="email" required style={{ width: "100%", padding: "14px 20px", border: "1px solid #cbd5e1", borderRadius: "6px", fontSize: "15px", background: "#f8fafc" }} placeholder="Enter your email" />
-                        </div>
-                        <div className="col-md-6 form-group">
-                          <label style={{ fontSize: "14px", fontWeight: 600, color: "#475569", marginBottom: "8px", display: "block" }}>Phone Number *</label>
-                          <input type="text" name="phone" required style={{ width: "100%", padding: "14px 20px", border: "1px solid #cbd5e1", borderRadius: "6px", fontSize: "15px", background: "#f8fafc" }} placeholder="Enter your phone" />
-                        </div>
-                      </div>
-                      <div className="form-group mb-4">
-                        <label style={{ fontSize: "14px", fontWeight: 600, color: "#475569", marginBottom: "8px", display: "block" }}>Message</label>
-                        <textarea name="message" rows={4} style={{ width: "100%", padding: "14px 20px", border: "1px solid #cbd5e1", borderRadius: "6px", fontSize: "15px", resize: "none", background: "#f8fafc" }} placeholder={`I am interested in ${product.product_name}...`}></textarea>
-                      </div>
-                      <button type="submit" className="theme-btn btn-one" style={{ width: "100%", border: "none", padding: "15px", borderRadius: "6px" }}>
-                        <span style={{ padding: "0" }}>Submit Enquiry <i className="fa-solid fa-arrow-right ms-2"></i></span>
-                      </button>
-                    </form>
+                    <ProductEnquiryForm productName={product.product_name} />
                   </div>
                </div>
             </div>

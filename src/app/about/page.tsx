@@ -464,7 +464,7 @@ export default function About_Page() {
                                         <div className="founder-line"></div>
 
                                         <div>
-                                            <h4>Mr. Founder Name</h4>
+                                            <h4>Mrs. Narender Kumar</h4>
                                             <span>Founder & Director</span>
                                         </div>
                                     </div>
