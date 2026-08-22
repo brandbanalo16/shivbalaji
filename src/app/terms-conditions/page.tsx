@@ -29,7 +29,7 @@ export default function TermsConditions() {
 
               <h4 className="mt-5 mb-3 fw-bold" style={{ color: '#1a1a1a' }}>2. Intellectual Property Rights</h4>
               <p>
-                Unless otherwise indicated, the Site is our proprietary property and all source code, databases, functionality, software, website designs, audio, video, text, photographs, and graphics on the Site (collectively, the "Content") and the trademarks, service marks, and logos contained therein (the "Marks") are owned or controlled by us or licensed to us. The Content and the Marks are provided on the Site "AS IS" for your information and personal use only.
+                Unless otherwise indicated, the Site is our proprietary property and all source code, databases, functionality, software, website designs, audio, video, text, photographs, and graphics on the Site (collectively, the &quot;Content&quot;) and the trademarks, service marks, and logos contained therein (the &quot;Marks&quot;) are owned or controlled by us or licensed to us. The Content and the Marks are provided on the Site &quot;AS IS&quot; for your information and personal use only.
               </p>
 
               <h4 className="mt-5 mb-3 fw-bold" style={{ color: '#1a1a1a' }}>3. Products & Pricing</h4>

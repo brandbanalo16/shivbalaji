@@ -291,7 +291,7 @@ export default async function CategoryPage({ params }: PageProps) {
                 const products = getProductsBySubcategory(resolvedParams.category, subName);
                 const firstProduct = products[0];
 
-                let subImage = subcategoryImages[subName] || firstProduct?.image || '/assets/images/placeholder.jpg';
+                const subImage = subcategoryImages[subName] || firstProduct?.image || '/assets/images/placeholder.jpg';
 
                 return (
                   <div className="pr-card" key={subSlug}>

@@ -7,7 +7,7 @@ export interface EnquiryData {
   product?: string;
   message?: string;
   pageUrl?: string;
-  [key: string]: any; // for any extra form fields
+  [key: string]: unknown; // for any extra form fields
 }
 
 export interface SubmitResult {

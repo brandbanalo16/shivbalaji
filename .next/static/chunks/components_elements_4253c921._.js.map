@@ -1,6 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "sections": [
-    {"offset": {"line": 10, "column": 0}, "map": {"version":3,"sources":["file:///C:/shiv/components/elements/ContactRight.tsx"],"sourcesContent":["\"use client\";\r\n\r\nimport Link from \"next/link\";\r\n\r\nexport default function ContactRight() {\r\n  return (\r\n    <div className=\"contact-right\">\r\n      <Link\r\n        href=\"https://wa.me/917678285286\" \r\n        target=\"_blank\"\r\n        className=\"contact-box whatsapp\"\r\n      >\r\n        <i className=\"fab fa-whatsapp\"></i>\r\n      </Link>\r\n\r\n      <Link href=\"tel:+917678285286\" className=\"contact-box call\">\r\n        <i className=\"fas fa-phone-alt\"></i>\r\n      </Link>\r\n    </div>\r\n  );\r\n}"],"names":[],"mappings":";;;;;AAEA;AAFA;;;AAIe,SAAS;IACtB,qBACE,6LAAC;QAAI,WAAU;;0BACb,6LAAC,0KAAI;gBACH,MAAK;gBACL,QAAO;gBACP,WAAU;0BAEV,cAAA,6LAAC;oBAAE,WAAU;;;;;;;;;;;0BAGf,6LAAC,0KAAI;gBAAC,MAAK;gBAAoB,WAAU;0BACvC,cAAA,6LAAC;oBAAE,WAAU;;;;;;;;;;;;;;;;;AAIrB;KAhBwB","debugId":null}}]
-}

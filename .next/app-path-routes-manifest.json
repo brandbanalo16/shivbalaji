@@ -5,6 +5,7 @@
   "/_not-found/page": "/_not-found",
   "/about/page": "/about",
   "/api/contact/route": "/api/contact",
+  "/api/enquiry/route": "/api/enquiry",
   "/blog-2/page": "/blog-2",
   "/blog-details/[slug]/page": "/blog-details/[slug]",
   "/blog-details/page": "/blog-details",
@@ -25,6 +26,8 @@
   "/portfolio-2/page": "/portfolio-2",
   "/portfolio/page": "/portfolio",
   "/pricing/page": "/pricing",
+  "/privacy-policy/page": "/privacy-policy",
   "/product-range/page": "/product-range",
-  "/product/[slug]/page": "/product/[slug]"
+  "/product/[slug]/page": "/product/[slug]",
+  "/terms-conditions/page": "/terms-conditions"
 }
