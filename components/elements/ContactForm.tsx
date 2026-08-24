@@ -67,11 +67,8 @@ export default function ContactForm() {
                 placeholder="Your Email"
                 />
             </div>
-            <div className="col-lg-6 col-md-6 col-sm-12 form-group">
+            <div className="col-lg-12 col-md-12 col-sm-12 form-group">
                 <input type="text" name="phone" placeholder="Phone" value={formData.phone} onChange={handleChange} />
-            </div>
-            <div className="col-lg-6 col-md-6 col-sm-12 form-group">
-                <input type="text" name="subject" placeholder="Subject" value={formData.subject} onChange={handleChange} />
             </div>
             <div className="col-lg-12 col-md-12 col-sm-12 form-group">
                 <textarea
