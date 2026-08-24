@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import ModalVideo from "../../../components/elements/VideoPopup";
+
 import Link from "next/link";
 
 export default function Chooseus() {

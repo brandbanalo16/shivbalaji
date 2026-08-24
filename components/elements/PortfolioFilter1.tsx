@@ -28,9 +28,11 @@ export default function PortfolioFilter1({}: PortfolioFilterProps) {
   // Apply filter
   useEffect(() => {
     if (isotope.current) {
-      filterKey === "*"
-        ? isotope.current.arrange({ filter: "*" })
-        : isotope.current.arrange({ filter: `.${filterKey}` });
+      if (filterKey === "*") {
+        isotope.current.arrange({ filter: "*" });
+      } else {
+        isotope.current.arrange({ filter: `.${filterKey}` });
+      }
     }
   }, [filterKey]);
 

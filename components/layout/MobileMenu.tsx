@@ -47,7 +47,7 @@ export default function MobileMenu({ isSidebar, handleMobileMenu, handleSidebar 
 
               {/* Our Product Range */}
               <li className={`dropdown ${activeDropdown === "products" ? "current" : ""}`}>
-                <Link href={`/${productCategories[0]?.slug || ''}`} onClick={(e) => {
+                <Link href={`/${productCategories[0]?.slug || ''}`} onClick={() => {
                    // Allow navigation to the main products page, but also toggle the menu
                    // Wait, clicking the link navigates. The dropdown button is for opening.
                 }}>

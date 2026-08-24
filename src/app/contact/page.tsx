@@ -3,7 +3,7 @@ import ContactForm from "../../../components/elements/ContactForm";
 import Image from "next/image";
 import Link from "next/link";
 import GoogleMapSection from "../../../components/sections/home1/GoogleMap";
-import Appointment from "../../../components/sections/home1/Appointment";
+
 export default function ContactPage() {
 
     return (

@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { footerCompanyLinks, productCategories, footerQuickLinks, contactInfo } from "../../../data/navData";
+import { productCategories, footerQuickLinks, contactInfo } from "../../../data/navData";
 
 export default function Footer1() {
     return (

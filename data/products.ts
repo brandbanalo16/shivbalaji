@@ -5183,10 +5183,10 @@ export const allProducts = departments.flatMap((d) => d.products);
 export const getCategoryBySlug = (slug: string) =>
   departments.find((d) => d.slug === slug);
 
-export const getProductsByCategory = (slug: string) =>
+const getProductsByCategory = (slug: string) =>
   getCategoryBySlug(slug)?.products ?? [];
 
-export const getProductsByCategoryName = (categoryName: string) =>
+const getProductsByCategoryName = (categoryName: string) =>
   departments.find(
     (d) =>
       d.name.toLowerCase() === categoryName.toLowerCase() ||
@@ -5196,12 +5196,12 @@ export const getProductsByCategoryName = (categoryName: string) =>
 export const getProductBySlug = (slug: string) =>
   allProducts.find((p) => p.slug === slug);
 
-export const getRelatedProducts = (category: string, currentProductId: string) =>
+const getRelatedProducts = (category: string, currentProductId: string) =>
   getProductsByCategoryName(category).filter((p) => p.product_id !== currentProductId);
 
-export const productCategoryParams = departments.map((d) => ({ category: d.slug }));
+const productCategoryParams = departments.map((d) => ({ category: d.slug }));
 
-export const productParams = allProducts.map((p) => ({ product: p.slug }));
+const productParams = allProducts.map((p) => ({ product: p.slug }));
 
 export const getProductByCategoryAndSlug = (categorySlug: string, productSlug: string) => {
   const category = getCategoryBySlug(categorySlug);
@@ -5235,7 +5235,7 @@ export const getRelatedProductsBySubcategory = (subcategoryName: string, categor
   }
   return related;
 };
-export const subcategoryImageMap: Record<string, string> = {
+const subcategoryImageMap: Record<string, string> = {
   // Add manual image paths for subcategories here, e.g.:
   // \"ICU Beds\": \"/assets/images/product/1.webp\",
 };

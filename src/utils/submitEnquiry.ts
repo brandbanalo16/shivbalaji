@@ -36,7 +36,7 @@ export async function submitEnquiry(data: EnquiryData): Promise<SubmitResult> {
     let result;
     try {
         result = await res.json();
-    } catch(err) {
+    } catch {
         return { success: false, message: 'Unable to submit your enquiry right now. Please try again or contact us directly.' };
     }
 

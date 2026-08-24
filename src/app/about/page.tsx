@@ -2,76 +2,20 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import "swiper/css";
 
 import Layout from "../../../components/layout/Layout";
-import Working from "../../../components/sections/home2/Working";
-import Clients from "../../../components/sections/home3/Clients";
-import Team from "../../../components/sections/home1/Team";
+
 import Cta from "../../../components/sections/home2/Cta";
 import Contact_Info from "../../../components/sections/home1/Contact_Info";
 import Appointment from "../../../components/sections/home1/Appointment";
 import Chooseus from "../../../components/sections/home1/Chooseus";
 
 export default function About_Page() {
-    const [activeTab, setActiveTab] = useState(1);
 
-    const tabs = [
-        {
-            id: 1,
-            title: "Premium Quality",
-        },
-        {
-            id: 2,
-            title: "Wide Product Range",
-        },
-        {
-            id: 3,
-            title: "Trusted Service",
-        },
-    ];
-
-    const tabContent = [
-        {
-            id: 1,
-            Img: "/assets/images/resource/why1.png",
-            heading: "Premium Quality",
-            text: "We use high-grade materials and advanced manufacturing processes to produce hospital furniture and medical equipment that deliver exceptional durability, safety, and long-term performance.",
-            list: [
-                "Premium Grade Materials",
-                "Strict Quality Control",
-                "Durable & Reliable Products",
-                "Built for Long-Term Performance",
-            ],
-        },
-        {
-            id: 2,
-            Img: "/assets/images/resource/why2.png",
-            heading: "Wide Product Range",
-            text: "From hospital beds and ICU beds to trolleys, hospital tables, and medical utility equipment, we provide complete solutions for modern healthcare facilities.",
-            list: [
-                "Hospital Beds & ICU Beds",
-                "Hospital & Instrument Trolleys",
-                "Hospital Tables",
-                "Medical Utility Equipment",
-            ],
-        },
-        {
-            id: 3,
-            Img: "/assets/images/resource/why3.png",
-            heading: "Trusted Service",
-            text: "We are committed to timely delivery, customer satisfaction, and dependable support, helping hospitals and healthcare institutions operate with confidence.",
-            list: [
-                "Timely Delivery",
-                "Customer-Centric Support",
-                "Customized Solutions",
-                "Trusted by Healthcare Professionals",
-            ],
-        },
-    ];
 
     return (
         <div className="boxed_wrapper">

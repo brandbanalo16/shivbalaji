@@ -8,7 +8,7 @@
 
 import { categoryMeta, getSubcategoriesByCategory, slugify } from "./products";
 
-export type SubCategory = {
+type SubCategory = {
   title: string;
   slug: string;
 };
@@ -33,7 +33,7 @@ export const productCategories: ProductCategory[] = categoryMeta.map((cat) => ({
 }));
 
 /** Top-level navigation links used in Header & Mobile Menu */
-export const mainNavLinks = [
+const mainNavLinks = [
   { title: "Home", href: "/" },
   { title: "About Us", href: "/about" },
   // "Our Product Range" is rendered separately as a mega-dropdown

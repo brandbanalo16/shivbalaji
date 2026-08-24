@@ -1,11 +1,11 @@
-import Image from "next/image";
+
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import Layout from "../../../../../components/layout/Layout";
 import Cta from "../../../../../components/sections/home2/Cta";
-import { getProductByCategoryAndSlug, getCategoryBySlug, getSubcategoriesByCategory, getRelatedProductsBySubcategory, slugify, allProducts, categoryMeta } from "../../../../../data/products";
+import { getProductByCategoryAndSlug, getCategoryBySlug, getSubcategoriesByCategory, getRelatedProductsBySubcategory, slugify, categoryMeta } from "../../../../../data/products";
 import ProductTabs from "../../../../../components/sections/product/ProductTabs";
-import Appointment from "../../../../../components/sections/home1/Appointment";
+
 import ProductImageGallery from "../../../../../components/sections/ProductShowcase/ProductImageGallery";
 import ProductEnquiryForm from "../../../../../components/elements/ProductEnquiryForm";
 import RelatedProductsSlider from "../../../../../components/elements/RelatedProductsSlider";

@@ -2,6 +2,7 @@
 
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
 import { ShieldCheck, Truck, Wrench } from "lucide-react";
@@ -102,7 +103,7 @@ const HeroBanner: React.FC = () => {
                   {/* Right Side Image */}
                   <div className="col-lg-5 col-md-12 order-1 order-lg-2 mb-5 mb-lg-0">
                     <div className="image-box">
-                      <img src={slide.image} alt={slide.title} className="slider-image" />
+                      <Image src={slide.image} alt={slide.title} width={600} height={400} className="slider-image" />
                     </div>
                   </div>
                 </div>

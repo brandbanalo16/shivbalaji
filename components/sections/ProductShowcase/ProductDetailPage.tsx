@@ -25,7 +25,7 @@ export default function ProductDetailPage({ slug }: ProductDetailPageProps) {
     )
     .slice(0, 4);
 
-  const productImageAlt = product.seo?.image_alt_text || `${product.product_name} ${product.model} - Hospital Furniture Manufacturer in India | Shiv Balaji Surgical`;
+
   const relatedProductAlt = (rp: typeof relatedProducts[0]) =>
     rp.seo?.image_alt_text || `${rp.product_name} - Hospital Furniture Manufacturer Delhi | Shiv Balaji Surgical`;
 

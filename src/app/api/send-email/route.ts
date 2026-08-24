@@ -40,7 +40,7 @@ export async function POST(request: Request) {
     let body;
     try {
         body = await request.json();
-    } catch (err) {
+    } catch {
         return NextResponse.json({ success: false, message: 'Invalid JSON request format.' }, { status: 400 });
     }
     const { formName, name, email, phone, company, product, message, pageUrl, ...additionalFields } = body;

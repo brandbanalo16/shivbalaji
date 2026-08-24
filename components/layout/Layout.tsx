@@ -25,13 +25,15 @@ export default function Layout({
   const [isScrolled, setIsScrolled] = useState(false);
 
   /* ── Mobile Menu ─────────────────────────────── */
-  const [isMobileMenu, setMobileMenu] = useState(false);
+  const [, setMobileMenu] = useState(false);
   const handleMobileMenu = () => {
     setMobileMenu((prev) => {
       const next = !prev;
-      next
-        ? document.body.classList.add("mobile-menu-visible")
-        : document.body.classList.remove("mobile-menu-visible");
+      if (next) {
+        document.body.classList.add("mobile-menu-visible");
+      } else {
+        document.body.classList.remove("mobile-menu-visible");
+      }
       return next;
     });
   };
