@@ -8,6 +8,7 @@ import ProductTabs from "../../../../../components/sections/product/ProductTabs"
 import Appointment from "../../../../../components/sections/home1/Appointment";
 import ProductImageGallery from "../../../../../components/sections/ProductShowcase/ProductImageGallery";
 import ProductEnquiryForm from "../../../../../components/elements/ProductEnquiryForm";
+import RelatedProductsSlider from "../../../../../components/elements/RelatedProductsSlider";
 
 interface PageProps {
   params: Promise<{
@@ -16,6 +17,8 @@ interface PageProps {
     product: string;
   }>;
 }
+
+export const dynamicParams = false;
 
 export async function generateStaticParams() {
   const params: { category: string; subcategory: string; product: string }[] = [];
@@ -94,7 +97,7 @@ export default async function ProductDetailPage({ params }: PageProps) {
       )}
       
       <Layout headerStyle={1} footerStyle={1} breadcrumbTitle={product.product_name}>
-        <section className="sidebar-page-container pt_120 pb_120">
+        <section className="sidebar-page-container pt_120 pb_40">
           <div className="auto-container">
             
             {/* Breadcrumb generated from hierarchy */}
@@ -144,17 +147,17 @@ export default async function ProductDetailPage({ params }: PageProps) {
                     </table>
                   </div>
                   
-                  <div style={{ marginBottom: "30px" }}>
+                  <div style={{ marginBottom: "0px" }}>
                     <h3 style={{ fontSize: "16px", fontWeight: 700, marginBottom: "10px", color: "#1e293b" }}>Description:</h3>
                     <p style={{ fontSize: "15px", lineHeight: "1.8", color: "#475569", marginBottom: "20px" }}>
                       {product.short_description || (product.description.length > 150 ? product.description.substring(0, 150) + "..." : product.description)}
                     </p>
-                    <div style={{ display: "flex", gap: "15px", flexWrap: "wrap" }}>
-                      <Link href="/contact" style={{ background: "#1e293b", color: "#fff", padding: "10px 25px", borderRadius: "30px", fontWeight: 600, display: "inline-flex", alignItems: "center", gap: "8px", fontSize: "14px", transition: "all 0.3s ease" }}>
-                        <i className="fa-brands fa-whatsapp"></i> Get Best Quote!
+                    <div style={{ display: "flex", gap: "10px", width: "100%" }}>
+                      <Link href={`https://wa.me/918287153753?text=${encodeURIComponent(`Hi, I'm interested in the ${product.product_name}. Please provide the best quote.`)}`} target="_blank" style={{ flex: 1, background: "#1e293b", color: "#fff", padding: "12px 5px", borderRadius: "30px", fontWeight: 600, display: "flex", justifyContent: "center", alignItems: "center", gap: "6px", fontSize: "14px", transition: "all 0.3s ease", textAlign: "center" }}>
+                        <i className="fa-brands fa-whatsapp"></i> Get Quote
                       </Link>
-                      <Link href="/contact" style={{ background: "#fe5e04", color: "#fff", padding: "10px 25px", borderRadius: "30px", fontWeight: 600, display: "inline-flex", alignItems: "center", gap: "8px", fontSize: "14px", transition: "all 0.3s ease" }}>
-                        <i className="fa-solid fa-phone"></i> Quick Enquiry
+                      <Link href="tel:+918287153753" style={{ flex: 1, background: "#fe5e04", color: "#fff", padding: "12px 5px", borderRadius: "30px", fontWeight: 600, display: "flex", justifyContent: "center", alignItems: "center", gap: "6px", fontSize: "14px", transition: "all 0.3s ease", textAlign: "center" }}>
+                        <i className="fa-solid fa-phone"></i> Call Now
                       </Link>
                     </div>
                   </div>
@@ -235,39 +238,17 @@ export default async function ProductDetailPage({ params }: PageProps) {
                   <h2 style={{ fontSize: "36px", fontWeight: 700, marginTop: "10px" }}>More from {actualSubName}</h2>
                 </div>
 
-                {relatedProducts.map((relatedProduct) => (
-                  <div className="col-lg-3 col-md-6 col-sm-12" key={relatedProduct.slug} style={{ marginBottom: "30px" }}>
-                    <div className="product-card-clean" style={{ background: "#fff", borderRadius: "8px", border: "1px solid #eaeaea", overflow: "hidden", transition: "transform 0.3s ease, box-shadow 0.3s ease", height: "100%" }}>
-                      <figure className="image-box" style={{ position: "relative", padding: "0", background: "#eef5ff", textAlign: "center", margin: 0, aspectRatio: "1 / 1", overflow: "hidden" }}>
-                        <Link href={`/${category.slug}/${slugify(relatedProduct.subcategory)}/${relatedProduct.slug}`} style={{ display: "block", width: "100%", height: "100%" }}>
-                          <Image
-                            src={relatedProduct.image}
-                            alt={relatedProduct.product_name}
-                            width={300}
-                            height={300}
-                            style={{ width: "100%", height: "100%", objectFit: "cover", transition: "transform 0.3s ease" }}
-                          />
-                        </Link>
-                      </figure>
-
-                      <div className="card-content" style={{ padding: "20px 15px", display: "flex", flexDirection: "column", alignItems: "center", background: "#fff", height: "calc(100% - 240px)" }}>
-                        <h3 style={{ fontSize: "15px", lineHeight: "22px", fontWeight: 700, marginBottom: "15px", textAlign: "center", textTransform: "uppercase" }}>
-                          <Link href={`/${category.slug}/${slugify(relatedProduct.subcategory)}/${relatedProduct.slug}`} style={{ color: "#d32f2f", textDecoration: "none" }}>
-                            {relatedProduct.product_name}
-                          </Link>
-                        </h3>
-                        <div className="link-btn" style={{ marginTop: "auto" }}>
-                          <Link 
-                            href={`/${category.slug}/${slugify(relatedProduct.subcategory)}/${relatedProduct.slug}`}
-                            style={{ display: "inline-block", padding: "8px 20px", background: "#003b8e", color: "#fff", fontWeight: 600, borderRadius: "4px", fontSize: "13px", textDecoration: "none" }}
-                          >
-                            Read more
-                          </Link>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                ))}
+                <div className="col-lg-12">
+                  <RelatedProductsSlider 
+                    relatedProducts={relatedProducts.map(p => ({
+                      slug: p.slug,
+                      subcategory: slugify(p.subcategory),
+                      product_name: p.product_name,
+                      image: p.image
+                    }))} 
+                    categorySlug={category.slug} 
+                  />
+                </div>
               </div>
             </div>
           </section>

@@ -4,6 +4,7 @@ import Link from "next/link";
 import Cta from "../../../../components/sections/home2/Cta";
 
 import { blogs } from "../../blog/blogs";
+import { categoryMeta } from "../../../../data/products";
 import { notFound } from "next/navigation";
 
 type Props = {
@@ -135,27 +136,14 @@ export default async function BlogDetails({ params }: Props) {
 
               <div className="col-lg-4 col-md-12 col-sm-12 sidebar-side">
                 <div className="blog-sidebar">
-                  <div className="search-widget mb_40">
-                    <h3>Search Here</h3>
-                    <form method="post" action="/blog-details">
-                      <div className="form-group">
-                        <input
-                          type="search"
-                          name="search-field"
-                          placeholder="keywords"
-                          required
-                        />
-                        <button type="submit">
-                          <Image
-                            src="/assets/images/icons/icon-22.svg"
-                            alt="Icon"
-                            width={20}
-                            height={20}
-                            priority
-                          />
-                        </button>
-                      </div>
-                    </form>
+                  <div className="sidebar-widget about-widget mb_40" style={{ background: "#f8fafc", padding: "30px", borderRadius: "10px", border: "1px solid #e2e8f0" }}>
+                    <div className="widget-title">
+                      <h3>Company Intro</h3>
+                    </div>
+                    <div className="widget-content">
+                      <p style={{ marginBottom: "15px", color: "#475569" }}>Shiv Balaji Surgical manufactures premium hospital furniture, beds, trolleys, and medical equipment with trusted quality and innovative designs.</p>
+                      <Link href="/about" className="theme-btn btn-two"><span>Read More</span></Link>
+                    </div>
                   </div>
                   <div className="sidebar-widget category-widget mb_40">
                     <div className="widget-title">
@@ -163,13 +151,9 @@ export default async function BlogDetails({ params }: Props) {
                     </div>
                     <div className="widget-content">
                       <ul className="category-list clearfix">
-                        <li><Link href="/blog-details">Hospital Beds</Link></li>
-                        <li><Link href="/blog-details">Hospital Trolley</Link></li>
-                        <li><Link href="/blog-details">Hospital Locker</Link></li>
-                        <li><Link href="/blog-details">Examination Couch</Link></li>
-                        <li><Link href="/blog-details">Hospital Foot Step</Link></li>
-                        <li><Link href="/blog-details">Wheel Chair</Link></li>
-                        <li><Link href="/blog-details">Medical Equipment</Link></li>
+                        {categoryMeta.map((cat) => (
+                          <li key={cat.slug}><Link href={`/${cat.slug}`}>{cat.name}</Link></li>
+                        ))}
                       </ul>
                     </div>
                   </div>

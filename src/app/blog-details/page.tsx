@@ -2,6 +2,7 @@ import Layout from "../../../components/layout/Layout";
 import Image from "next/image";
 import Link from "next/link";
 import Cta from "../../../components/sections/home2/Cta";
+import { categoryMeta } from "../../../data/products";
 export default function Departments_Details() {
 
     return (
@@ -31,18 +32,18 @@ export default function Departments_Details() {
                                             </div>
                                         </div>
                                     </div>
-                                  
-                                    
-                                   
+
+
+
                                     <div className="comment-form">
                                         <h3>Leave a Reply</h3>
                                         <form method="post" action="/blog-details" className="default-form">
                                             <div className="row clearfix">
                                                 <div className="col-lg-6 col-md-6 col-sm-12 form-group">
-                                                    <input type="text" name="name" placeholder="Name" required/>
+                                                    <input type="text" name="name" placeholder="Name" required />
                                                 </div>
                                                 <div className="col-lg-6 col-md-6 col-sm-12 form-group">
-                                                    <input type="email" name="email" placeholder="Email" required/>
+                                                    <input type="email" name="email" placeholder="Email" required />
                                                 </div>
                                                 <div className="col-lg-12 col-md-12 col-sm-12 form-group">
                                                     <textarea name="message" placeholder="Type Comment Here ..."></textarea>
@@ -57,29 +58,25 @@ export default function Departments_Details() {
                             </div>
                             <div className="col-lg-4 col-md-12 col-sm-12 sidebar-side">
                                 <div className="blog-sidebar">
-                                    <div className="search-widget mb_40">
-                                        <h3>Search Here</h3>
-                                        <form method="post" action="/blog-details">
-                                            <div className="form-group">
-                                                <input type="search" name="search-field" placeholder="keywords" required/>
-                                                <button type="submit"><Image src="/assets/images/icons/icon-22.svg" alt="Icon" width={20} height={20} priority /></button>
-                                            </div>
-                                        </form>
+                                    <div className="sidebar-widget about-widget mb_40" style={{ background: "#064acb !important", padding: "30px", borderRadius: "10px", border: "1px solid #e2e8f0" }}>
+                                        <div className="widget-title">
+                                            <h3>Company Intro</h3>
+                                        </div>
+                                        <div className="widget-content">
+                                            <p style={{ marginBottom: "15px", color: "#475569" }}>Shiv Balaji Surgical manufactures premium hospital furniture, beds, trolleys, and medical equipment with trusted quality and innovative designs.</p>
+                                            <Link href="/about" className="theme-btn btn-two"><span>Read More</span></Link>
+                                        </div>
                                     </div>
                                     <div className="sidebar-widget category-widget mb_40">
                                         <div className="widget-title">
-                                            <h3>Category akk</h3>
+                                            <h3>Category</h3>
                                         </div>
                                         <div className="widget-content">
                                             <ul className="category-list clearfix">
-  <li><Link href="/blog-details">Hospital Beds</Link></li>
-  <li><Link href="/blog-details">Hospital Trolley</Link></li>
-  <li><Link href="/blog-details">Hospital Locker</Link></li>
-  <li><Link href="/blog-details">Examination Couch</Link></li>
-  <li><Link href="/blog-details">Hospital Foot Step</Link></li>
-  <li><Link href="/blog-details">Wheel Chair</Link></li>
-  <li><Link href="/blog-details">Medical Equipment</Link></li>
-</ul>
+                                                {categoryMeta.map((cat) => (
+                                                    <li key={cat.slug}><Link href={`/${cat.slug}`}>{cat.name}</Link></li>
+                                                ))}
+                                            </ul>
                                         </div>
                                     </div>
                                     <div className="sidebar-widget post-widget mb_40">
@@ -124,7 +121,7 @@ export default function Departments_Details() {
                         </div>
                     </div>
                 </section>
-                <Cta/>
+                <Cta />
             </Layout>
         </div>
     )

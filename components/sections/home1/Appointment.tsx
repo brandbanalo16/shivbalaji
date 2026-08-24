@@ -22,6 +22,7 @@ export default function Appointment() {
       email: formData.get("email") as string,
       city: formData.get("city") as string,
       product: formData.get("product") as string,
+      message: formData.get("message") as string,
     };
 
     const result = await submitEnquiry(data);

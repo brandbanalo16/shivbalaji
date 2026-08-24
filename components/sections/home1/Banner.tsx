@@ -340,8 +340,17 @@ const HeroBanner: React.FC = () => {
         }
         
         @media (max-width: 767px) {
+          .hero-slider-section {
+            background-attachment: scroll;
+          }
+          .slider-image {
+            max-height: 250px;
+            width: 100%;
+            object-fit: contain;
+          }
           .slide-content-wrapper {
-            padding: 40px 0 60px;
+            padding: 100px 0 60px;
+            min-height: auto;
           }
           .custom-container {
             padding-left: 15px;
@@ -353,29 +362,20 @@ const HeroBanner: React.FC = () => {
           .hero-text {
             font-size: 16px;
           }
-          .top-stats-bar {
-            flex-direction: column;
+          .hero-buttons {
+            flex-wrap: nowrap;
+            gap: 10px;
             width: 100%;
           }
-          .stat-divider {
-            width: 100%;
-            height: 1px;
-            margin: 10px 0;
+          :global(.hero-btn),
+          :global(.hero-btn-outline) {
+            flex: 1;
+            padding: 10px 5px;
+            font-size: 13px;
+            text-align: center;
           }
           .bottom-features-bar {
-            flex-direction: column;
-            align-items: center;
-          }
-          .feature-divider {
-            display: none;
-          }
-          .feature-item {
-            width: 100%;
-            justify-content: center;
-            margin-bottom: 10px;
-          }
-          .feature-text {
-            text-align: left;
+            display: none !important;
           }
         }
       `}</style>

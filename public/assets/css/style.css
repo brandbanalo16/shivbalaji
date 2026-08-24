@@ -2650,22 +2650,7 @@
    background: var(--secondary-color);
  }
 
- .nav-style-one .swiper-nav button:before {
-   position: absolute;
-   content: '';
-   background: #BDBDBD;
-   width: 50px;
-   height: 1px;
-   top: 25px;
- }
-
- .nav-style-one .swiper-nav button.swiper-prev:before {
-   left: -70px;
- }
-
- .nav-style-one .swiper-nav button.swiper-next:before {
-   right: -70px;
- }
+ /* Removed horizontal line pseudo-elements from nav-style-one swiper buttons to remove the "cut line" effect */
 
 
  .tabs-box .tab {

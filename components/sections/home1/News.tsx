@@ -96,8 +96,9 @@ export default function News() {
                         height={300}
                         style={{
                           width: "100%",
-                          height: "300px",
-                          objectFit: "cover",
+                          height: "auto",
+                          maxHeight: "300px",
+                          objectFit: "contain",
                         }}
                       />
                     </Link>

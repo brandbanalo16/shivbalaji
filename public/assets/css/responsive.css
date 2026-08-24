@@ -41,7 +41,6 @@
 @media only screen and (max-width: 1200px){
 
   .main-menu,
-  .sticky-header,
   .main-header.style-one .outer-container:before{
     display: none !important;
   }

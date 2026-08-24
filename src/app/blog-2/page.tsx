@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import ModalVideo from "../../../components/elements/VideoPopup";
 import Cta from "../../../components/sections/home2/Cta";
+import { categoryMeta } from "../../../data/products";
 export default function Departments_Details() {
 
     return (
@@ -80,14 +81,14 @@ export default function Departments_Details() {
                             </div>
                             <div className="col-lg-4 col-md-12 col-sm-12 sidebar-side">
                                 <div className="blog-sidebar">
-                                    <div className="search-widget mb_40">
-                                        <h3>Search Here</h3>
-                                        <form method="post" action="/blog-2">
-                                            <div className="form-group">
-                                                <input type="search" name="search-field" placeholder="keywords" required/>
-                                                <button type="submit"><Image src="/assets/images/icons/icon-22.svg" alt="Icon" width={20} height={20} priority /></button>
-                                            </div>
-                                        </form>
+                                    <div className="sidebar-widget about-widget mb_40" style={{ background: "#f8fafc", padding: "30px", borderRadius: "10px", border: "1px solid #e2e8f0" }}>
+                                        <div className="widget-title">
+                                            <h3>Company Intro</h3>
+                                        </div>
+                                        <div className="widget-content">
+                                            <p style={{ marginBottom: "15px", color: "#475569" }}>Shiv Balaji Surgical manufactures premium hospital furniture, beds, trolleys, and medical equipment with trusted quality and innovative designs.</p>
+                                            <Link href="/about" className="theme-btn btn-two"><span>Read More</span></Link>
+                                        </div>
                                     </div>
                                     <div className="sidebar-widget category-widget mb_40">
                                         <div className="widget-title">
@@ -95,12 +96,9 @@ export default function Departments_Details() {
                                         </div>
                                         <div className="widget-content">
                                             <ul className="category-list clearfix">
-                                                <li><Link href="/blog-details">Cardiology</Link></li>
-                                                <li><Link href="/blog-details">Dental</Link></li>
-                                                <li><Link href="/blog-details">Gastroenterology</Link></li>
-                                                <li><Link href="/blog-details">Neurology</Link></li>
-                                                <li><Link href="/blog-details">Orthopaedics</Link></li>
-                                                <li><Link href="/blog-details">Dental Caring</Link></li>
+                                                {categoryMeta.map((cat) => (
+                                                    <li key={cat.slug}><Link href={`/${cat.slug}`}>{cat.name}</Link></li>
+                                                ))}
                                             </ul>
                                         </div>
                                     </div>

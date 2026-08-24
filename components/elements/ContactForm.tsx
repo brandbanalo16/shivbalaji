@@ -7,6 +7,8 @@ export default function ContactForm() {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
+    phone: "",
+    subject: "",
     message: "",
   });
 
@@ -30,7 +32,7 @@ export default function ContactForm() {
     if (result.success) {
       setStatus("success");
       setStatusMessage(result.message);
-      setFormData({ name: "", email: "", message: "" });
+      setFormData({ name: "", email: "", phone: "", subject: "", message: "" });
     } else {
       setStatus("error");
       setStatusMessage(result.message);
@@ -66,10 +68,10 @@ export default function ContactForm() {
                 />
             </div>
             <div className="col-lg-6 col-md-6 col-sm-12 form-group">
-                <input type="text" name="phone" placeholder="Phone" />
+                <input type="text" name="phone" placeholder="Phone" value={formData.phone} onChange={handleChange} />
             </div>
             <div className="col-lg-6 col-md-6 col-sm-12 form-group">
-                <input type="text" name="subject" placeholder="Subject" />
+                <input type="text" name="subject" placeholder="Subject" value={formData.subject} onChange={handleChange} />
             </div>
             <div className="col-lg-12 col-md-12 col-sm-12 form-group">
                 <textarea

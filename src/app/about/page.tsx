@@ -3,6 +3,9 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay } from "swiper/modules";
+import "swiper/css";
 
 import Layout from "../../../components/layout/Layout";
 import Working from "../../../components/sections/home2/Working";
@@ -243,10 +246,21 @@ export default function About_Page() {
 
                         </div>
 
-                        <div className="row clearfix">
+                        <Swiper
+                            modules={[Autoplay]}
+                            slidesPerView={1}
+                            spaceBetween={30}
+                            loop={true}
+                            autoplay={{ delay: 3000, disableOnInteraction: false }}
+                            breakpoints={{
+                                768: { slidesPerView: 2 },
+                                992: { slidesPerView: 3 },
+                            }}
+                            className="vision-mission-slider pb_30"
+                        >
 
                             {/* Vision */}
-                            <div className="col-lg-4 col-md-6 col-sm-12 service-block">
+                            <SwiperSlide>
                                 <div className="service-block-one">
                                     <div className="inner-box">
 
@@ -285,10 +299,10 @@ export default function About_Page() {
 
                                     </div>
                                 </div>
-                            </div>
+                            </SwiperSlide>
 
                             {/* Mission */}
-                            <div className="col-lg-4 col-md-6 col-sm-12 service-block">
+                            <SwiperSlide>
                                 <div className="service-block-one">
                                     <div className="inner-box">
 
@@ -327,10 +341,10 @@ export default function About_Page() {
 
                                     </div>
                                 </div>
-                            </div>
+                            </SwiperSlide>
 
                             {/* Core Specialization */}
-                            <div className="col-lg-4 col-md-6 col-sm-12 service-block">
+                            <SwiperSlide>
                                 <div className="service-block-one">
                                     <div className="inner-box">
 
@@ -369,9 +383,9 @@ export default function About_Page() {
 
                                     </div>
                                 </div>
-                            </div>
+                            </SwiperSlide>
 
-                        </div>
+                        </Swiper>
                     </div>
                 </section>
 

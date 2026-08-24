@@ -4577,58 +4577,38 @@ export const departments: Category[] = [
     products: [
       makeProduct({
         product_id: "SBS-065",
-        product_name: "Bedside Screen (3/4 Panel)",
+        product_name: "Premium Bedside Screen (Multi-Panel)",
         model: "SB-G165",
         category: "Stretchers, Screens & Accessories",
-        image: productImg(65),
-        short_description: "Bedside Screen (3/4 Panel) (Model SB-G165) — Overall size 1680 x 2450 mm",
-        description: "Bedside Screen (3/4 Panel) - Model SB-G165 — Bedside Screen (3/4 Panel) (Model SB-G165) — Overall size 1680 x 2450 mm",
+        image: productImg(66),
+        short_description: "Premium Bedside Screen (Multi-Panel) (Model SB-G165) — Folding privacy screen with castor wheels",
+        description: "Premium Bedside Screen (Multi-Panel) - Model SB-G165 — Folding privacy screen with castor wheels, available in 3-panel and 4-panel configurations.",
         subcategory: "Bedside Screens",
         specifications: [
-          "Approx. size: 1680 x 2450 mm.",
-          "M.S. tubular construction of 19 mm x 18G in four/three sections.",
-          "Legs made of 25 mm x 18G with 50 mm dia castors.",
-          "Supplied with hooks and ring with curtain cloth.",
+          "Available in 3-panel and 4-panel configurations.",
+          "M.S. tubular frame construction.",
+          "Fitted with smooth castor wheels for easy mobility.",
+          "Supplied with durable, washable curtain cloth.",
           "Pre-treated and epoxy powder coated finish.",
         ],
         optional_feature: [],
         features: [
-          "Overall size 1680 x 2450 mm",
-          "MS tubular construction, 19mm x 18G, in 3 or 4 sections",
-          "Legs of 25mm x 18G fitted with 50mm dia castors",
-          "Supplied with hooks, rings and curtain cloth",
+          "Folding multi-panel design",
+          "M.S. tubular construction",
+          "Castor wheels for mobility",
+          "Washable curtains included",
           "Pre-treated and epoxy powder coated finish",
         ],
         seo: {
-          focus_keyword: "Bedside Screen (3/4 Panel)",
-          meta_title: "Bedside Screen (3/4 Panel) | Pediatric Bed Manufacturer and Bedside Locker Manufacturer | Shiv Balaji Surgical",
-          meta_description: "Buy the best Bedside Screen (3/4 Panel). We are a leading Bedside Locker Manufacturer and Crash Cart Trolley Manufacturer. Explore our high-quality Bedside Screen (3/4 Panel) today!",
-          url_slug: "/products/stretchers-screens-accessories/sb-g165-bedside-screen-3-4-panel",
-          image_alt_text: "Bedside Screen (3/4 Panel) - SB-G165 - Bedside Locker Manufacturer",
-          og_title: "Bedside Screen (3/4 Panel) SB-G165 | Shiv Balaji Surgical",
-          og_description: "Buy Bedside Screen (3/4 Panel) (Model SB-G165) from Shiv Balaji Surgical - leading hospital furniture manufacturer, supplier & dealer in Delhi NCR. Overall…",
-          twitter_title: "Bedside Screen (3/4 Panel) SB-G165 | Shiv Balaji Surgical",
-          twitter_description: "Buy Bedside Screen (3/4 Panel) (Model SB-G165) from Shiv Balaji Surgical - leading hospital furniture manufacturer, supplier & dealer in Delhi NCR. Overall…",
-          additional_keywords: ["Bedside Locker Manufacturer", "Crash Cart Trolley Manufacturer", "Hospital Bed Manufacturer for Government Tenders", "Examination Table Manufacturer", "Shiv Balaji Surgical Hospital Beds"],
-          business_keywords: ["Bedside Screen (3/4 Panel) Manufacturer", "Bedside Screen (3/4 Panel) Supplier", "Bedside Screen (3/4 Panel) Dealer", "Bedside Screen (3/4 Panel) Exporter", "Bedside Screen (3/4 Panel) Wholesaler in Delhi", "Hospital Furniture Manufacturer India", "Hospital Equipment Supplier Delhi NCR"],
-          seo_content_block: "If you are looking for the best Bedside Screen (3/4 Panel), you are in the right place. Our Bedside Screen (3/4 Panel) is designed for optimal performance. As a top Bedside Locker Manufacturer, we ensure every Bedside Screen (3/4 Panel) meets high standards. The Bedside Screen (3/4 Panel) offers incredible durability. Patients and caregivers prefer our Bedside Screen (3/4 Panel) for its reliability. When you choose our Bedside Screen (3/4 Panel), you get quality. We are known as a leading Crash Cart Trolley Manufacturer as well. This Bedside Screen (3/4 Panel) is perfect for clinics. The Bedside Screen (3/4 Panel) provides unmatched comfort. Contact us if you need a Bedside Screen (3/4 Panel) from a Hospital Bed Manufacturer for Government Tenders. We also supply related items as a Examination Table Manufacturer. The Bedside Screen (3/4 Panel) stands out in the market. Many hospitals trust our Bedside Screen (3/4 Panel). Experience the excellence of this Bedside Screen (3/4 Panel) today. We are your reliable Shiv Balaji Surgical Hospital Beds.",
-          schema_org: {
-            "@context": "https://schema.org/",
-            "@type": "Product",
-            "name": "Bedside Screen (3/4 Panel) - SB-G165",
-            "sku": "SB-G165",
-            "category": "Stretchers, Screens & Accessories",
-            "brand": {
-              "@type": "Brand",
-              "name": "Shiv Balaji Surgical"
-            },
-            "manufacturer": {
-              "@type": "Organization",
-              "name": "Shiv Balaji Surgical",
-              "address": "Kh. No. 25/2, Nangli Sakrawati, Najafgarh, New Delhi - 110043, India"
-            },
-            "description": "Buy Bedside Screen (3/4 Panel) (Model SB-G165) from Shiv Balaji Surgical - leading hospital furniture manufacturer, supplier & dealer in Delhi NCR. Overall…"
-          },
+          focus_keyword: "Premium Bedside Screen",
+          meta_title: "Premium Bedside Screen (Multi-Panel) | Hospital Bed Manufacturer in Delhi | Shiv Balaji Surgical",
+          meta_description: "Buy the best Premium Bedside Screen (Multi-Panel). We are a leading Hospital Furniture Manufacturer. Explore our high-quality Bedside Screens today!",
+          url_slug: "/products/stretchers-screens-accessories/sb-g165-premium-bedside-screen-multi-panel",
+          image_alt_text: "Premium Bedside Screen - Hospital Furniture Manufacturer",
+          og_title: "Premium Bedside Screen | Shiv Balaji Surgical",
+          og_description: "Buy Premium Bedside Screen (Multi-Panel) from Shiv Balaji Surgical - leading hospital furniture manufacturer, supplier & dealer in Delhi NCR.",
+          business_keywords: ["Premium Bedside Screen Manufacturer", "Bedside Screen Supplier", "Hospital Furniture Manufacturer India", "Hospital Equipment Supplier Delhi NCR"],
+          seo_content_block: "If you are looking for the best Premium Bedside Screen, you are in the right place. Our Premium Bedside Screen is designed for optimal performance. As a top Hospital Furniture Manufacturer, we ensure every Premium Bedside Screen meets high standards. Patients and caregivers prefer our Premium Bedside Screen for its reliability and privacy.",
         },
       }),
       makeProduct({
@@ -5149,7 +5129,7 @@ export const departments: Category[] = [
         product_name: "Bedside Screen (Fabric 3-Panel)",
         model: "SB-G68",
         category: "Stretchers, Screens & Accessories",
-        image: productImg(83),
+        image: productImg(85),
         short_description: "Bedside Screen (Fabric 3-Panel) (Model SB-G68) — Three-panel folding privacy screen",
         description: "Bedside Screen (Fabric 3-Panel) - Model SB-G68 — Bedside Screen (Fabric 3-Panel) (Model SB-G68) — Three-panel folding privacy screen",
         subcategory: "Bedside Screens",
@@ -5237,7 +5217,7 @@ export const categoryMeta = departments.map((d) => ({
 export const getSubcategoriesByCategory = (categorySlug: string) => {
   const products = getProductsByCategory(categorySlug);
   const subcategories = Array.from(new Set(products.map(p => p.subcategory)));
-  return subcategories;
+  return subcategories.filter(sub => !["Hospital Accessories", "Bucket Stands", "Swab Stands"].includes(sub));
 };
 
 export const getProductsBySubcategory = (categorySlug: string, subcategoryName: string) => {
@@ -5262,7 +5242,7 @@ export const subcategoryImageMap: Record<string, string> = {
 export const subcategoryImages: Record<string, string> = {
   "Attendant Beds": "/assets/images/Sub Categoty/Attendant Beds.webp",
   "Bedside Lockers": "/assets/images/Sub Categoty/Bedside Lockers.png",
-  "Bedside Screen": "/assets/images/Sub Categoty/Bedside Screen.webp",
+  "Bedside Screens": "/assets/images/Sub Categoty/Bedside Screen.webp",
   "Blood Donor Chairs": "/assets/images/Sub Categoty/Blood Donor Chairs.webp",
   "Crash Carts": "/assets/images/Sub Categoty/Crash Carts.webp",
   "Dressing Trolleys": "/assets/images/Sub Categoty/Dressing Trolleys.webp",

@@ -52,7 +52,7 @@ const Breadcrumb: React.FC<BreadcrumbProps> = ({ breadcrumbTitle }) => {
           maxWidth: "950px",
           padding: "150px  20px 50px 20PX",
           textAlign: "center",
-       
+
         }}
       >
         <h1
@@ -64,7 +64,7 @@ const Breadcrumb: React.FC<BreadcrumbProps> = ({ breadcrumbTitle }) => {
             letterSpacing: "-2px",
             marginBottom: "18px",
             textShadow: "0 5px 18px rgba(0,0,0,.25)",
-          
+
           }}
         >
           {firstWord}{" "}

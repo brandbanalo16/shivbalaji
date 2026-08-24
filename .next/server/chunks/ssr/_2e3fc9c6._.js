@@ -1,3 +1,0 @@
-module.exports=[75922,a=>{"use strict";a.s(["default",()=>d]);var b=a.i(87924),c=a.i(72131);function d({label:a,percent:d}){let[e,f]=(0,c.useState)(0);return(0,c.useEffect)(()=>{let a=setTimeout(()=>{f(d)},200);return()=>clearTimeout(a)},[d]),(0,b.jsxs)("div",{className:"progress-box",children:[(0,b.jsx)("p",{children:a}),(0,b.jsx)("div",{className:"bar",children:(0,b.jsx)("div",{className:"bar-inner count-bar",style:{width:`${e}%`,transition:"width 1.2s ease-in-out"},children:(0,b.jsxs)("div",{className:"count-text",children:[d,"%"]})})})]})}},22980,a=>{a.v(b=>Promise.all(["server/chunks/ssr/node_modules_wowjs_dist_wow_28a448ac.js"].map(b=>a.l(b))).then(()=>b(47911)))}];
-
-//# sourceMappingURL=_2e3fc9c6._.js.map
