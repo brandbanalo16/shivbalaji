@@ -4,7 +4,6 @@
   "/[category]/page": "/[category]",
   "/_not-found/page": "/_not-found",
   "/about/page": "/about",
-  "/api/send-email/route": "/api/send-email",
   "/blog-2/page": "/blog-2",
   "/blog-details/[slug]/page": "/blog-details/[slug]",
   "/blog-details/page": "/blog-details",

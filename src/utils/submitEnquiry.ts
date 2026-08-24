@@ -21,11 +21,11 @@ export async function submitEnquiry(data: EnquiryData): Promise<SubmitResult> {
     if (!data.name || (!data.email && !data.phone)) {
       return { success: false, message: 'Name and either Email or Phone are required.' };
     }
-
-    const res = await fetch('/api/send-email', {
+    const res = await fetch('/mail.php', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
+        'Accept': 'application/json'
       },
       body: JSON.stringify({
         ...data,
@@ -40,8 +40,8 @@ export async function submitEnquiry(data: EnquiryData): Promise<SubmitResult> {
         return { success: false, message: 'Unable to submit your enquiry right now. Please try again or contact us directly.' };
     }
 
-    if (res.ok && result.success) {
-      return { success: true, message: result.message || 'Thank you! Your enquiry has been submitted successfully. Our team will contact you shortly.' };
+    if (res.status === 200 && result.success) {
+      return { success: true, message: 'Thank you! Your enquiry has been submitted successfully. Our team will contact you shortly.' };
     } else {
       return { success: false, message: result.message || 'Unable to submit your enquiry right now. Please try again or contact us directly.' };
     }

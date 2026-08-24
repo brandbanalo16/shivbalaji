@@ -1,6 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "sections": [
-    {"offset": {"line": 1, "column": 0}, "map": {"version":3,"sources":["turbopack:///[project]/public/assets/css/color.css"],"sourcesContent":["\r\n/* template-color */\r\n\r\n.handle-preloader{\r\n\tbackground: #EC4E4F;\r\n}\r\n\r\n.preloader-close{\r\n\tcolor: #EC4E4F;\r\n}"],"names":[],"mappings":"AAGA;;;;AAIA"}}]
-}
