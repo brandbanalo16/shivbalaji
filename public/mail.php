@@ -101,10 +101,10 @@ $headers = "MIME-Version: 1.0" . "\r\n";
 $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
 
 // Additional headers
-$senderEmail = !empty($email) ? $email : 'noreply@shivbalajisurgical.com';
-$headers .= "From: Shiv Balaji Surgical Website <$senderEmail>" . "\r\n";
+$senderEmail = 'noreply@' . (isset($_SERVER['SERVER_NAME']) ? $_SERVER['SERVER_NAME'] : 'shivbalajisurgical.com');
+$headers .= "From: Shiv Balaji Website <$senderEmail>\r\n";
 if (!empty($email)) {
-    $headers .= "Reply-To: $email" . "\r\n";
+    $headers .= "Reply-To: $email\r\n";
 }
 
 // Send email using PHP mail()
