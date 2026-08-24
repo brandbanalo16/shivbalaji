@@ -44,27 +44,97 @@ export async function submitEnquiry(data: EnquiryData): Promise<SubmitResult> {
     });
 
     const mailOptions = {
-      from: SMTP_USER,
+      from: `"Shiv Balaji Website" <${SMTP_USER}>`,
+      replyTo: data.email || SMTP_USER,
       to: EMAIL_TO,
-      subject: `New Enquiry from ${data.name}`,
+      subject: `New Website Enquiry from ${data.name}`,
       text: `
-        Name: ${data.name}
-        Email: ${data.email || 'N/A'}
-        Phone: ${data.phone || 'N/A'}
-        Company: ${data.company || 'N/A'}
-        Product: ${data.product || 'N/A'}
-        Message: ${data.message || 'N/A'}
-        Page URL: ${data.pageUrl || 'N/A'}
+        New Website Enquiry
+        
+        FORM NAME
+        ${data.formName || 'Contact Us Form'}
+        
+        NAME
+        ${data.name}
+        
+        EMAIL
+        ${data.email || 'N/A'}
+        
+        PHONE
+        ${data.phone || 'N/A'}
+        
+        COMPANY
+        ${data.company || 'N/A'}
+        
+        PRODUCT
+        ${data.product || 'N/A'}
+        
+        MESSAGE
+        ${data.message || 'N/A'}
+        
+        SUBMITTED FROM PAGE
+        ${data.pageUrl || 'N/A'}
       `,
       html: `
-        <h3>New Enquiry Received</h3>
-        <p><strong>Name:</strong> ${data.name}</p>
-        <p><strong>Email:</strong> ${data.email || 'N/A'}</p>
-        <p><strong>Phone:</strong> ${data.phone || 'N/A'}</p>
-        <p><strong>Company:</strong> ${data.company || 'N/A'}</p>
-        <p><strong>Product:</strong> ${data.product || 'N/A'}</p>
-        <p><strong>Message:</strong> ${data.message || 'N/A'}</p>
-        <p><strong>Page URL:</strong> ${data.pageUrl || 'N/A'}</p>
+        <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; border: 1px solid #e0e0e0; border-radius: 8px; overflow: hidden;">
+          <div style="background-color: #ff6b00; padding: 20px; text-align: center;">
+            <h2 style="color: #ffffff; margin: 0; font-size: 22px; font-weight: 600;">New Website Enquiry</h2>
+          </div>
+          
+          <div style="padding: 30px;">
+            <div style="margin-bottom: 20px; padding-bottom: 15px; border-bottom: 1px solid #f0f0f0;">
+              <div style="color: #666666; font-size: 12px; font-weight: bold; margin-bottom: 5px; text-transform: uppercase;">Form Name</div>
+              <div style="color: #333333; font-size: 16px;">${data.formName || 'Contact Us Form'}</div>
+            </div>
+            
+            <div style="margin-bottom: 20px; padding-bottom: 15px; border-bottom: 1px solid #f0f0f0;">
+              <div style="color: #666666; font-size: 12px; font-weight: bold; margin-bottom: 5px; text-transform: uppercase;">Name</div>
+              <div style="color: #333333; font-size: 16px;">${data.name}</div>
+            </div>
+            
+            ${data.email ? `
+            <div style="margin-bottom: 20px; padding-bottom: 15px; border-bottom: 1px solid #f0f0f0;">
+              <div style="color: #666666; font-size: 12px; font-weight: bold; margin-bottom: 5px; text-transform: uppercase;">Email</div>
+              <div style="color: #333333; font-size: 16px;"><a href="mailto:${data.email}" style="color: #1a73e8; text-decoration: none;">${data.email}</a></div>
+            </div>
+            ` : ''}
+            
+            ${data.phone ? `
+            <div style="margin-bottom: 20px; padding-bottom: 15px; border-bottom: 1px solid #f0f0f0;">
+              <div style="color: #666666; font-size: 12px; font-weight: bold; margin-bottom: 5px; text-transform: uppercase;">Phone</div>
+              <div style="color: #333333; font-size: 16px;">${data.phone}</div>
+            </div>
+            ` : ''}
+
+            ${data.company ? `
+            <div style="margin-bottom: 20px; padding-bottom: 15px; border-bottom: 1px solid #f0f0f0;">
+              <div style="color: #666666; font-size: 12px; font-weight: bold; margin-bottom: 5px; text-transform: uppercase;">Company</div>
+              <div style="color: #333333; font-size: 16px;">${data.company}</div>
+            </div>
+            ` : ''}
+
+            ${data.product ? `
+            <div style="margin-bottom: 20px; padding-bottom: 15px; border-bottom: 1px solid #f0f0f0;">
+              <div style="color: #666666; font-size: 12px; font-weight: bold; margin-bottom: 5px; text-transform: uppercase;">Product</div>
+              <div style="color: #333333; font-size: 16px;">${data.product}</div>
+            </div>
+            ` : ''}
+            
+            ${data.message ? `
+            <div style="margin-bottom: 20px; padding-bottom: 15px; border-bottom: 1px solid #f0f0f0;">
+              <div style="color: #666666; font-size: 12px; font-weight: bold; margin-bottom: 5px; text-transform: uppercase;">Message</div>
+              <div style="color: #333333; font-size: 16px;">${data.message}</div>
+            </div>
+            ` : ''}
+            
+            ${data.pageUrl ? `
+            <div style="margin-bottom: 10px;">
+              <div style="color: #666666; font-size: 12px; font-weight: bold; margin-bottom: 5px; text-transform: uppercase;">Submitted From Page</div>
+              <div style="color: #333333; font-size: 16px; background-color: #e8f0fe; display: inline-block; padding: 2px 5px; color: #1a73e8; font-weight: 600;">${data.pageUrl}</div>
+            </div>
+            ` : ''}
+          </div>
+        </div>
       `,
     };
 
