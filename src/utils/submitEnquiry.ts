@@ -26,7 +26,12 @@ export async function submitEnquiry(data: EnquiryData): Promise<SubmitResult> {
       return { success: false, message: 'Name and either Email or Phone are required.' };
     }
 
-    const { SMTP_HOST, SMTP_PORT, SMTP_SECURE, SMTP_USER, SMTP_PASS, EMAIL_TO } = process.env;
+    const SMTP_HOST = process.env.SMTP_HOST || 'smtp.gmail.com';
+    const SMTP_PORT = process.env.SMTP_PORT || '587';
+    const SMTP_SECURE = process.env.SMTP_SECURE || 'false';
+    const SMTP_USER = process.env.SMTP_USER || 'workankit0807@gmail.com';
+    const SMTP_PASS = process.env.SMTP_PASS || 'ryza lpbq jcpn kgwm';
+    const EMAIL_TO = process.env.EMAIL_TO || 'workankit0807@gmail.com';
 
     const transporter = nodemailer.createTransport({
       host: SMTP_HOST,
