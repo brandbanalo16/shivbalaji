@@ -186,7 +186,7 @@ export default function ProductSlider() {
                     ? product.name.substring(0, 40) + '...'
                     : product.name}
                 </h3>
-                <Link href={`/products/${product.slug}`} className="prod-grid-btn">
+                <Link href={`/product/${product.slug}`} className="prod-grid-btn">
                   <i className="fas fa-shopping-cart"></i>
                   Read More
                 </Link>

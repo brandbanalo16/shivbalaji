@@ -206,7 +206,7 @@ export default function ProductDetailPage({ slug }: ProductDetailPageProps) {
                     <div className="news-block-one">
                       <div className="inner-box">
                         <figure className="image-box" style={{ aspectRatio: "1 / 1", overflow: "hidden", margin: 0 }}>
-                          <Link href={`/products/${relatedProduct.slug}`} style={{ display: "block", width: "100%", height: "100%" }}>
+                          <Link href={`/product/${relatedProduct.slug}`} style={{ display: "block", width: "100%", height: "100%" }}>
                             <Image
                               src={relatedProduct.image}
                               alt={relatedProductAlt(relatedProduct)}
@@ -221,7 +221,7 @@ export default function ProductDetailPage({ slug }: ProductDetailPageProps) {
                           <span className="comment-box">{relatedProduct.category}</span>
 
                           <h3>
-                            <Link href={`/products/${relatedProduct.slug}`}>
+                            <Link href={`/product/${relatedProduct.slug}`}>
                               {relatedProduct.product_name}
                             </Link>
                           </h3>
@@ -233,7 +233,7 @@ export default function ProductDetailPage({ slug }: ProductDetailPageProps) {
                           </p>
 
                           <div className="link">
-                            <Link href={`/products/${relatedProduct.slug}`}>
+                            <Link href={`/product/${relatedProduct.slug}`}>
                               Read More
                             </Link>
                           </div>
