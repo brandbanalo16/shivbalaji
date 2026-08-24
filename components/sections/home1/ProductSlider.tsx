@@ -16,7 +16,8 @@ export default function ProductSlider() {
         slug: p.slug,
       }))
     );
-    return [...all].sort(() => Math.random() - 0.5).slice(0, 8);
+    // Remove Math.random() sorting to fix React Hydration Mismatch (Error #418)
+    return all.slice(0, 8);
   }, []);
 
   return (
