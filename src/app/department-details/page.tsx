@@ -2,6 +2,7 @@ import Layout from "../../../components/layout/Layout";
 import Image from "next/image";
 import Link from "next/link";
 import Cta from "../../../components/sections/home2/Cta";
+import AppointmentSidebarForm from "../../../components/elements/AppointmentSidebarForm";
 export default function Departments_Details() {
 
     return (
@@ -32,37 +33,7 @@ export default function Departments_Details() {
                                         <div className="widget-title">
                                             <h2>Appointment</h2>
                                         </div>
-                                        <div className="form-inner">
-                                            <form method="post" action="contact.html" className="default-form">
-                                                <div className="form-group">
-                                                    <div className="icon"><i className="icon-45"></i></div>
-                                                    <input type="text" name="name" placeholder="Name" required/>
-                                                </div>
-                                                <div className="form-group">
-                                                    <div className="icon"><i className="icon-46"></i></div>
-                                                    <input type="email" name="email" placeholder="Email" required/>
-                                                </div>
-                                                <div className="form-group">
-                                                    <div className="icon"><Image src="/assets/images/icons/icon-15.svg" alt="Image" width={15} height={15} priority /></div>
-                                                    <div className="select-box">
-                                                        <select className="selectmenu">
-                                                            <option>I&apos;m interested in *</option>
-                                                            <option>Heart Health</option>
-                                                            <option>Cardiology</option>
-                                                            <option>Dental</option>
-                                                            <option>Gastroenterology</option>
-                                                        </select>
-                                                    </div>
-                                                </div>
-                                                <div className="form-group">
-                                                    <div className="icon"><i className="icon-48"></i></div>
-                                                    <textarea name="message" placeholder="Message"></textarea>
-                                                </div>
-                                                <div className="form-group message-btn">
-                                                    <button type="submit" className="theme-btn btn-two"><span>Send your message</span></button>
-                                                </div>
-                                            </form>
-                                        </div>
+                                        <AppointmentSidebarForm formName="Department Details Appointment - Cardiology" />
                                     </div>
                                     <div className="sidebar-widget schedule-widget">
                                         <div className="widget-title">

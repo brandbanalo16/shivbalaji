@@ -2,6 +2,7 @@ import Layout from "../../../../components/layout/Layout";
 import Image from "next/image";
 import Link from "next/link";
 import Cta from "../../../../components/sections/home2/Cta";
+import CommentForm from "../../../../components/elements/CommentForm";
 
 import { blogs } from "../../blog/blogs";
 import { categoryMeta } from "../../../../data/products";
@@ -91,44 +92,7 @@ export default async function BlogDetails({ params }: Props) {
 
                   {/* Comment Form SAME */}
 
-                  <div className="comment-form">
-                    <h3>Leave a Reply</h3>
-
-                    <form method="post" action="#" className="default-form">
-                      <div className="row clearfix">
-                        <div className="col-lg-6 col-md-6 col-sm-12 form-group">
-                          <input
-                            type="text"
-                            name="name"
-                            placeholder="Name"
-                            required
-                          />
-                        </div>
-
-                        <div className="col-lg-6 col-md-6 col-sm-12 form-group">
-                          <input
-                            type="email"
-                            name="email"
-                            placeholder="Email"
-                            required
-                          />
-                        </div>
-
-                        <div className="col-lg-12 col-md-12 col-sm-12 form-group">
-                          <textarea
-                            name="message"
-                            placeholder="Type Comment Here ..."
-                          ></textarea>
-                        </div>
-
-                        <div className="col-lg-12 col-md-12 col-sm-12 form-group message-btn">
-                          <button type="submit" className="theme-btn btn-two">
-                            <span>Send your message</span>
-                          </button>
-                        </div>
-                      </div>
-                    </form>
-                  </div>
+                  <CommentForm formName={"Blog Reply - " + blog.title} />
                 </div>
               </div>
 

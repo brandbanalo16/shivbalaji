@@ -266,7 +266,7 @@ export default function About_Page() {
 
                                         <figure className="image-box">
                                             <Image
-                                                src="/assets/images/service/vision.png"
+                                                src="/assets/images/background/vision.png"
                                                 alt="Vision"
                                                 width={416}
                                                 height={358}

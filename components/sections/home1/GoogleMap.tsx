@@ -5,15 +5,15 @@ export default function GoogleMapSection() {
         <section className="google-map-section">
             <div className="map-inner">
                 <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2643.6895046810805!2d-122.52642526124438!3d38.00014098339506!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085976736097a2f%3A0xbe014d20e6e22654!2sSan Rafael%2C California%2C Hoa Kỳ!5e0!3m2!1svi!2s!4v1678975266976!5m2!1svi!2s"
+                    src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d56036.90191969373!2d77.0374685939866!3d28.62057856336221!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sA-294%2C%20Second%20Floor%2C%20Hastal%2C%20Uttam%20Nagar%2C%20New%20Delhi%20-%20110059%2C%20India!5e0!3m2!1sen!2sin!4v1787557529799!5m2!1sen!2sin"
                     width="100%"
                     height="400"
                     style={{ border: 0 }}
                     allowFullScreen
                     loading="lazy"
                     referrerPolicy="strict-origin-when-cross-origin"
-                ></iframe>
-
+                    title="Our Location - A-294, Second Floor, Hastal, Uttam Nagar, New Delhi"
+                />
             </div>
 
             {/* <div className="content-box">

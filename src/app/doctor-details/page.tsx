@@ -2,6 +2,7 @@ import Layout from "../../../components/layout/Layout";
 import Image from "next/image";
 import Cta from "../../../components/sections/home2/Cta";
 import ProgressBar from "../../../components/elements/ProgressBar";
+import DoctorContactForm from "../../../components/elements/DoctorContactForm";
 
 export default function Doctors_Details() {
   return (
@@ -142,73 +143,7 @@ export default function Doctors_Details() {
             {/* Contact Form */}
             <div className="contact-box">
               <h3>Contact Me</h3>
-              <form method="post" action="#" className="default-form">
-                <div className="row clearfix">
-                  <div className="col-lg-6 col-md-6 col-sm-12 single-column">
-                    <div className="form-group">
-                      <div className="icon">
-                        <i className="icon-45"></i>
-                      </div>
-                      <input
-                        type="text"
-                        name="name"
-                        placeholder="Name"
-                        required
-                      />
-                    </div>
-                  </div>
-
-                  <div className="col-lg-6 col-md-6 col-sm-12 single-column">
-                    <div className="form-group">
-                      <div className="icon">
-                        <i className="icon-46"></i>
-                      </div>
-                      <input
-                        type="email"
-                        name="email"
-                        placeholder="Email"
-                        required
-                      />
-                    </div>
-                  </div>
-
-                  <div className="col-lg-12 col-md-12 col-sm-12 single-column">
-                    <div className="form-group">
-                      <div className="icon">
-                        <Image
-                          src="/assets/images/icons/icon-18.svg"
-                          alt="Phone"
-                          width={14}
-                          height={15}
-                        />
-                      </div>
-                      <input
-                        type="text"
-                        name="phone"
-                        placeholder="Phone"
-                        required
-                      />
-                    </div>
-                  </div>
-
-                  <div className="col-lg-12 col-md-12 col-sm-12 single-column">
-                    <div className="form-group">
-                      <div className="icon">
-                        <i className="icon-48"></i>
-                      </div>
-                      <textarea name="message" placeholder="Message"></textarea>
-                    </div>
-                  </div>
-
-                  <div className="col-lg-12 col-md-12 col-sm-12 single-column">
-                    <div className="form-group message-btn mx-0">
-                      <button type="submit" className="theme-btn btn-two">
-                        <span>Send your message</span>
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </form>
+              <DoctorContactForm formName="Doctor Guy Hawkins Contact Form" />
             </div>
           </div>
         </section>
