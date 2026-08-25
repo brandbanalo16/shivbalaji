@@ -3,7 +3,7 @@
     "40c29ea5706802aaa9b171260da05de6569efcc34f": {
       "workers": {
         "app/page": {
-          "moduleId": "23943",
+          "moduleId": "[project]/.next-internal/server/app/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/utils/submitEnquiry.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
           "async": false,
           "exportedName": "submitEnquiry",
           "filename": "src/utils/submitEnquiry.ts"

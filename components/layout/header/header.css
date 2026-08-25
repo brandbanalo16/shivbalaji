@@ -187,3 +187,11 @@
 @media (max-width: 991px) {
   .main-menu .navigation > li > .simple-dropdown { display: none !important; }
 }
+
+/* Hide down arrow for menu items that don't have a dropdown */
+.main-menu .navigation > li:not(.dropdown) > a::after,
+.main-menu .navigation > li:not(.dropdown) .dropdown-btn,
+.main-menu .navigation > li:not(.dropdown) > a::before {
+  display: none !important;
+  content: none !important;
+}

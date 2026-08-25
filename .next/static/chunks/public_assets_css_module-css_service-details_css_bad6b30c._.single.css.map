@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 1, "column": 0}, "map": {"version":3,"sources":["turbopack:///[project]/public/assets/css/module-css/service-details.css"],"sourcesContent":["\r\n/** service-details **/\r\n\r\n.service-details{\r\n  position: relative;\r\n}\r\n\r\n\r\n\r\n/** RTL-CSS **/\r\n\r\n\r\n\r\n\r\n/** RESPONSIVE-CSS **/\r\n\r\n@media only screen and (max-width: 1599px){\r\n  \r\n\r\n\r\n\r\n@media only screen and (max-width: 1200px){\r\n\r\n\r\n\r\n}\r\n\r\n@media only screen and (max-width: 991px){\r\n\r\n\r\n\r\n}\r\n\r\n@media only screen and (max-width: 767px){\r\n\r\n\r\n\r\n}\r\n\r\n@media only screen and (max-width: 599px){\r\n\r\n  \r\n\r\n}\r\n\r\n@media only screen and (max-width: 499px){\r\n\r\n\r\n\r\n}\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n"],"names":[],"mappings":"AAGA"}}]
+}
