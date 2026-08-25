@@ -2,6 +2,18 @@
   "node": {
     "40c29ea5706802aaa9b171260da05de6569efcc34f": {
       "workers": {
+        "app/[category]/page": {
+          "moduleId": "[project]/.next-internal/server/app/[category]/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/utils/submitEnquiry.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "submitEnquiry",
+          "filename": "src/utils/submitEnquiry.ts"
+        },
+        "app/_not-found/page": {
+          "moduleId": "[project]/.next-internal/server/app/_not-found/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/utils/submitEnquiry.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "submitEnquiry",
+          "filename": "src/utils/submitEnquiry.ts"
+        },
         "app/page": {
           "moduleId": "[project]/.next-internal/server/app/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/utils/submitEnquiry.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
           "async": false,
@@ -10,6 +22,8 @@
         }
       },
       "layer": {
+        "app/[category]/page": "action-browser",
+        "app/_not-found/page": "action-browser",
         "app/page": "action-browser"
       },
       "filename": "src/utils/submitEnquiry.ts",

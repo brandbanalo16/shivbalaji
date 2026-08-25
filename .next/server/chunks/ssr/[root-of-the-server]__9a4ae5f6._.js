@@ -89,134 +89,132 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$nodemailer$2
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$webpack$2f$loaders$2f$next$2d$flight$2d$loader$2f$action$2d$validate$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/build/webpack/loaders/next-flight-loader/action-validate.js [app-rsc] (ecmascript)");
 ;
 ;
+const sanitizeHtml = (str)=>{
+    if (typeof str !== 'string') return '';
+    return str.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#39;');
+};
 async function submitEnquiry(data) {
     try {
-        // Basic validation
+        // 1. Validate Fields
         if (!data.name || !data.email && !data.phone) {
             return {
                 success: false,
                 message: 'Name and either Email or Phone are required.'
             };
         }
+        // 2. Sanitize Inputs
+        const sanitizedData = Object.fromEntries(Object.entries(data).map(([key, value])=>[
+                key,
+                typeof value === 'string' ? sanitizeHtml(value) : value
+            ]));
+        // 3. Configure SMTP
         const SMTP_HOST = process.env.SMTP_HOST || 'smtp.gmail.com';
         const SMTP_PORT = process.env.SMTP_PORT || '587';
-        const SMTP_SECURE = process.env.SMTP_SECURE || 'false';
-        const SMTP_USER = process.env.SMTP_USER || 'workankit0807@gmail.com';
-        const SMTP_PASS = process.env.SMTP_PASS || 'ryza lpbq jcpn kgwm';
-        const EMAIL_TO = process.env.EMAIL_TO || 'workankit0807@gmail.com';
+        const SMTP_SECURE = process.env.SMTP_SECURE === 'true';
+        const SMTP_USER = process.env.SMTP_USER;
+        const SMTP_PASS = process.env.SMTP_PASS;
+        const EMAIL_BCC = process.env.EMAIL_BCC;
+        const EMAIL_TO = process.env.EMAIL_TO || SMTP_USER;
+        if (!SMTP_USER || !SMTP_PASS) {
+            console.error('SMTP credentials are not configured properly.');
+            return {
+                success: false,
+                message: 'Unable to submit your enquiry. Please try again.'
+            };
+        }
         const transporter = __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$nodemailer$2f$lib$2f$nodemailer$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"].createTransport({
             host: SMTP_HOST,
             port: Number(SMTP_PORT),
-            secure: SMTP_SECURE === 'true',
+            secure: SMTP_SECURE,
             auth: {
                 user: SMTP_USER,
                 pass: SMTP_PASS
             }
         });
-        const mailOptions = {
-            from: `"Shiv Balaji Website" <${SMTP_USER}>`,
-            replyTo: data.email || SMTP_USER,
-            to: EMAIL_TO,
-            subject: `New Website Enquiry from ${data.name}`,
-            text: `
-        New Website Enquiry
-        
-        FORM NAME
-        ${data.formName || 'Contact Us Form'}
-        
-        NAME
-        ${data.name}
-        
-        EMAIL
-        ${data.email || 'N/A'}
-        
-        PHONE
-        ${data.phone || 'N/A'}
-        
-        COMPANY
-        ${data.company || 'N/A'}
-        
-        PRODUCT
-        ${data.product || 'N/A'}
-        
-        MESSAGE
-        ${data.message || 'N/A'}
-        
-        SUBMITTED FROM PAGE
-        ${data.pageUrl || 'N/A'}
-      `,
-            html: `
-        <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; border: 1px solid #e0e0e0; border-radius: 8px; overflow: hidden;">
-          <div style="background-color: #ff6b00; padding: 20px; text-align: center;">
-            <h2 style="color: #ffffff; margin: 0; font-size: 22px; font-weight: 600;">New Website Enquiry</h2>
-          </div>
-          
-          <div style="padding: 30px;">
-            <div style="margin-bottom: 20px; padding-bottom: 15px; border-bottom: 1px solid #f0f0f0;">
-              <div style="color: #666666; font-size: 12px; font-weight: bold; margin-bottom: 5px; text-transform: uppercase;">Form Name</div>
-              <div style="color: #333333; font-size: 16px;">${data.formName || 'Contact Us Form'}</div>
-            </div>
-            
-            <div style="margin-bottom: 20px; padding-bottom: 15px; border-bottom: 1px solid #f0f0f0;">
-              <div style="color: #666666; font-size: 12px; font-weight: bold; margin-bottom: 5px; text-transform: uppercase;">Name</div>
-              <div style="color: #333333; font-size: 16px;">${data.name}</div>
-            </div>
-            
-            ${data.email ? `
-            <div style="margin-bottom: 20px; padding-bottom: 15px; border-bottom: 1px solid #f0f0f0;">
-              <div style="color: #666666; font-size: 12px; font-weight: bold; margin-bottom: 5px; text-transform: uppercase;">Email</div>
-              <div style="color: #333333; font-size: 16px;"><a href="mailto:${data.email}" style="color: #1a73e8; text-decoration: none;">${data.email}</a></div>
-            </div>
-            ` : ''}
-            
-            ${data.phone ? `
-            <div style="margin-bottom: 20px; padding-bottom: 15px; border-bottom: 1px solid #f0f0f0;">
-              <div style="color: #666666; font-size: 12px; font-weight: bold; margin-bottom: 5px; text-transform: uppercase;">Phone</div>
-              <div style="color: #333333; font-size: 16px;">${data.phone}</div>
-            </div>
-            ` : ''}
-
-            ${data.company ? `
-            <div style="margin-bottom: 20px; padding-bottom: 15px; border-bottom: 1px solid #f0f0f0;">
-              <div style="color: #666666; font-size: 12px; font-weight: bold; margin-bottom: 5px; text-transform: uppercase;">Company</div>
-              <div style="color: #333333; font-size: 16px;">${data.company}</div>
-            </div>
-            ` : ''}
-
-            ${data.product ? `
-            <div style="margin-bottom: 20px; padding-bottom: 15px; border-bottom: 1px solid #f0f0f0;">
-              <div style="color: #666666; font-size: 12px; font-weight: bold; margin-bottom: 5px; text-transform: uppercase;">Product</div>
-              <div style="color: #333333; font-size: 16px;">${data.product}</div>
-            </div>
-            ` : ''}
-            
-            ${data.message ? `
-            <div style="margin-bottom: 20px; padding-bottom: 15px; border-bottom: 1px solid #f0f0f0;">
-              <div style="color: #666666; font-size: 12px; font-weight: bold; margin-bottom: 5px; text-transform: uppercase;">Message</div>
-              <div style="color: #333333; font-size: 16px;">${data.message}</div>
-            </div>
-            ` : ''}
-            
-            ${data.pageUrl ? `
-            <div style="margin-bottom: 10px;">
-              <div style="color: #666666; font-size: 12px; font-weight: bold; margin-bottom: 5px; text-transform: uppercase;">Submitted From Page</div>
-              <div style="color: #333333; font-size: 16px; background-color: #e8f0fe; display: inline-block; padding: 2px 5px; color: #1a73e8; font-weight: 600;">${data.pageUrl}</div>
-            </div>
-            ` : ''}
-          </div>
+        const formName = sanitizedData.formName || 'Website Enquiry';
+        const currentDateTime = new Date().toLocaleString('en-IN', {
+            timeZone: 'Asia/Kolkata'
+        });
+        // Dynamic fields to display
+        const fieldsToDisplay = [
+            {
+                label: 'Name',
+                value: sanitizedData.name
+            },
+            {
+                label: 'Email',
+                value: sanitizedData.email
+            },
+            {
+                label: 'Phone',
+                value: sanitizedData.phone
+            },
+            {
+                label: 'Company',
+                value: sanitizedData.company
+            },
+            {
+                label: 'Product/Interest',
+                value: sanitizedData.product || sanitizedData.interest
+            },
+            {
+                label: 'City',
+                value: sanitizedData.city
+            },
+            {
+                label: 'Message',
+                value: sanitizedData.message
+            },
+            {
+                label: 'Submitted From Page',
+                value: sanitizedData.pageUrl
+            }
+        ].filter((f)=>f.value); // Only show fields that have a value
+        const htmlContent = `
+      <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; border: 1px solid #e0e0e0; border-radius: 8px; overflow: hidden;">
+        <div style="background-color: #ff6b00; padding: 20px; text-align: center;">
+          <h2 style="color: #ffffff; margin: 0; font-size: 22px; font-weight: 600;">${formName}</h2>
         </div>
-      `
+        
+        <div style="padding: 30px;">
+          <div style="margin-bottom: 20px; padding-bottom: 15px; border-bottom: 1px solid #f0f0f0;">
+            <div style="color: #666666; font-size: 12px; font-weight: bold; margin-bottom: 5px; text-transform: uppercase;">Submission Details</div>
+            <div style="color: #333333; font-size: 14px;"><strong>Date/Time:</strong> ${currentDateTime}</div>
+          </div>
+
+          ${fieldsToDisplay.map((field)=>`
+            <div style="margin-bottom: 20px; padding-bottom: 15px; border-bottom: 1px solid #f0f0f0;">
+              <div style="color: #666666; font-size: 12px; font-weight: bold; margin-bottom: 5px; text-transform: uppercase;">${field.label}</div>
+              <div style="color: #333333; font-size: 16px;">${field.value}</div>
+            </div>
+          `).join('')}
+        </div>
+        <div style="background-color: #f8f9fa; padding: 15px; text-align: center; font-size: 12px; color: #888888;">
+          This is an automated message from the Shiv Balaji Surgicals website.
+        </div>
+      </div>
+    `;
+        const textContent = fieldsToDisplay.map((field)=>`${field.label.toUpperCase()}\n${field.value}`).join('\n\n');
+        const mailOptions = {
+            from: SMTP_USER,
+            replyTo: sanitizedData.email || undefined,
+            to: EMAIL_TO,
+            bcc: EMAIL_BCC,
+            subject: `New ${formName} from ${sanitizedData.name}`,
+            text: `New Website Enquiry (${currentDateTime})\n\n${textContent}`,
+            html: htmlContent
         };
         await transporter.sendMail(mailOptions);
         return {
             success: true,
-            message: 'Thank you! Your enquiry has been submitted successfully. Our team will contact you shortly.'
+            message: 'Thank you! Your enquiry has been submitted successfully.'
         };
     } catch (error) {
-        console.error('Submit Enquiry Error:', error);
+        // Log generic error to avoid exposing sensitive info
+        console.error('Submit Enquiry Error: Failed to send email.');
         return {
             success: false,
-            message: 'Unable to submit your enquiry right now. Please try again or contact us directly.'
+            message: 'Unable to submit your enquiry. Please try again.'
         };
     }
 }

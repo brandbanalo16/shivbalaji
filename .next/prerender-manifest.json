@@ -1,11 +1,1 @@
-{
-  "version": 4,
-  "routes": {},
-  "dynamicRoutes": {},
-  "notFoundRoutes": [],
-  "preview": {
-    "previewModeId": "74416af9711bd9638cf7415b4e0972bc",
-    "previewModeSigningKey": "1d95bb348791a6c0b7ba02411d12491405c1a54f3862d32fac0455439e2a624c",
-    "previewModeEncryptionKey": "e2c75f5b3cc205d16ce69fd4ce5e1445247d9e317b66797e0725a6f4cf4fe120"
-  }
-}
+{"version":4,"routes":{"/hospital-icu-beds":{},"/medical-trolleys-carts":{},"/bedside-lockers-over-bed-tables":{},"/examination-room-furniture":{},"/stools-chairs-patient-seating":{},"/stretchers-screens-accessories":{}},"dynamicRoutes":{"/[category]":{"dataRoute":null,"dataRouteRegex":null,"fallback":false,"fallbackRevalidate":false,"fallbackSourceRoute":"/[category]","routeRegex":"^\\/([^/]+?)(?:\\/)?$","allowHeader":[]}},"notFoundRoutes":[],"preview":{"previewModeId":"ee175878f823d82635f00a6d4e867dff","previewModeSigningKey":"ed1fe2cbe96a56512a58a4145cd8863dcb42b38f1025497e698241cac56c50af","previewModeEncryptionKey":"4b95336b4d0cc60c9b51d99652c8aaf9ab876feb8cf7f4833468cc14c33c4005"}}
