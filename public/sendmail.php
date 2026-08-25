@@ -49,7 +49,7 @@ if ($name === 'N/A' || ($email === 'N/A' && $phone === 'N/A')) {
 $date = date('d-m-Y h:i:s A');
 
 // Match the exact format requested
-$bodyText = "New Website Enquiry\n\n";
+$bodyText = "Congratulations Enquiry Received From Shiv Balaji Surgical {$formName}\n\n";
 $bodyText .= "Name: " . $name . "\n";
 $bodyText .= "Email: " . $email . "\n";
 $bodyText .= "Phone: " . $phone . "\n";
