@@ -1,7 +1,3 @@
-"use server";
-
-import nodemailer from "nodemailer";
-
 export interface EnquiryData {
   formName?: string;
   name: string;
@@ -9,7 +5,6 @@ export interface EnquiryData {
   phone?: string;
   company?: string;
   product?: string;
-  interest?: string;
   message?: string;
   pageUrl?: string;
   [key: string]: unknown;
@@ -22,65 +17,39 @@ export interface SubmitResult {
 
 export async function submitEnquiry(data: EnquiryData): Promise<SubmitResult> {
   try {
-    const name = data.name || "N/A";
-    const email = data.email || "N/A";
-    const phone = data.phone || "N/A";
-    const company = data.company || "N/A";
-    const message = data.message || "N/A";
-    const productOrInterest = data.product || data.interest || "";
-    
-    if (name === "N/A" || (email === "N/A" && phone === "N/A")) {
-      return { success: false, message: "Name and either Email or Phone are required." };
+    // 1. Client-Side Validation
+    if (!data.name || (!data.email && !data.phone)) {
+      return { success: false, message: 'Name and either Email or Phone are required.' };
     }
 
-    const subjectLine = productOrInterest ? `New Enquiry about ${productOrInterest}` : `New Enquiry from ${name}`;
-    const dateStr = new Date().toLocaleString("en-IN", { timeZone: "Asia/Kolkata" });
-
-    // Format body exactly like screenshot
-    let bodyText = `New Website Enquiry\n\n`;
-    bodyText += `Name: ${name}\n`;
-    bodyText += `Email: ${email}\n`;
-    bodyText += `Phone: ${phone}\n`;
-    bodyText += `Company: ${company}\n`;
-    bodyText += `Subject: ${subjectLine}\n\n`;
-    bodyText += `Message:\n${message}\n\n`;
-    bodyText += `Website: Shiv Balaji Surgicals\n`;
-    bodyText += `Submission Date & Time: ${dateStr}\n`;
-
-    // Ensure we have SMTP credentials from env
-    const SMTP_HOST = process.env.SMTP_HOST || "smtp.gmail.com";
-    const SMTP_PORT = process.env.SMTP_PORT || "587";
-    const SMTP_USER = process.env.SMTP_USER;
-    const SMTP_PASS = process.env.SMTP_PASS;
-    
-    if (!SMTP_USER || !SMTP_PASS) {
-      console.error("SMTP credentials are not configured properly.");
-      return { success: false, message: "Unable to submit your enquiry. Please try again." };
+    // 2. Add current page URL if not present
+    if (typeof window !== 'undefined' && !data.pageUrl) {
+      data.pageUrl = window.location.href;
     }
 
-    const transporter = nodemailer.createTransport({
-      host: SMTP_HOST,
-      port: Number(SMTP_PORT),
-      secure: Number(SMTP_PORT) === 465,
-      auth: {
-        user: SMTP_USER,
-        pass: SMTP_PASS,
+    // 3. Call the PHP Endpoint
+    // We send a POST request to sendmail.php located in the root of the server
+    const response = await fetch('/sendmail.php', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json',
       },
+      body: JSON.stringify(data)
     });
 
-    const mailOptions = {
-      from: `"${name}" <noreply@shivbalajisurgicals.com>`,
-      replyTo: email !== "N/A" ? email : undefined,
-      to: ["shivbalajisurgical@gmail.com", "brandbanalo16@gmail.com"],
-      subject: `New Website Enquiry - ${name}`,
-      text: bodyText,
-      html: bodyText.replace(/\n/g, "<br>"),
+    if (!response.ok) {
+      throw new Error('Network response was not ok');
+    }
+
+    const result = await response.json();
+    return { 
+      success: result.success, 
+      message: result.message || (result.success ? 'Thank you! Your enquiry has been submitted successfully.' : 'Unable to submit your enquiry. Please try again.')
     };
 
-    await transporter.sendMail(mailOptions);
-    return { success: true, message: "Thank you! Your enquiry has been submitted successfully." };
   } catch (error) {
-    console.error("Submit Enquiry Error:", error);
-    return { success: false, message: "Unable to submit your enquiry. Please try again." };
+    console.error('Submit Enquiry Error:', error);
+    return { success: false, message: 'Unable to submit your enquiry. Please try again.' };
   }
 }

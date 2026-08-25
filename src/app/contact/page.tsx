@@ -166,7 +166,7 @@ export default function ContactPage() {
                                                         lineHeight: "32px",
                                                     }}
                                                 >
-                                                    Kh. No. 25/2, Nangli Sakrawati, Najafgarh, New Delhi-110043
+                                                    Kh. Number 25/2, Kala Bus Depot, Najafgarh, behind Dichaon, Nangli Sakrawati, New Delhi, Delhi 110043
                                                 </h5>
                                             </div>
                                         </div>
