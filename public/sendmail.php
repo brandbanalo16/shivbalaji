@@ -68,7 +68,7 @@ if (!class_exists('PHPMailer\PHPMailer\PHPMailer')) {
     
     $headers = "MIME-Version: 1.0" . "\r\n";
     $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
-    $headers .= "From: {$name} <noreply@shivbalajisurgicals.com>\r\n";
+    $headers .= "From: Shiv Balaji Surgical <noreply@shivbalajisurgicals.com>\r\n";
     if ($email !== 'N/A') {
         $headers .= "Reply-To: {$name} <{$email}>\r\n";
     }
@@ -92,7 +92,7 @@ try {
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
     $mail->Port       = 587;
 
-    $mail->setFrom('shivbalajisurgical@gmail.com', $name);
+    $mail->setFrom('shivbalajisurgical@gmail.com', 'Shiv Balaji Surgical');
     
     $mail->addAddress('shivbalajisurgical@gmail.com');
     $mail->addAddress('brandbanalo16@gmail.com');

@@ -61,7 +61,7 @@ export const footerCompanyLinks = [
 
 /** Contact details */
 export const contactInfo = {
-  address: "Kh. No. 25/2, Nangli Sakrawati, Najafgarh, New Delhi - 110043, India",
+  address: "Kh. Number 25/2, Kala Bus Depot, Najafgarh, behind Dichaon, Nangli Sakrawati, New Delhi, Delhi 110043",
   regdAddress: "A-294, Second Floor, Hastal, Uttam Nagar, New Delhi - 110059, India",
   phones: ["+91 8287153753", "+91 7678285286", "+91 7678281217"],
   email: "shivbalajisurgical@gmail.com",
