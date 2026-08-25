@@ -13,10 +13,11 @@ export default function ProductEnquiryForm({ productName }: ProductEnquiryFormPr
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    const form = e.currentTarget;
     setLoading(true);
     setMessage(null);
 
-    const formData = new FormData(e.currentTarget);
+    const formData = new FormData(form);
     const data = {
       formName: 'Product Enquiry',
       name: formData.get('name') as string,
@@ -34,7 +35,7 @@ export default function ProductEnquiryForm({ productName }: ProductEnquiryFormPr
     });
 
     if (result.success) {
-      e.currentTarget.reset();
+      form.reset();
     }
     
     setLoading(false);

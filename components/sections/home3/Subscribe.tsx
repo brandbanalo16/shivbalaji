@@ -11,10 +11,11 @@ export default function Subscribe() {
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    const form = e.currentTarget;
     setLoading(true);
     setStatusMessage("");
 
-    const formData = new FormData(e.currentTarget);
+    const formData = new FormData(form);
     const result = await submitEnquiry({
       formName: "Newsletter Subscribe",
       name: "Subscriber", // Name is required by backend, so we provide a default
@@ -23,7 +24,7 @@ export default function Subscribe() {
 
     setStatusMessage(result.message);
     if (result.success) {
-      e.currentTarget.reset();
+      form.reset();
     }
     setLoading(false);
   };

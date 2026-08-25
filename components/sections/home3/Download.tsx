@@ -11,10 +11,11 @@ export default function Download() {
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    const form = e.currentTarget;
     setLoading(true);
     setStatusMessage("");
     
-    const formData = new FormData(e.currentTarget);
+    const formData = new FormData(form);
     const result = await submitEnquiry({
       formName: "Home3 Appointment Form",
       name: formData.get("name") as string,
@@ -27,7 +28,7 @@ export default function Download() {
     setStatusType(result.success ? "success" : "error");
     
     if (result.success) {
-      e.currentTarget.reset();
+      form.reset();
     }
     setLoading(false);
   };
