@@ -1,20 +1,4 @@
 {
-  "node": {
-    "40c29ea5706802aaa9b171260da05de6569efcc34f": {
-      "workers": {
-        "app/[category]/[subcategory]/page": {
-          "moduleId": "16033",
-          "async": false,
-          "exportedName": "submitEnquiry",
-          "filename": "src/utils/submitEnquiry.ts"
-        }
-      },
-      "layer": {
-        "app/[category]/[subcategory]/page": "action-browser"
-      },
-      "exportedName": "submitEnquiry",
-      "filename": "src/utils/submitEnquiry.ts"
-    }
-  },
+  "node": {},
   "edge": {}
 }

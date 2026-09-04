@@ -773,93 +773,79 @@ const departments = [
         icon: "fa-bed",
         description: "Comfort-oriented hospital & ICU beds built for safe patient handling, reliable positioning and efficient clinical care. ISO-certified products.",
         products: [
-            makeProduct({
-                product_id: "SBS-001",
-                product_name: "ICU Bed Electric with Nurse Control (ACP)",
-                model: "SB-G101A",
-                category: "Hospital & ICU Beds",
-                image: productImg(1),
-                short_description: "ICU Bed Electric with Nurse Control (ACP) (Model SB-G101A) — Advance linear actuator system with 4 motors, control box, hand remote & nurse control system (ACP)",
-                description: "ICU Bed Electric with Nurse Control (ACP) - Model SB-G101A — ICU Bed Electric with Nurse Control (ACP) (Model SB-G101A) — Advance linear actuator system with 4 motors, control box, hand remote & nurse control system (ACP)",
-                subcategory: "ICU Beds",
-                specifications: [
-                    "Advance Liner Actuator system with 04 pcs motor, 01 pc control box, 01 pc handset and 01 pc nurse control system (ACP).",
-                    "Four pieces individual ABS moulded side rails.",
-                    "ABS moulded head and foot panel with locking.",
-                    "Rectangular M.S. tube framework.",
-                    "4-section oval perforated CRCA M.S. sheet top.",
-                    "Bed mounted on 5-inch dia castor.",
-                    "Urine bag holder.",
-                    "S.S. telescopic IV rod with 4 locations.",
-                    "Approx. size: 2090L x 910W x 460-700H mm.",
-                    "Pretreated and epoxy powder coated finish.",
-                    "Plastic base cover for base frame.",
-                    "Hand-remote positions: Hi-Low, backrest elevation, Trendelenburg/reverse Trendelenburg and knee-rest elevation."
-                ],
-                optional_feature: [
-                    "4-section mattress system (ACP)",
-                    "Manual CPR for backrest",
-                    "X-ray translucent backrest",
-                    "Removable ABS platform",
-                    "Nurse-control functions: Hi-Low, knee-rest elevation, backrest elevation and Trendelenburg/reverse Trendelenburg"
-                ],
-                features: [
-                    "Advance linear actuator system with 4 motors, control box, hand remote & nurse control system (ACP)",
-                    "Four individual ABS moulded side rails",
-                    "ABS head and foot panels with locking",
-                    "4-section top with oval perforated CRCA MS sheet",
-                    "5\" dia castors with urine bag holder",
-                    "S.S. telescopic IV rod with 4 locations",
-                    "Overall size 2090L x 910W x 460-700H mm",
-                    "Pretreated & epoxy powder coated finish",
-                    "Hi-Low, Trendelenburg/Reverse Trendelenburg, knee rest & backrest positions"
-                ],
-                seo: {
-                    focus_keyword: "ICU Bed Electric with Nurse Control (ACP)",
-                    meta_title: "ICU Bed Electric with Nurse Control (ACP) | Hospital Bed Exporter India and ISO Certified Hospital Bed Manufacturer | Shiv Balaji Surgical",
-                    meta_description: "Buy the best ICU Bed Electric with Nurse Control (ACP). We are a leading Medicine Trolley Manufacturer and Bedside Locker Manufacturer. Explore our high-quality ICU Bed Electric with Nurse Control (ACP) today!",
-                    url_slug: "/products/hospital-icu-beds/sb-g101a-icu-bed-electric-with-nurse-control-acp",
-                    image_alt_text: "ICU Bed Electric with Nurse Control (ACP) - SB-G101A - Medicine Trolley Manufacturer",
-                    og_title: "ICU Bed Electric with Nurse Control (ACP) | Shiv Balaji…",
-                    og_description: "Buy ICU Bed Electric with Nurse Control (ACP) (Model SB-G101A) from Shiv Balaji Surgical - leading hospital furniture manufacturer, supplier & dealer in Delhi…",
-                    twitter_title: "ICU Bed Electric with Nurse Control (ACP) | Shiv Balaji…",
-                    twitter_description: "Buy ICU Bed Electric with Nurse Control (ACP) (Model SB-G101A) from Shiv Balaji Surgical - leading hospital furniture manufacturer, supplier & dealer in Delhi…",
-                    additional_keywords: [
-                        "Medicine Trolley Manufacturer",
-                        "Bedside Locker Manufacturer",
-                        "Hospital Bed Wholesale Dealer",
-                        "ICU Bed Mechanical Manufacturer",
-                        "Bed Side Screen Manufacturer"
-                    ],
-                    business_keywords: [
-                        "ICU Bed Electric with Nurse Control (ACP) Manufacturer",
-                        "ICU Bed Electric with Nurse Control (ACP) Supplier",
-                        "ICU Bed Electric with Nurse Control (ACP) Dealer",
-                        "ICU Bed Electric with Nurse Control (ACP) Exporter",
-                        "ICU Bed Electric with Nurse Control (ACP) Wholesaler in Delhi",
-                        "Hospital Furniture Manufacturer India",
-                        "Hospital Equipment Supplier Delhi NCR"
-                    ],
-                    seo_content_block: "If you are looking for the best ICU Bed Electric with Nurse Control (ACP), you are in the right place. Our ICU Bed Electric with Nurse Control (ACP) is designed for optimal performance. As a top Medicine Trolley Manufacturer, we ensure every ICU Bed Electric with Nurse Control (ACP) meets high standards. The ICU Bed Electric with Nurse Control (ACP) offers incredible durability. Patients and caregivers prefer our ICU Bed Electric with Nurse Control (ACP) for its reliability. When you choose our ICU Bed Electric with Nurse Control (ACP), you get quality. We are known as a leading Bedside Locker Manufacturer as well. This ICU Bed Electric with Nurse Control (ACP) is perfect for clinics. The ICU Bed Electric with Nurse Control (ACP) provides unmatched comfort. Contact us if you need a ICU Bed Electric with Nurse Control (ACP) from a Hospital Bed Wholesale Dealer. We also supply related items as a ICU Bed Mechanical Manufacturer. The ICU Bed Electric with Nurse Control (ACP) stands out in the market. Many hospitals trust our ICU Bed Electric with Nurse Control (ACP). Experience the excellence of this ICU Bed Electric with Nurse Control (ACP) today. We are your reliable Bed Side Screen Manufacturer.",
-                    schema_org: {
-                        "@context": "https://schema.org/",
-                        "@type": "Product",
-                        "name": "ICU Bed Electric with Nurse Control (ACP) - SB-G101A",
-                        "sku": "SB-G101A",
-                        "category": "Hospital & ICU Beds",
-                        "brand": {
-                            "@type": "Brand",
-                            "name": "Shiv Balaji Surgical"
-                        },
-                        "manufacturer": {
-                            "@type": "Organization",
-                            "name": "Shiv Balaji Surgical",
-                            "address": "Kh. No. 25/2, Nangli Sakrawati, Najafgarh, New Delhi - 110043, India"
-                        },
-                        "description": "Buy ICU Bed Electric with Nurse Control (ACP) (Model SB-G101A) from Shiv Balaji Surgical - leading hospital furniture manufacturer, supplier & dealer in Delhi…"
-                    }
-                }
-            }),
+            // makeProduct({
+            //   product_id: "SBS-001",
+            //   product_name: "ICU Bed Electric with Nurse Control (ACP)",
+            //   model: "SB-G101A",
+            //   category: "Hospital & ICU Beds",
+            //   image: productImg(1),
+            //   short_description: "ICU Bed Electric with Nurse Control (ACP) (Model SB-G101A) — Advance linear actuator system with 4 motors, control box, hand remote & nurse control system (ACP)",
+            //   description: "ICU Bed Electric with Nurse Control (ACP) - Model SB-G101A — ICU Bed Electric with Nurse Control (ACP) (Model SB-G101A) — Advance linear actuator system with 4 motors, control box, hand remote & nurse control system (ACP)",
+            //   subcategory: "ICU Beds",
+            //   specifications: [
+            //     "Advance Liner Actuator system with 04 pcs motor, 01 pc control box, 01 pc handset and 01 pc nurse control system (ACP).",
+            //     "Four pieces individual ABS moulded side rails.",
+            //     "ABS moulded head and foot panel with locking.",
+            //     "Rectangular M.S. tube framework.",
+            //     "4-section oval perforated CRCA M.S. sheet top.",
+            //     "Bed mounted on 5-inch dia castor.",
+            //     "Urine bag holder.",
+            //     "S.S. telescopic IV rod with 4 locations.",
+            //     "Approx. size: 2090L x 910W x 460-700H mm.",
+            //     "Pretreated and epoxy powder coated finish.",
+            //     "Plastic base cover for base frame.",
+            //     "Hand-remote positions: Hi-Low, backrest elevation, Trendelenburg/reverse Trendelenburg and knee-rest elevation.",
+            //   ],
+            //   optional_feature: [
+            //     "4-section mattress system (ACP)",
+            //     "Manual CPR for backrest",
+            //     "X-ray translucent backrest",
+            //     "Removable ABS platform",
+            //     "Nurse-control functions: Hi-Low, knee-rest elevation, backrest elevation and Trendelenburg/reverse Trendelenburg",
+            //   ],
+            //   features: [
+            //     "Advance linear actuator system with 4 motors, control box, hand remote & nurse control system (ACP)",
+            //     "Four individual ABS moulded side rails",
+            //     "ABS head and foot panels with locking",
+            //     "4-section top with oval perforated CRCA MS sheet",
+            //     "5\" dia castors with urine bag holder",
+            //     "S.S. telescopic IV rod with 4 locations",
+            //     "Overall size 2090L x 910W x 460-700H mm",
+            //     "Pretreated & epoxy powder coated finish",
+            //     "Hi-Low, Trendelenburg/Reverse Trendelenburg, knee rest & backrest positions",
+            //   ],
+            //   seo: {
+            //     focus_keyword: "ICU Bed Electric with Nurse Control (ACP)",
+            //     meta_title: "ICU Bed Electric with Nurse Control (ACP) | Hospital Bed Exporter India and ISO Certified Hospital Bed Manufacturer | Shiv Balaji Surgical",
+            //     meta_description: "Buy the best ICU Bed Electric with Nurse Control (ACP). We are a leading Medicine Trolley Manufacturer and Bedside Locker Manufacturer. Explore our high-quality ICU Bed Electric with Nurse Control (ACP) today!",
+            //     url_slug: "/products/hospital-icu-beds/sb-g101a-icu-bed-electric-with-nurse-control-acp",
+            //     image_alt_text: "ICU Bed Electric with Nurse Control (ACP) - SB-G101A - Medicine Trolley Manufacturer",
+            //     og_title: "ICU Bed Electric with Nurse Control (ACP) | Shiv Balaji…",
+            //     og_description: "Buy ICU Bed Electric with Nurse Control (ACP) (Model SB-G101A) from Shiv Balaji Surgical - leading hospital furniture manufacturer, supplier & dealer in Delhi…",
+            //     twitter_title: "ICU Bed Electric with Nurse Control (ACP) | Shiv Balaji…",
+            //     twitter_description: "Buy ICU Bed Electric with Nurse Control (ACP) (Model SB-G101A) from Shiv Balaji Surgical - leading hospital furniture manufacturer, supplier & dealer in Delhi…",
+            //     additional_keywords: ["Medicine Trolley Manufacturer", "Bedside Locker Manufacturer", "Hospital Bed Wholesale Dealer", "ICU Bed Mechanical Manufacturer", "Bed Side Screen Manufacturer"],
+            //     business_keywords: ["ICU Bed Electric with Nurse Control (ACP) Manufacturer", "ICU Bed Electric with Nurse Control (ACP) Supplier", "ICU Bed Electric with Nurse Control (ACP) Dealer", "ICU Bed Electric with Nurse Control (ACP) Exporter", "ICU Bed Electric with Nurse Control (ACP) Wholesaler in Delhi", "Hospital Furniture Manufacturer India", "Hospital Equipment Supplier Delhi NCR"],
+            //     seo_content_block: "If you are looking for the best ICU Bed Electric with Nurse Control (ACP), you are in the right place. Our ICU Bed Electric with Nurse Control (ACP) is designed for optimal performance. As a top Medicine Trolley Manufacturer, we ensure every ICU Bed Electric with Nurse Control (ACP) meets high standards. The ICU Bed Electric with Nurse Control (ACP) offers incredible durability. Patients and caregivers prefer our ICU Bed Electric with Nurse Control (ACP) for its reliability. When you choose our ICU Bed Electric with Nurse Control (ACP), you get quality. We are known as a leading Bedside Locker Manufacturer as well. This ICU Bed Electric with Nurse Control (ACP) is perfect for clinics. The ICU Bed Electric with Nurse Control (ACP) provides unmatched comfort. Contact us if you need a ICU Bed Electric with Nurse Control (ACP) from a Hospital Bed Wholesale Dealer. We also supply related items as a ICU Bed Mechanical Manufacturer. The ICU Bed Electric with Nurse Control (ACP) stands out in the market. Many hospitals trust our ICU Bed Electric with Nurse Control (ACP). Experience the excellence of this ICU Bed Electric with Nurse Control (ACP) today. We are your reliable Bed Side Screen Manufacturer.",
+            //     schema_org: {
+            //       "@context": "https://schema.org/",
+            //       "@type": "Product",
+            //       "name": "ICU Bed Electric with Nurse Control (ACP) - SB-G101A",
+            //       "sku": "SB-G101A",
+            //       "category": "Hospital & ICU Beds",
+            //       "brand": {
+            //         "@type": "Brand",
+            //         "name": "Shiv Balaji Surgical"
+            //       },
+            //       "manufacturer": {
+            //         "@type": "Organization",
+            //         "name": "Shiv Balaji Surgical",
+            //         "address": "Kh. No. 25/2, Nangli Sakrawati, Najafgarh, New Delhi - 110043, India"
+            //       },
+            //       "description": "Buy ICU Bed Electric with Nurse Control (ACP) (Model SB-G101A) from Shiv Balaji Surgical - leading hospital furniture manufacturer, supplier & dealer in Delhi…"
+            //     },
+            //   },
+            // }),
             makeProduct({
                 product_id: "SBS-002",
                 product_name: "ICU Bed Electric with Hand Remote",
@@ -7260,7 +7246,7 @@ const footerCompanyLinks = [
     }
 ];
 const contactInfo = {
-    address: "Kh. No. 25/2, Nangli Sakrawati, Najafgarh, New Delhi - 110043, India",
+    address: "Kh. Number 25/2, Kala Bus Depot, Najafgarh, behind Dichaon, Nangli Sakrawati, New Delhi, Delhi 110043",
     regdAddress: "A-294, Second Floor, Hastal, Uttam Nagar, New Delhi - 110059, India",
     phones: [
         "+91 8287153753",

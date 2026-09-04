@@ -740,93 +740,79 @@ const departments = [
         icon: "fa-bed",
         description: "Comfort-oriented hospital & ICU beds built for safe patient handling, reliable positioning and efficient clinical care. ISO-certified products.",
         products: [
-            makeProduct({
-                product_id: "SBS-001",
-                product_name: "ICU Bed Electric with Nurse Control (ACP)",
-                model: "SB-G101A",
-                category: "Hospital & ICU Beds",
-                image: productImg(1),
-                short_description: "ICU Bed Electric with Nurse Control (ACP) (Model SB-G101A) — Advance linear actuator system with 4 motors, control box, hand remote & nurse control system (ACP)",
-                description: "ICU Bed Electric with Nurse Control (ACP) - Model SB-G101A — ICU Bed Electric with Nurse Control (ACP) (Model SB-G101A) — Advance linear actuator system with 4 motors, control box, hand remote & nurse control system (ACP)",
-                subcategory: "ICU Beds",
-                specifications: [
-                    "Advance Liner Actuator system with 04 pcs motor, 01 pc control box, 01 pc handset and 01 pc nurse control system (ACP).",
-                    "Four pieces individual ABS moulded side rails.",
-                    "ABS moulded head and foot panel with locking.",
-                    "Rectangular M.S. tube framework.",
-                    "4-section oval perforated CRCA M.S. sheet top.",
-                    "Bed mounted on 5-inch dia castor.",
-                    "Urine bag holder.",
-                    "S.S. telescopic IV rod with 4 locations.",
-                    "Approx. size: 2090L x 910W x 460-700H mm.",
-                    "Pretreated and epoxy powder coated finish.",
-                    "Plastic base cover for base frame.",
-                    "Hand-remote positions: Hi-Low, backrest elevation, Trendelenburg/reverse Trendelenburg and knee-rest elevation."
-                ],
-                optional_feature: [
-                    "4-section mattress system (ACP)",
-                    "Manual CPR for backrest",
-                    "X-ray translucent backrest",
-                    "Removable ABS platform",
-                    "Nurse-control functions: Hi-Low, knee-rest elevation, backrest elevation and Trendelenburg/reverse Trendelenburg"
-                ],
-                features: [
-                    "Advance linear actuator system with 4 motors, control box, hand remote & nurse control system (ACP)",
-                    "Four individual ABS moulded side rails",
-                    "ABS head and foot panels with locking",
-                    "4-section top with oval perforated CRCA MS sheet",
-                    "5\" dia castors with urine bag holder",
-                    "S.S. telescopic IV rod with 4 locations",
-                    "Overall size 2090L x 910W x 460-700H mm",
-                    "Pretreated & epoxy powder coated finish",
-                    "Hi-Low, Trendelenburg/Reverse Trendelenburg, knee rest & backrest positions"
-                ],
-                seo: {
-                    focus_keyword: "ICU Bed Electric with Nurse Control (ACP)",
-                    meta_title: "ICU Bed Electric with Nurse Control (ACP) | Hospital Bed Exporter India and ISO Certified Hospital Bed Manufacturer | Shiv Balaji Surgical",
-                    meta_description: "Buy the best ICU Bed Electric with Nurse Control (ACP). We are a leading Medicine Trolley Manufacturer and Bedside Locker Manufacturer. Explore our high-quality ICU Bed Electric with Nurse Control (ACP) today!",
-                    url_slug: "/products/hospital-icu-beds/sb-g101a-icu-bed-electric-with-nurse-control-acp",
-                    image_alt_text: "ICU Bed Electric with Nurse Control (ACP) - SB-G101A - Medicine Trolley Manufacturer",
-                    og_title: "ICU Bed Electric with Nurse Control (ACP) | Shiv Balaji…",
-                    og_description: "Buy ICU Bed Electric with Nurse Control (ACP) (Model SB-G101A) from Shiv Balaji Surgical - leading hospital furniture manufacturer, supplier & dealer in Delhi…",
-                    twitter_title: "ICU Bed Electric with Nurse Control (ACP) | Shiv Balaji…",
-                    twitter_description: "Buy ICU Bed Electric with Nurse Control (ACP) (Model SB-G101A) from Shiv Balaji Surgical - leading hospital furniture manufacturer, supplier & dealer in Delhi…",
-                    additional_keywords: [
-                        "Medicine Trolley Manufacturer",
-                        "Bedside Locker Manufacturer",
-                        "Hospital Bed Wholesale Dealer",
-                        "ICU Bed Mechanical Manufacturer",
-                        "Bed Side Screen Manufacturer"
-                    ],
-                    business_keywords: [
-                        "ICU Bed Electric with Nurse Control (ACP) Manufacturer",
-                        "ICU Bed Electric with Nurse Control (ACP) Supplier",
-                        "ICU Bed Electric with Nurse Control (ACP) Dealer",
-                        "ICU Bed Electric with Nurse Control (ACP) Exporter",
-                        "ICU Bed Electric with Nurse Control (ACP) Wholesaler in Delhi",
-                        "Hospital Furniture Manufacturer India",
-                        "Hospital Equipment Supplier Delhi NCR"
-                    ],
-                    seo_content_block: "If you are looking for the best ICU Bed Electric with Nurse Control (ACP), you are in the right place. Our ICU Bed Electric with Nurse Control (ACP) is designed for optimal performance. As a top Medicine Trolley Manufacturer, we ensure every ICU Bed Electric with Nurse Control (ACP) meets high standards. The ICU Bed Electric with Nurse Control (ACP) offers incredible durability. Patients and caregivers prefer our ICU Bed Electric with Nurse Control (ACP) for its reliability. When you choose our ICU Bed Electric with Nurse Control (ACP), you get quality. We are known as a leading Bedside Locker Manufacturer as well. This ICU Bed Electric with Nurse Control (ACP) is perfect for clinics. The ICU Bed Electric with Nurse Control (ACP) provides unmatched comfort. Contact us if you need a ICU Bed Electric with Nurse Control (ACP) from a Hospital Bed Wholesale Dealer. We also supply related items as a ICU Bed Mechanical Manufacturer. The ICU Bed Electric with Nurse Control (ACP) stands out in the market. Many hospitals trust our ICU Bed Electric with Nurse Control (ACP). Experience the excellence of this ICU Bed Electric with Nurse Control (ACP) today. We are your reliable Bed Side Screen Manufacturer.",
-                    schema_org: {
-                        "@context": "https://schema.org/",
-                        "@type": "Product",
-                        "name": "ICU Bed Electric with Nurse Control (ACP) - SB-G101A",
-                        "sku": "SB-G101A",
-                        "category": "Hospital & ICU Beds",
-                        "brand": {
-                            "@type": "Brand",
-                            "name": "Shiv Balaji Surgical"
-                        },
-                        "manufacturer": {
-                            "@type": "Organization",
-                            "name": "Shiv Balaji Surgical",
-                            "address": "Kh. No. 25/2, Nangli Sakrawati, Najafgarh, New Delhi - 110043, India"
-                        },
-                        "description": "Buy ICU Bed Electric with Nurse Control (ACP) (Model SB-G101A) from Shiv Balaji Surgical - leading hospital furniture manufacturer, supplier & dealer in Delhi…"
-                    }
-                }
-            }),
+            // makeProduct({
+            //   product_id: "SBS-001",
+            //   product_name: "ICU Bed Electric with Nurse Control (ACP)",
+            //   model: "SB-G101A",
+            //   category: "Hospital & ICU Beds",
+            //   image: productImg(1),
+            //   short_description: "ICU Bed Electric with Nurse Control (ACP) (Model SB-G101A) — Advance linear actuator system with 4 motors, control box, hand remote & nurse control system (ACP)",
+            //   description: "ICU Bed Electric with Nurse Control (ACP) - Model SB-G101A — ICU Bed Electric with Nurse Control (ACP) (Model SB-G101A) — Advance linear actuator system with 4 motors, control box, hand remote & nurse control system (ACP)",
+            //   subcategory: "ICU Beds",
+            //   specifications: [
+            //     "Advance Liner Actuator system with 04 pcs motor, 01 pc control box, 01 pc handset and 01 pc nurse control system (ACP).",
+            //     "Four pieces individual ABS moulded side rails.",
+            //     "ABS moulded head and foot panel with locking.",
+            //     "Rectangular M.S. tube framework.",
+            //     "4-section oval perforated CRCA M.S. sheet top.",
+            //     "Bed mounted on 5-inch dia castor.",
+            //     "Urine bag holder.",
+            //     "S.S. telescopic IV rod with 4 locations.",
+            //     "Approx. size: 2090L x 910W x 460-700H mm.",
+            //     "Pretreated and epoxy powder coated finish.",
+            //     "Plastic base cover for base frame.",
+            //     "Hand-remote positions: Hi-Low, backrest elevation, Trendelenburg/reverse Trendelenburg and knee-rest elevation.",
+            //   ],
+            //   optional_feature: [
+            //     "4-section mattress system (ACP)",
+            //     "Manual CPR for backrest",
+            //     "X-ray translucent backrest",
+            //     "Removable ABS platform",
+            //     "Nurse-control functions: Hi-Low, knee-rest elevation, backrest elevation and Trendelenburg/reverse Trendelenburg",
+            //   ],
+            //   features: [
+            //     "Advance linear actuator system with 4 motors, control box, hand remote & nurse control system (ACP)",
+            //     "Four individual ABS moulded side rails",
+            //     "ABS head and foot panels with locking",
+            //     "4-section top with oval perforated CRCA MS sheet",
+            //     "5\" dia castors with urine bag holder",
+            //     "S.S. telescopic IV rod with 4 locations",
+            //     "Overall size 2090L x 910W x 460-700H mm",
+            //     "Pretreated & epoxy powder coated finish",
+            //     "Hi-Low, Trendelenburg/Reverse Trendelenburg, knee rest & backrest positions",
+            //   ],
+            //   seo: {
+            //     focus_keyword: "ICU Bed Electric with Nurse Control (ACP)",
+            //     meta_title: "ICU Bed Electric with Nurse Control (ACP) | Hospital Bed Exporter India and ISO Certified Hospital Bed Manufacturer | Shiv Balaji Surgical",
+            //     meta_description: "Buy the best ICU Bed Electric with Nurse Control (ACP). We are a leading Medicine Trolley Manufacturer and Bedside Locker Manufacturer. Explore our high-quality ICU Bed Electric with Nurse Control (ACP) today!",
+            //     url_slug: "/products/hospital-icu-beds/sb-g101a-icu-bed-electric-with-nurse-control-acp",
+            //     image_alt_text: "ICU Bed Electric with Nurse Control (ACP) - SB-G101A - Medicine Trolley Manufacturer",
+            //     og_title: "ICU Bed Electric with Nurse Control (ACP) | Shiv Balaji…",
+            //     og_description: "Buy ICU Bed Electric with Nurse Control (ACP) (Model SB-G101A) from Shiv Balaji Surgical - leading hospital furniture manufacturer, supplier & dealer in Delhi…",
+            //     twitter_title: "ICU Bed Electric with Nurse Control (ACP) | Shiv Balaji…",
+            //     twitter_description: "Buy ICU Bed Electric with Nurse Control (ACP) (Model SB-G101A) from Shiv Balaji Surgical - leading hospital furniture manufacturer, supplier & dealer in Delhi…",
+            //     additional_keywords: ["Medicine Trolley Manufacturer", "Bedside Locker Manufacturer", "Hospital Bed Wholesale Dealer", "ICU Bed Mechanical Manufacturer", "Bed Side Screen Manufacturer"],
+            //     business_keywords: ["ICU Bed Electric with Nurse Control (ACP) Manufacturer", "ICU Bed Electric with Nurse Control (ACP) Supplier", "ICU Bed Electric with Nurse Control (ACP) Dealer", "ICU Bed Electric with Nurse Control (ACP) Exporter", "ICU Bed Electric with Nurse Control (ACP) Wholesaler in Delhi", "Hospital Furniture Manufacturer India", "Hospital Equipment Supplier Delhi NCR"],
+            //     seo_content_block: "If you are looking for the best ICU Bed Electric with Nurse Control (ACP), you are in the right place. Our ICU Bed Electric with Nurse Control (ACP) is designed for optimal performance. As a top Medicine Trolley Manufacturer, we ensure every ICU Bed Electric with Nurse Control (ACP) meets high standards. The ICU Bed Electric with Nurse Control (ACP) offers incredible durability. Patients and caregivers prefer our ICU Bed Electric with Nurse Control (ACP) for its reliability. When you choose our ICU Bed Electric with Nurse Control (ACP), you get quality. We are known as a leading Bedside Locker Manufacturer as well. This ICU Bed Electric with Nurse Control (ACP) is perfect for clinics. The ICU Bed Electric with Nurse Control (ACP) provides unmatched comfort. Contact us if you need a ICU Bed Electric with Nurse Control (ACP) from a Hospital Bed Wholesale Dealer. We also supply related items as a ICU Bed Mechanical Manufacturer. The ICU Bed Electric with Nurse Control (ACP) stands out in the market. Many hospitals trust our ICU Bed Electric with Nurse Control (ACP). Experience the excellence of this ICU Bed Electric with Nurse Control (ACP) today. We are your reliable Bed Side Screen Manufacturer.",
+            //     schema_org: {
+            //       "@context": "https://schema.org/",
+            //       "@type": "Product",
+            //       "name": "ICU Bed Electric with Nurse Control (ACP) - SB-G101A",
+            //       "sku": "SB-G101A",
+            //       "category": "Hospital & ICU Beds",
+            //       "brand": {
+            //         "@type": "Brand",
+            //         "name": "Shiv Balaji Surgical"
+            //       },
+            //       "manufacturer": {
+            //         "@type": "Organization",
+            //         "name": "Shiv Balaji Surgical",
+            //         "address": "Kh. No. 25/2, Nangli Sakrawati, Najafgarh, New Delhi - 110043, India"
+            //       },
+            //       "description": "Buy ICU Bed Electric with Nurse Control (ACP) (Model SB-G101A) from Shiv Balaji Surgical - leading hospital furniture manufacturer, supplier & dealer in Delhi…"
+            //     },
+            //   },
+            // }),
             makeProduct({
                 product_id: "SBS-002",
                 product_name: "ICU Bed Electric with Hand Remote",
@@ -7216,7 +7202,7 @@ const footerCompanyLinks = [
     }
 ];
 const contactInfo = {
-    address: "Kh. No. 25/2, Nangli Sakrawati, Najafgarh, New Delhi - 110043, India",
+    address: "Kh. Number 25/2, Kala Bus Depot, Najafgarh, behind Dichaon, Nangli Sakrawati, New Delhi, Delhi 110043",
     regdAddress: "A-294, Second Floor, Hastal, Uttam Nagar, New Delhi - 110059, India",
     phones: [
         "+91 8287153753",
@@ -9305,7 +9291,7 @@ __turbopack_context__.s([
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react-jsx-dev-runtime.js [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/image.js [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react.js [app-ssr] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$utils$2f$data$3a$fc2217__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$text$2f$javascript$3e$__ = __turbopack_context__.i("[project]/src/utils/data:fc2217 [app-ssr] (ecmascript) <text/javascript>");
+var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$utils$2f$submitEnquiry$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/utils/submitEnquiry.ts [app-ssr] (ecmascript)");
 "use client";
 ;
 ;
@@ -9317,9 +9303,10 @@ function Appointment() {
     const [statusType, setStatusType] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])("");
     const handleSubmit = async (e)=>{
         e.preventDefault();
+        const form = e.currentTarget;
         setLoading(true);
         setStatusMessage("");
-        const formData = new FormData(e.currentTarget);
+        const formData = new FormData(form);
         const data = {
             formName: "Home Page Appointment",
             name: formData.get("name"),
@@ -9329,11 +9316,11 @@ function Appointment() {
             product: formData.get("product"),
             message: formData.get("message")
         };
-        const result = await (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$utils$2f$data$3a$fc2217__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$text$2f$javascript$3e$__["submitEnquiry"])(data);
+        const result = await (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$utils$2f$submitEnquiry$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["submitEnquiry"])(data);
         setStatusMessage(result.message);
         setStatusType(result.success ? "success" : "error");
         if (result.success) {
-            e.currentTarget.reset();
+            form.reset();
         }
         setLoading(false);
     };
@@ -9347,7 +9334,7 @@ function Appointment() {
                 }
             }, void 0, false, {
                 fileName: "[project]/components/sections/home1/Appointment.tsx",
-                lineNumber: 42,
+                lineNumber: 43,
                 columnNumber: 13
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("figure", {
@@ -9360,12 +9347,12 @@ function Appointment() {
                     priority: true
                 }, void 0, false, {
                     fileName: "[project]/components/sections/home1/Appointment.tsx",
-                    lineNumber: 43,
+                    lineNumber: 44,
                     columnNumber: 45
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/components/sections/home1/Appointment.tsx",
-                lineNumber: 43,
+                lineNumber: 44,
                 columnNumber: 13
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -9381,7 +9368,7 @@ function Appointment() {
                                 }
                             }, void 0, false, {
                                 fileName: "[project]/components/sections/home1/Appointment.tsx",
-                                lineNumber: 46,
+                                lineNumber: 47,
                                 columnNumber: 19
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -9397,30 +9384,16 @@ function Appointment() {
                                             priority: true
                                         }, void 0, false, {
                                             fileName: "[project]/components/sections/home1/Appointment.tsx",
-                                            lineNumber: 48,
+                                            lineNumber: 49,
                                             columnNumber: 51
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/components/sections/home1/Appointment.tsx",
-                                        lineNumber: 48,
+                                        lineNumber: 49,
                                         columnNumber: 25
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
                                         children: "Looking for Premium Hospital Furniture? Call Us Today!"
-                                    }, void 0, false, {
-                                        fileName: "[project]/components/sections/home1/Appointment.tsx",
-                                        lineNumber: 49,
-                                        columnNumber: 23
-                                    }, this),
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
-                                            href: "tel:917678285286",
-                                            children: "Call: +91 76782 85286"
-                                        }, void 0, false, {
-                                            fileName: "[project]/components/sections/home1/Appointment.tsx",
-                                            lineNumber: 50,
-                                            columnNumber: 29
-                                        }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/components/sections/home1/Appointment.tsx",
                                         lineNumber: 50,
@@ -9428,8 +9401,8 @@ function Appointment() {
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
-                                            href: "tel:919891874277",
-                                            children: "Call: +91 98918 74277"
+                                            href: "tel:917678285286",
+                                            children: "Call: +91 76782 85286"
                                         }, void 0, false, {
                                             fileName: "[project]/components/sections/home1/Appointment.tsx",
                                             lineNumber: 51,
@@ -9439,17 +9412,31 @@ function Appointment() {
                                         fileName: "[project]/components/sections/home1/Appointment.tsx",
                                         lineNumber: 51,
                                         columnNumber: 23
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
+                                            href: "tel:919891874277",
+                                            children: "Call: +91 98918 74277"
+                                        }, void 0, false, {
+                                            fileName: "[project]/components/sections/home1/Appointment.tsx",
+                                            lineNumber: 52,
+                                            columnNumber: 29
+                                        }, this)
+                                    }, void 0, false, {
+                                        fileName: "[project]/components/sections/home1/Appointment.tsx",
+                                        lineNumber: 52,
+                                        columnNumber: 23
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/components/sections/home1/Appointment.tsx",
-                                lineNumber: 47,
+                                lineNumber: 48,
                                 columnNumber: 21
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/sections/home1/Appointment.tsx",
-                        lineNumber: 45,
+                        lineNumber: 46,
                         columnNumber: 17
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -9464,14 +9451,14 @@ function Appointment() {
                                     }
                                 }, void 0, false, {
                                     fileName: "[project]/components/sections/home1/Appointment.tsx",
-                                    lineNumber: 56,
+                                    lineNumber: 57,
                                     columnNumber: 25
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
                                     children: "Start Your Inquiry"
                                 }, void 0, false, {
                                     fileName: "[project]/components/sections/home1/Appointment.tsx",
-                                    lineNumber: 57,
+                                    lineNumber: 58,
                                     columnNumber: 23
                                 }, this),
                                 statusMessage && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -9486,7 +9473,7 @@ function Appointment() {
                                     children: statusMessage
                                 }, void 0, false, {
                                     fileName: "[project]/components/sections/home1/Appointment.tsx",
-                                    lineNumber: 59,
+                                    lineNumber: 60,
                                     columnNumber: 25
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("form", {
@@ -9506,13 +9493,13 @@ function Appointment() {
                                                                 children: "*"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/components/sections/home1/Appointment.tsx",
-                                                                lineNumber: 68,
+                                                                lineNumber: 69,
                                                                 columnNumber: 44
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/components/sections/home1/Appointment.tsx",
-                                                        lineNumber: 67,
+                                                        lineNumber: 68,
                                                         columnNumber: 35
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -9523,13 +9510,13 @@ function Appointment() {
                                                         required: true
                                                     }, void 0, false, {
                                                         fileName: "[project]/components/sections/home1/Appointment.tsx",
-                                                        lineNumber: 70,
+                                                        lineNumber: 71,
                                                         columnNumber: 35
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/components/sections/home1/Appointment.tsx",
-                                                lineNumber: 66,
+                                                lineNumber: 67,
                                                 columnNumber: 31
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -9544,13 +9531,13 @@ function Appointment() {
                                                                 children: "*"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/components/sections/home1/Appointment.tsx",
-                                                                lineNumber: 81,
+                                                                lineNumber: 82,
                                                                 columnNumber: 49
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/components/sections/home1/Appointment.tsx",
-                                                        lineNumber: 80,
+                                                        lineNumber: 81,
                                                         columnNumber: 35
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -9561,13 +9548,13 @@ function Appointment() {
                                                         required: true
                                                     }, void 0, false, {
                                                         fileName: "[project]/components/sections/home1/Appointment.tsx",
-                                                        lineNumber: 83,
+                                                        lineNumber: 84,
                                                         columnNumber: 35
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/components/sections/home1/Appointment.tsx",
-                                                lineNumber: 79,
+                                                lineNumber: 80,
                                                 columnNumber: 31
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -9582,13 +9569,13 @@ function Appointment() {
                                                                 children: "*"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/components/sections/home1/Appointment.tsx",
-                                                                lineNumber: 94,
+                                                                lineNumber: 95,
                                                                 columnNumber: 45
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/components/sections/home1/Appointment.tsx",
-                                                        lineNumber: 93,
+                                                        lineNumber: 94,
                                                         columnNumber: 35
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -9599,13 +9586,13 @@ function Appointment() {
                                                         required: true
                                                     }, void 0, false, {
                                                         fileName: "[project]/components/sections/home1/Appointment.tsx",
-                                                        lineNumber: 96,
+                                                        lineNumber: 97,
                                                         columnNumber: 35
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/components/sections/home1/Appointment.tsx",
-                                                lineNumber: 92,
+                                                lineNumber: 93,
                                                 columnNumber: 31
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -9620,13 +9607,13 @@ function Appointment() {
                                                                 children: "*"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/components/sections/home1/Appointment.tsx",
-                                                                lineNumber: 107,
+                                                                lineNumber: 108,
                                                                 columnNumber: 44
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/components/sections/home1/Appointment.tsx",
-                                                        lineNumber: 106,
+                                                        lineNumber: 107,
                                                         columnNumber: 35
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -9637,13 +9624,13 @@ function Appointment() {
                                                         required: true
                                                     }, void 0, false, {
                                                         fileName: "[project]/components/sections/home1/Appointment.tsx",
-                                                        lineNumber: 109,
+                                                        lineNumber: 110,
                                                         columnNumber: 35
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/components/sections/home1/Appointment.tsx",
-                                                lineNumber: 105,
+                                                lineNumber: 106,
                                                 columnNumber: 31
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -9658,13 +9645,13 @@ function Appointment() {
                                                                 children: "*"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/components/sections/home1/Appointment.tsx",
-                                                                lineNumber: 120,
+                                                                lineNumber: 121,
                                                                 columnNumber: 47
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/components/sections/home1/Appointment.tsx",
-                                                        lineNumber: 119,
+                                                        lineNumber: 120,
                                                         columnNumber: 35
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("textarea", {
@@ -9675,13 +9662,13 @@ function Appointment() {
                                                         required: true
                                                     }, void 0, false, {
                                                         fileName: "[project]/components/sections/home1/Appointment.tsx",
-                                                        lineNumber: 122,
+                                                        lineNumber: 123,
                                                         columnNumber: 35
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/components/sections/home1/Appointment.tsx",
-                                                lineNumber: 118,
+                                                lineNumber: 119,
                                                 columnNumber: 31
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -9691,12 +9678,12 @@ function Appointment() {
                                                     "data-sitekey": "YOUR_RECAPTCHA_SITE_KEY"
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/sections/home1/Appointment.tsx",
-                                                    lineNumber: 133,
+                                                    lineNumber: 134,
                                                     columnNumber: 35
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/components/sections/home1/Appointment.tsx",
-                                                lineNumber: 132,
+                                                lineNumber: 133,
                                                 columnNumber: 31
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -9715,52 +9702,52 @@ function Appointment() {
                                                             className: "fa-solid fa-arrow-right"
                                                         }, void 0, false, {
                                                             fileName: "[project]/components/sections/home1/Appointment.tsx",
-                                                            lineNumber: 146,
+                                                            lineNumber: 147,
                                                             columnNumber: 82
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/components/sections/home1/Appointment.tsx",
-                                                    lineNumber: 140,
+                                                    lineNumber: 141,
                                                     columnNumber: 35
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/components/sections/home1/Appointment.tsx",
-                                                lineNumber: 139,
+                                                lineNumber: 140,
                                                 columnNumber: 31
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/components/sections/home1/Appointment.tsx",
-                                        lineNumber: 64,
+                                        lineNumber: 65,
                                         columnNumber: 27
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/components/sections/home1/Appointment.tsx",
-                                    lineNumber: 63,
+                                    lineNumber: 64,
                                     columnNumber: 23
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/sections/home1/Appointment.tsx",
-                            lineNumber: 55,
+                            lineNumber: 56,
                             columnNumber: 21
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/components/sections/home1/Appointment.tsx",
-                        lineNumber: 54,
+                        lineNumber: 55,
                         columnNumber: 17
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/sections/home1/Appointment.tsx",
-                lineNumber: 44,
+                lineNumber: 45,
                 columnNumber: 13
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/components/sections/home1/Appointment.tsx",
-        lineNumber: 41,
+        lineNumber: 42,
         columnNumber: 9
     }, this);
 }
