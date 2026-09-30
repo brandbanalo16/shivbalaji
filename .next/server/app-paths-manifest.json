@@ -1,5 +1,9 @@
 {
+  "/[category]/[subcategory]/[product]/page": "app/[category]/[subcategory]/[product]/page.js",
+  "/[category]/[subcategory]/page": "app/[category]/[subcategory]/page.js",
   "/[category]/page": "app/[category]/page.js",
-  "/favicon.ico/route": "app/favicon.ico/route.js",
+  "/_not-found/page": "app/_not-found/page.js",
+  "/blog-details/[slug]/page": "app/blog-details/[slug]/page.js",
+  "/blog/page": "app/blog/page.js",
   "/page": "app/page.js"
 }

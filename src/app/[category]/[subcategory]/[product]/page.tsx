@@ -9,6 +9,7 @@ import ProductTabs from "../../../../../components/sections/product/ProductTabs"
 import ProductImageGallery from "../../../../../components/sections/ProductShowcase/ProductImageGallery";
 import ProductEnquiryForm from "../../../../../components/elements/ProductEnquiryForm";
 import RelatedProductsSlider from "../../../../../components/elements/RelatedProductsSlider";
+import { getProductMetadata } from "../../../../utils/catalogSeo";
 
 interface PageProps {
   params: Promise<{
@@ -49,21 +50,10 @@ export async function generateMetadata({ params }: PageProps) {
   
   if (!product) return { title: "Product Not Found" };
   
-  return {
-    title: product.seo?.meta_title || `${product.product_name} | Shiv Balaji Surgical`,
-    description: product.seo?.meta_description || product.short_description,
-    keywords: [product.seo?.focus_keyword, ...(product.seo?.additional_keywords || []), ...(product.seo?.business_keywords || [])].filter(Boolean).join(", "),
-    openGraph: {
-      title: product.seo?.og_title || product.seo?.meta_title || product.product_name,
-      description: product.seo?.og_description || product.seo?.meta_description,
-      images: [product.image],
-    },
-    twitter: {
-      card: "summary_large_image",
-      title: product.seo?.twitter_title || product.seo?.meta_title || product.product_name,
-      description: product.seo?.twitter_description || product.seo?.meta_description,
-    }
-  };
+  return getProductMetadata(
+    product,
+    `/${resolvedParams.category}/${resolvedParams.subcategory}/${product.slug}`,
+  );
 }
 
 export default async function ProductDetailPage({ params }: PageProps) {

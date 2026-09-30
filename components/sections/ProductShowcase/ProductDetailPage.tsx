@@ -148,24 +148,21 @@ export default function ProductDetailPage({ slug }: ProductDetailPageProps) {
               </div>
             </div>
 
-            {/* SEO Content Block */}
-            {product.seo?.seo_content_block && (
-              <div className="row mt_60 clearfix">
-                <div className="col-lg-12">
-                  <div className="product-seo-block" style={{ background: "#f8f9fb", borderRadius: 24, padding: "42px 35px", boxShadow: "0 20px 45px rgba(12, 26, 58, 0.08)" }}>
-                    <div className="text-center mb_30">
-                      <span className="sub-title" style={{ color: "#fe5e04", fontWeight: 700 }}>About This Product</span>
-                      <h3 style={{ fontSize: "clamp(1.4rem, 2.5vw, 2rem)", color: "#08245c", marginTop: 10 }}>
-                        {product.product_name} — Hospital Furniture Manufacturer in Delhi
-                      </h3>
-                    </div>
-                    <p style={{ fontSize: 16, color: "#4b5563", lineHeight: 1.9, maxWidth: 900, margin: "0 auto" }}>
-                      {product.seo.seo_content_block}
-                    </p>
+            <div className="row mt_60 clearfix">
+              <div className="col-lg-12">
+                <div className="product-seo-block" style={{ background: "#f8f9fb", borderRadius: 24, padding: "42px 35px", boxShadow: "0 20px 45px rgba(12, 26, 58, 0.08)" }}>
+                  <div className="text-center mb_30">
+                    <span className="sub-title" style={{ color: "#fe5e04", fontWeight: 700 }}>Product Information</span>
+                    <h3 style={{ fontSize: "clamp(1.4rem, 2.5vw, 2rem)", color: "#08245c", marginTop: 10 }}>
+                      {product.product_name} Manufacturer &amp; Supplier in India
+                    </h3>
                   </div>
+                  <p style={{ fontSize: 16, color: "#4b5563", lineHeight: 1.9, maxWidth: 900, margin: "0 auto" }}>
+                    Shiv Balaji Surgical supplies {product.product_name}{product.model ? ` (Model ${product.model})` : ""} for hospitals, clinics and healthcare facilities. As a hospital furniture manufacturer and supplier in Delhi, we can provide product specifications, bulk-order details and delivery information. Contact our team for availability and dealer pricing.
+                  </p>
                 </div>
               </div>
-            )}
+            </div>
 
             <div className="row mt_60 clearfix">
               <div className="col-lg-12">

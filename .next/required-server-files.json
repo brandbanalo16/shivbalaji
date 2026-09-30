@@ -99,7 +99,7 @@
         "transform": "lodash/{{member}}"
       }
     },
-    "outputFileTracingRoot": "C:\\shiv",
+    "outputFileTracingRoot": "C:\\akansha\\shiv - Copy",
     "experimental": {
       "useSkewCookie": false,
       "cacheLife": {
@@ -288,10 +288,10 @@
     "bundlePagesRouterDependencies": false,
     "configFileName": "next.config.ts",
     "turbopack": {
-      "root": "C:\\shiv"
+      "root": "C:\\akansha\\shiv - Copy"
     }
   },
-  "appDir": "C:\\shiv",
+  "appDir": "C:\\akansha\\shiv - Copy",
   "relativeAppDir": "",
   "files": [
     ".next\\routes-manifest.json",

@@ -11,6 +11,7 @@ import {
   slugify,
   subcategoryImages,
 } from "../../../data/products";
+import { getCategoryMetadata } from "../../utils/catalogSeo";
 
 interface PageProps {
   params: Promise<{
@@ -32,11 +33,7 @@ export async function generateMetadata({ params }: PageProps) {
 
   if (!category) return { title: "Category Not Found" };
 
-  return {
-    title: `${category.name} Manufacturer in Delhi | Shiv Balaji Surgical`,
-    description: `Leading ${category.name} Manufacturer in Delhi, India. Explore our range of premium ${category.name.toLowerCase()} designed for durability and high performance.`,
-    keywords: `${category.name} Manufacturer, ${category.name} Manufacturer in Delhi, ${category.name} Supplier`,
-  };
+  return getCategoryMetadata(category.name, `/${category.slug}`);
 }
 
 export default async function CategoryPage({ params }: PageProps) {

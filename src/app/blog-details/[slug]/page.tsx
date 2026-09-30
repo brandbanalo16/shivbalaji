@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Layout from "../../../../components/layout/Layout";
 import Image from "next/image";
 import Link from "next/link";
@@ -6,7 +7,7 @@ import CommentForm from "../../../../components/elements/CommentForm";
 
 import { blogs } from "../../blog/blogs";
 import { categoryMeta } from "../../../../data/products";
-import { notFound } from "next/navigation";
+import { notFound, permanentRedirect } from "next/navigation";
 
 type Props = {
   params: Promise<{
@@ -15,18 +16,69 @@ type Props = {
 };
 
 export async function generateStaticParams() {
-  return blogs.map((blog) => ({
-    slug: blog.slug,
-  }));
+  return blogs.flatMap((blog) =>
+    [blog.slug, ...blog.legacySlugs].map((slug) => ({ slug })),
+  );
+}
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { slug } = await params;
+  const blog = blogs.find(
+    (item) => item.slug === slug || item.legacySlugs.includes(slug),
+  );
+
+  if (!blog) {
+    return { title: "Blog post not found", robots: { index: false } };
+  }
+
+  const canonicalUrl = `/blog-details/${blog.slug}`;
+
+  return {
+    title: blog.seoTitle,
+    description: blog.description,
+    keywords: blog.focusKeywords,
+    alternates: { canonical: canonicalUrl },
+    openGraph: {
+      title: blog.seoTitle,
+      description: blog.description,
+      url: canonicalUrl,
+      type: "article",
+      images: [{ url: blog.image, alt: blog.title }],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: blog.seoTitle,
+      description: blog.description,
+      images: [blog.image],
+    },
+  };
 }
 
 export default async function BlogDetails({ params }: Props) {
   const { slug } = await params;
-  const blog = blogs.find((item) => item.slug === slug);
+  const blog = blogs.find(
+    (item) => item.slug === slug || item.legacySlugs.includes(slug),
+  );
 
   if (!blog) {
     notFound();
   }
+
+  if (blog.slug !== slug) {
+    permanentRedirect(`/blog-details/${blog.slug}`);
+  }
+
+  const focusKeywordPattern = new RegExp(
+    blog.focusKeyword.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"),
+    "i",
+  );
+  const isHtmlContent = blog.content.trimStart().startsWith("<");
+  const articleHtml = isHtmlContent
+    ? blog.content.replace(focusKeywordPattern, (match) => `<strong>${match}</strong>`)
+    : null;
+  const focusKeywordIndex = blog.content
+    .toLowerCase()
+    .indexOf(blog.focusKeyword.toLowerCase());
 
   return (
     <div className="boxed_wrapper">
@@ -77,7 +129,30 @@ export default async function BlogDetails({ params }: Props) {
 
                         {/* Dynamic Blog Content */}
 
-                        <p style={{ color: "#3b3939" }}>{blog.content}</p>
+                        <div className="blog-article-content">
+                          {articleHtml !== null ? (
+                            <div
+                              dangerouslySetInnerHTML={{ __html: articleHtml }}
+                            />
+                          ) : (
+                            <p>
+                              {blog.content.slice(0, focusKeywordIndex)}
+                              {focusKeywordIndex >= 0 ? (
+                                <strong>
+                                  {blog.content.slice(
+                                    focusKeywordIndex,
+                                    focusKeywordIndex + blog.focusKeyword.length,
+                                  )}
+                                </strong>
+                              ) : null}
+                              {focusKeywordIndex >= 0
+                                ? blog.content.slice(
+                                    focusKeywordIndex + blog.focusKeyword.length,
+                                  )
+                                : blog.content}
+                            </p>
+                          )}
+                        </div>
 
                         <blockquote>
                           <h2 style={{ color: "#fe5e04" }}>

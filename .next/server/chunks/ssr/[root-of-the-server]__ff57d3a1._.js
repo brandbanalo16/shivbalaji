@@ -168,7 +168,24 @@ const metadata = {
         template: "%s | Shiv Balaji Surgical"
     },
     description: "Shiv Balaji Surgical — Leading Hospital Furniture Manufacturer in Delhi, India. ISO & GMP Certified manufacturer of Hospital Beds, ICU Beds, Fowler Beds, Medical Trolleys, Examination Couches and all Hospital Furniture.",
-    keywords: "Hospital Bed Manufacturer in India, Hospital Furniture Manufacturer in Delhi, ICU Bed Manufacturer, Fowler Bed Manufacturer, Medical Furniture Manufacturer India",
+    keywords: [
+        "hospital bed manufacturer in India",
+        "hospital bed supplier in India",
+        "hospital bed dealer in India",
+        "hospital bed wholesaler in India",
+        "ICU bed manufacturer in Delhi",
+        "ICU bed supplier in India",
+        "ICU bed dealer in India",
+        "Fowler bed manufacturer in India",
+        "hospital furniture manufacturer in Delhi",
+        "hospital furniture supplier in India",
+        "hospital furniture dealer in India",
+        "medical equipment supplier in Delhi"
+    ],
+    icons: {
+        icon: "/assets/images/favicon.ico",
+        shortcut: "/assets/images/favicon.ico"
+    },
     openGraph: {
         siteName: "Shiv Balaji Surgical",
         type: "website",
@@ -187,23 +204,23 @@ function RootLayout({ children }) {
                 children,
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$elements$2f$DownloadProductList$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                     fileName: "[project]/src/app/layout.tsx",
-                    lineNumber: 71,
+                    lineNumber: 88,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$elements$2f$ContactRight$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                     fileName: "[project]/src/app/layout.tsx",
-                    lineNumber: 73,
+                    lineNumber: 90,
                     columnNumber: 9
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/src/app/layout.tsx",
-            lineNumber: 67,
+            lineNumber: 84,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "[project]/src/app/layout.tsx",
-        lineNumber: 66,
+        lineNumber: 83,
         columnNumber: 5
     }, this);
 }

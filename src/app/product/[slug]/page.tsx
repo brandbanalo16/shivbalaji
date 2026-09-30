@@ -1,6 +1,7 @@
 import { notFound } from "next/navigation";
 import ProductDetailPage from "../../../../components/sections/ProductShowcase/ProductDetailPage";
 import { getProductBySlug as getProduct, allProducts } from "../../../../data/products";
+import { getProductMetadata } from "../../../utils/catalogSeo";
 
 export async function generateStaticParams() {
   return allProducts.map((p) => ({
@@ -20,10 +21,7 @@ export async function generateMetadata({ params }: ProductPageProps) {
     return { title: "Product not found" };
   }
 
-  return {
-    title: product.seo?.meta_title || `${product.product_name} | Shiv Balaji Surgical`,
-    description: product.seo?.meta_description || product.short_description,
-  };
+  return getProductMetadata(product, `/product/${product.slug}`);
 }
 
 export default async function ProductPage({ params }: ProductPageProps) {

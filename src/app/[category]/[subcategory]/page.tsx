@@ -4,6 +4,7 @@ import Image from "next/image";
 import Layout from "../../../../components/layout/Layout";
 import Cta from "../../../../components/sections/home2/Cta";
 import { getCategoryBySlug, getSubcategoriesByCategory, getProductsBySubcategory, slugify } from "../../../../data/products";
+import { getSubcategoryMetadata } from "../../../utils/catalogSeo";
 
 interface PageProps {
   params: Promise<{
@@ -43,10 +44,11 @@ export async function generateMetadata({ params }: PageProps) {
 
   if (!actualSubName) return { title: "Subcategory Not Found" };
 
-  return {
-    title: `${actualSubName} | ${category.name} | Shiv Balaji Surgical`,
-    description: `Explore our range of ${actualSubName} in the ${category.name} category from Shiv Balaji Surgical, a leading manufacturer and supplier.`,
-  };
+  return getSubcategoryMetadata(
+    actualSubName,
+    category.name,
+    `/${category.slug}/${resolvedParams.subcategory}`,
+  );
 }
 
 export default async function SubcategoryPage({ params }: PageProps) {
